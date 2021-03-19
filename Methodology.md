@@ -10,8 +10,12 @@ The DERI score is composed of a number of calculations that each build on top of
 The most important area of this work is the original indicator score calculation.
 
 ## Choice of indicators
+The original choice of indicators comes from work completed internally at Salford City Council. The indicators aim to convey the breadth of the issue of digital exclusion, covering aspects such as age, deprivation and affordability, access, and activity.
+
+It is important to review these over time, and to ensure that chosen and new indicators are not so closely correlated that they do not 'double-count' an issue.
 
 ## Choice of geography
+The original tool developed by Salford City Council focused on ward areas. All of the datasets used are available at an LSOA or OA level, but not all are available at ward level. It was suggested that the LSOA level of detail remained, and as such the DERI score is provided at an LSOA level. 
 
 ## Individual indicator scores
 There are 10 individual indicators that make up the overall DERI score. These are individually weighted to form the next part in the calculation chain, the component scores. The table below highlights, for each indicator, what is considered a higher risk of digital exclusion
@@ -34,9 +38,9 @@ Based on the above, it is clear that most indicators suggest that a higher rate,
 
 The score for each indicator aimed to show how far between the minimum and maximum indicator values the individual indicator value was for each LSOA located. This gives a value between 0 (the LSOA has the smallest indicator value, therefore indicating low risk) to 10 (the LSOA has the highest indicator value, therefore indicating high risk).
 
-The calculation used for each LSOA (l) anbd each indicator (i) was:
+The calculation used for each indicator (i) and each LSOA (j) was:
 
->10 x ((Value of indicator i for LSOA l) - (Minimum value of indicator i)) / ((Maximum value of i) - (Minimum value of i))
+>10 x ((Value of indicator i for LSOA j) - (Minimum value of indicator i)) / ((Maximum value of i) - (Minimum value of i))
 
 However, for one of the indicators (average download speed), a lower value indicated a higher risk. As a result, the calculation is different for this indicator. There are two possible formulations:
 
@@ -53,18 +57,23 @@ The DERI score is based on some original work at Salford City Council. As this w
 
 The first is to consider this information on a single geographic basis. That is, use the maximum and minimum values nationally. However, not all datasets are provided across all areas of the UK, or even of Great Britain. Substitute indicators might also need to be used.
 
-The second option is to consider a smaller geography, such as local authority level, for the maximum and minimum values. The benefit of this approach is it provides a localised view of where risk is highest, regardless of the wider levels of risk.
+The second option is to consider a smaller geography, such as local authority level, for the maximum and minimum values. The benefit of this approach is it provides a localised view of where risk is highest, regardless of the wider levels of risk. That is, an LSOA could get a score of 10 on one indicator, because it is the highest indicator value within the local authority. Unless the indicator value in that LSOA was also the highest nationally, the LSOA would not get the same score as in the first approach.
 
-The third option, and one being used by the Tableau online tool, is to take the maximum and minimum values of the areas of focus. That is, if a local authority is being viewed, the maximum and minimum values of that local authority are used; if a region is being viewed, the maximum and minimum values of that region are used.
+The third option is to take the maximum and minimum values of the areas of focus. That is, if a local authority is being viewed, the maximum and minimum values of that local authority are used; if a region is being viewed, the maximum and minimum values of that region are used. This would mean a recalculation - and thereby reprioritisation of risk - dependent on the area in focus.
 
 ## Components
+Each indicator is turned into a score between 0 and 10. This allows indicators to be grouped into wider 'components' of digital exclusion, and weighted to provide a component score between 0 and 10. The four components are: age, broadband, deprivation, and activity.
 
-### Age component
+### Age component and weightings
+The age component is built from two indicator scores: the proportion of the population aged 65+, and the proportion of the population aged 75+. There is a clear correlation between these two datasets, but not a direct correlation. As a result, both datasets are used. Each is equally weighted (50% each) to form the age component.
 
-### Broadband component
+### Broadband component and weightings
+The broadband component is built from three indicator scores: the proportion of homes unable to receive a 30MBit/s connection; the proportion of connections receiving less than 10MBit/s broadband; and the average download speed. The components are weighted xx%, xx%, xx% respectively.
 
-### Deprivation component
+### Deprivation component and weightings
 
 ### Activity component
 
 ## DERI Score
+
+### Weightings

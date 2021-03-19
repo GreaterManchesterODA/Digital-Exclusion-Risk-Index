@@ -3,8 +3,8 @@ An index that of risk of digital exclusion across England and Wales.
 
 ## Background
 
-## Development
-
 ## Methodology
 
+## Development of an online tool
 
+## Engagement

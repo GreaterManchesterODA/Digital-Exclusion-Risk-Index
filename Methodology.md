@@ -33,6 +33,8 @@ There are 10 individual indicators that make up the overall DERI score. These ar
 |Average download speed|Lower average speed|
 |Digital Hard to Count Score|Higher score|
 
+The original work by Salford included two local measures: the proportion of council helpline contacts made online; and the proporton of Council Tax bills that are electronic. In order to expand this nationally, it was decided to drop these two measures. The main reason for this was that the data would not be available at a local level for all local authorities. Additionally, the data is likely to be impacted by the specific focus of the local authority - Salford has made great strdes in recent years in creating a digital first approach to council contacts and services, which may not be consistent across all local authorities. 
+
 ### Scoring based on minimum and maximum 
 Based on the above, it is clear that most indicators suggest that a higher rate, score or proportion is equivalent to a higher level of risk of digital exclusion. However, all of these indicators have different denominators (e.g. number of homes, number of connections, number of people aged 16+). It is therefore important, in order to create an index, that these indicators are transformed into a consistent 'score'. For the DERI, the score for each indicator in each LSOA is given as a number between 0 and 10, where 10 indicates a higher level of digital exclusion risk.
 
@@ -62,18 +64,21 @@ The second option is to consider a smaller geography, such as local authority le
 The third option is to take the maximum and minimum values of the areas of focus. That is, if a local authority is being viewed, the maximum and minimum values of that local authority are used; if a region is being viewed, the maximum and minimum values of that region are used. This would mean a recalculation - and thereby reprioritisation of risk - dependent on the area in focus.
 
 ## Components
-Each indicator is turned into a score between 0 and 10. This allows indicators to be grouped into wider 'components' of digital exclusion, and weighted to provide a component score between 0 and 10. The four components are: age, broadband, deprivation, and activity.
+Each indicator is turned into a score between 0 and 10. This allows indicators to be grouped into wider 'components' of digital exclusion, and weighted to provide a component score between 0 and 10. The four components are: age, broadband, deprivation, and activity. The calculation is simply:
 
 ### Age component and weightings
 The age component is built from two indicator scores: the proportion of the population aged 65+, and the proportion of the population aged 75+. There is a clear correlation between these two datasets, but not a direct correlation. As a result, both datasets are used. Each is equally weighted (50% each) to form the age component.
 
 ### Broadband component and weightings
-The broadband component is built from three indicator scores: the proportion of homes unable to receive a 30MBit/s connection; the proportion of connections receiving less than 10MBit/s broadband; and the average download speed. The components are weighted xx%, xx%, xx% respectively.
+The broadband component is built from three indicator scores: the proportion of homes unable to receive a 30MBit/s connection; the proportion of connections receiving less than 10MBit/s broadband; and the average download speed. The components are equally weighted (33.3%).
 
 ### Deprivation component and weightings
+The deprivation component is built from four indicator scores: the proportion of over 65 residents on guaranteed Pension Credit; the proportion of 16+ population with no qualifications; the alternative unemployment rate; and the Index of Multiple Deprivation score. The components are weighted 20%, 40%, 20% and 20% respectively.
 
 ### Activity component
+The activity component is built from just one indicator: the ONS' Digital Hard to Count score.
 
 ## DERI Score
+The overall DERI score takes each of the components and weights them to provide a score between 0 and 10, with 0 being low risk of digital exclusion, and 10 being a high risk.
 
 ### Weightings

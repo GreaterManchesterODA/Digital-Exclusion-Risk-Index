@@ -20,53 +20,54 @@ The second was created by GMCA, by sourcing all the relevant data and adding int
 These two data sources were loaded into Tableau, with an inner join based on the LSOA code.
 
 The following table lists the data source fields:
-Field name|Information contained|Source
-ObjectId||
-Lsoa11Cd||
-Lsoa11Nm||
-BngE||
-BngN||
-Long||
-Lat||
-Shape_Len||
-Share_Are||
-Geometry||
-Local authority code||
-Local authority name||
-LSOA code||
-LSOA name||
-Region Code||
-Region Name||
-Combined Authority Code||
-Combined Authority Name||
-County code||
-County name||
-Total population||
-Aged 16+||
-Aged 65+||
-Aged 75+||
-Percentage of homes unable to receive at least 30MBit/s||
-Average download speed (MBit/s)||
-Percentage of connections receiving less than 10MBit/s||
-Percentage of population aged 65 and over||
-Percentage of population aged 75 and over||
-Percentage of residents aged 16+ with no qualifications||
-Guaranteed pension credit (rate per 1,000 aged 65+)||
-Index of Multiple Deprivation 2019 score||
-Unemployment rate||
+
+|Field name|Information contained|Source|
+|ObjectId|||
+|Lsoa11Cd|||
+|Lsoa11Nm|||
+|BngE|||
+|BngN|||
+|Long|||
+|Lat|||
+|Shape_Len|||
+|Share_Are|||
+|Geometry|||
+|Local authority code|||
+|Local authority name|||
+|LSOA code|||
+|LSOA name|||
+|Region Code|||
+|Region Name|||
+|Combined Authority Code|||
+|Combined Authority Name|||
+|County code|||
+|County name|||
+|Total population|||
+|Aged 16+|||
+|Aged 65+|||
+|Aged 75+|||
+|Percentage of homes unable to receive at least 30MBit/s|||
+|Average download speed (MBit/s)|||
+|Percentage of connections receiving less than 10MBit/s|||
+|Percentage of population aged 65 and over|||
+|Percentage of population aged 75 and over|||
+|Percentage of residents aged 16+ with no qualifications|||
+|Guaranteed pension credit (rate per 1,000 aged 65+)|||
+|Index of Multiple Deprivation 2019 score|||
+|Unemployment rate|||
 
 ### Indicator scores
 
-Indicator|Calculated field name|Calculation score
-Percentage of homes unable to receive at least 30MBit/s||
-Average download speed (MBit/s)||
-Percentage of connections receiving less than 10MBit/s||
-Percentage of population aged 65 and over||
-Percentage of population aged 75 and over||
-Percentage of residents aged 16+ with no qualifications||
-Guaranteed pension credit (rate per 1,000 aged 65+)||
-Index of Multiple Deprivation 2019 score||
-Unemployment rate||
+|Indicator|Calculated field name|Calculation score|
+|Percentage of homes unable to receive at least 30MBit/s|||
+|Average download speed (MBit/s)|||
+|Percentage of connections receiving less than 10MBit/s|||
+|Percentage of population aged 65 and over|||
+|Percentage of population aged 75 and over|||
+|Percentage of residents aged 16+ with no qualifications|||
+|Guaranteed pension credit (rate per 1,000 aged 65+)|||
+|Index of Multiple Deprivation 2019 score|||
+|Unemployment rate|||
 
 ### Weightings and parameters
 

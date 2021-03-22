@@ -1,5 +1,20 @@
 # Methodology
 
+## Contents
+[General process](#general-process)
+[Choice of indicators](#choice-of-indicators)
+[Choice of geography](#choice-of-geography)
+[Individual indicators scores](#individual-indicators-scores)
+[Scoring based on minimum and maximum](#scoring-based-on-minimum-and-maximum)
+[Local considerations](#local-considerations)
+[Components](#components)
+[Age component and weightings](#age-component-and-weightings)
+[Broadband component and weightings](#broadband-component-and-weightings)
+[Deprivation component and weightings](#deprivation-component-and-weightings)
+[Activity component](#activity-component)
+[DERI Score](#deri-score)
+[Weightings](#weightings)
+
 ## General process
 The DERI score is composed of a number of calculations that each build on top of one another. The base level for these calculations is a series of individual indicators at an LSOA level. The general process is:
 

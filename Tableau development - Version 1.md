@@ -22,6 +22,7 @@ These two data sources were loaded into Tableau, with an inner join based on the
 The following table lists the data source fields:
 
 |Field name|Information contained|Source|
+|---|---|---|
 |ObjectId|||
 |Lsoa11Cd|||
 |Lsoa11Nm|||
@@ -59,6 +60,7 @@ The following table lists the data source fields:
 ### Indicator scores
 
 |Indicator|Calculated field name|Calculation score|
+|---|---|---|
 |Percentage of homes unable to receive at least 30MBit/s|||
 |Average download speed (MBit/s)|||
 |Percentage of connections receiving less than 10MBit/s|||

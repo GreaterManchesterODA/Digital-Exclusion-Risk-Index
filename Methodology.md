@@ -66,6 +66,8 @@ The third option is to take the maximum and minimum values of the areas of focus
 ## Components
 Each indicator is turned into a score between 0 and 10. This allows indicators to be grouped into wider 'components' of digital exclusion, and weighted to provide a component score between 0 and 10. The four components are: age, broadband, deprivation, and activity. The calculation is simply:
 
+(Indicator score a x weighting a) + (indicator score b x weighting b) ...
+
 ### Age component and weightings
 The age component is built from two indicator scores: the proportion of the population aged 65+, and the proportion of the population aged 75+. There is a clear correlation between these two datasets, but not a direct correlation. As a result, both datasets are used. Each is equally weighted (50% each) to form the age component.
 
@@ -79,6 +81,13 @@ The deprivation component is built from four indicator scores: the proportion of
 The activity component is built from just one indicator: the ONS' Digital Hard to Count score.
 
 ## DERI Score
-The overall DERI score takes each of the components and weights them to provide a score between 0 and 10, with 0 being low risk of digital exclusion, and 10 being a high risk.
+The overall DERI score takes each of the components and weights them to provide a score between 0 and 10, with 0 being low risk of digital exclusion, and 10 being a high risk. The score is again composed of the sum of weighted individual component scores. That is:
+
+(Age component score x age component weighting) + (Deprivation component score x deprivation component weighting) + (Broadband component score x broadband component weighting) + (Activity component score x activity component weighting)
 
 ### Weightings
+The weightings used for the DERI score are:
+* Age component: 33%
+* Broadband component: 17%
+* Deprivation component: 33%
+* Activity component: 17%

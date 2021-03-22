@@ -26,7 +26,9 @@ The data used is that indicated in the source document. That includes:
 However, the Digital Hard to Count score is not currently released by ONS. It has been shared individually with Census managers, but collating this information nationally would be difficult. Information provided by ONS suggests that this dataset will be released after the Census, and as such cannot be easily integrated into version 1.
 
 > **DECISION:** Version 1 will not include an activity component, and therefore diverges from the [Methodology document](Methodology.md) and the [Data sources document](Data_sources.csv).
+
 > **DECISION:** We will explore integrating the digital hard to count score in a future version.
+
 > **DECISION:** We will discuss with partners which additional measures might be included, and aim to understand any correlation between these measures. 
 
 ## Geographic choice
@@ -56,5 +58,7 @@ As indicated in the methodology document, there are several approaches to potent
 3. Using the maximum and minimum values of a varying set, chosen by the user. In this case, the advantages of using Tableau or other dashboard tools means that the calculation for this can be automatically updated. In the case of LSOAs A and B, they would only attain the same average download speed score if they were both in the chosen set of the user AND if their average download speed was the same. Otherwise, their scores would vary.
 
 > **DECISION:** For Version 1, the second option will be applied, as this provides a useful view at the local level, and a wider city-regional, county, or regional level.
+
 > **DECISION:** In future, we will explore how the third option might also be applied.
+
 > **DECISION:** We will explore with partners which of the different options might provide a better view of digital exclusion.

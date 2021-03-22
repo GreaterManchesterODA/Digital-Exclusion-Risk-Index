@@ -25,7 +25,7 @@ The data used is that indicated in the source document. That includes:
 
 However, the Digital Hard to Count score is not currently released by ONS. It has been shared individually with Census managers, but collating this information nationally would be difficult. Information provided by ONS suggests that this dataset will be released after the Census, and as such cannot be easily integrated into version 1.
 
-> **DECISION:** Version 1 will not include an activity component, and therefore diverges from the [Methodology document](Methodology.md) and the [Data sources document](Data_sources.csv).
+> **DECISION:** Version 1 will not include an activity component, and therefore diverges from the [Methodology document](Methodology.md) and the [Data sources document](Data%20sources.csv).
 
 > **DECISION:** We will explore integrating the digital hard to count score in a future version.
 

@@ -1,0 +1,9 @@
+# Tableau development - Version 1
+
+## Introduction
+This document sets out the processes used to create version 1 of the Digital Exclusion Risk Index on Tableau. In comparison to the version 1 notes, which details the considerations and issues in calculatng and building the tool, this document sets out how one might build exactly the same tool in Tableau.
+
+It covers the data input to version 1 of the tool, the calculated fields, the sheets created and the final dashboard.
+
+The aim of this development document is to update users so that they can also create a similar tool using their own data, or to recreate the DERI tool in full.
+

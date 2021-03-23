@@ -62,3 +62,5 @@ As indicated in the methodology document, there are several approaches to potent
 > **DECISION:** In future, we will explore how the third option might also be applied.
 
 > **DECISION:** We will explore with partners which of the different options might provide a better view of digital exclusion.
+
+> **DECISION:** We will explore with partners whether a log calculation might be a better option for creating scores.

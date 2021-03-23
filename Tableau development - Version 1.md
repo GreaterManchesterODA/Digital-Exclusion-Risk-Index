@@ -40,7 +40,15 @@ Similarly, the calculation used for the 'minimum' field was:
 In total, 18 calculated fields were created - one minimum and one maximum calculated field for each indicator. The full list of calculated fields and calculations is presented in Appendix B.
 
 ## Calculating scores
-Using the minimum and maximum value calculated fields mentioned above, individual scores between 0 and 10 can be created for each indicator.
+Using the minimum and maximum value calculated fields mentioned above, individual scores between 0 and 10 can be created for each indicator. In most instances, a higher indicator value is assumed to relate to a higher risk of digital exclusion. Therefore, the calculation identifies where on the scale between the minimum and maximum values in the district each LSOA lies. The highest value would receive a score of 10, and the lowest value a score of 0. A value halfway between the highest and lowest values would gain a score of 5.
+
+The general calculation for this was:
+`10*([indicator value]-[Min of indicator])/([Max of indicator]-[Min of indicator])`
+
+However, one indicator - the average download speed - was associated with higher risk of digital exclusion. As average broadband speeds are lower, there is a risk that many homes will have low speed connections that might be underutilised. In this instance, the calculation is reversed: when average broadband speeds are low, the score needs to be high, and vice versa.
+
+There are no log functions used in the calculation. This is something we may explore in future. A log function would help to identify if it may be harder to reach a higher value. For example, it may be more difficult to reduce down an unemployment rate from 1% to 0% than it would be to reduce it from 10% to 9%.
+
 
 ### Weightings and parameters
 

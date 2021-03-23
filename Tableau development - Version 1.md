@@ -39,7 +39,7 @@ Similarly, the calculation used for the 'minimum' field was:
 
 In total, 18 calculated fields were created - one minimum and one maximum calculated field for each indicator. The full list of calculated fields and calculations is presented in Appendix B.
 
-## Calculating scores
+### Calculating indicator scores
 Using the minimum and maximum value calculated fields mentioned above, individual scores between 0 and 10 can be created for each indicator. In most instances, a higher indicator value is assumed to relate to a higher risk of digital exclusion. Therefore, the calculation identifies where on the scale between the minimum and maximum values in the district each LSOA lies. The highest value would receive a score of 10, and the lowest value a score of 0. A value halfway between the highest and lowest values would gain a score of 5.
 
 The general calculation for this was:
@@ -54,9 +54,13 @@ There are no log functions used in the calculation. This is something we may exp
 A full list of indicator score calculations is provided in Appendix C.
 
 ## Component scores
+The next stage of the process is to create component scores. These component scores are based on the sum of weighted indicator scores. Only three component scores were created for this version of the tool:
+* Age component: composed of the over 65 and over 75 indicator scores.
+* Broadband
+
 ### Weightings and parameters
-### Calculation of scores
-### Final DERI score
+### Calculating component scores
+## Final DERI score
 
 ## Additional calculated fields
 
@@ -133,3 +137,12 @@ The following table lists the joined data source fields. The two sources are the
 ## Appendix C: Individual indicator scores
 |Score name|Score calculation|
 |---|---|
+|Score: average download speed|`10*([Max of Average download speed]-[Average download speed (Mbit/s)])/([Max of Average download speed]-[Min of Average download speed])`|
+|Score: guaranteed pension credit|`10*([Guaranteed pension credit (rate per 1,000 aged 65+)]-[Min of Guaranteed Pension Credit])/([Max of Guaranteed Pension Credit]-[Min of Guaranteed Pension Credit])`|
+|Score: Index of Multiple Deprivation score|`10*([Index of Multiple Deprivation 2019 score]-[Min of Index of Multiple Deprivation Score])/([Max of Index of Multiple Deprivation Score]-[Min of Index of Multiple Deprivation Score])`|
+|Score: percentage of connections receiving less than 10MBit/s|`10*([Percentage of connections receiving less than 10Mbit/s broadband]-[Min of Percentage of connections less than 10MBit/s])/([Max of Percentage of connections less than 10MBit/s]-[Min of Percentage of connections less than 10MBit/s])`|
+|Score: percentage of homes unable to receive at least 30MBit/s|`10*([Percentage of homes unable to receive at least 30Mbit/s broadband]-[Min of Percentage of homes unable to receive at least 30MBit/s])/([Max of Percentage of homes unable to receive at least 30MBit/s]-[Min of Percentage of homes unable to receive at least 30MBit/s])`|
+|Score: percentage of population aged 65+|`10*([Percentage of population aged 65 and over]-[Min of Percentage of population aged 65+])/([Max of Percentage of population aged 65+]-[Min of Percentage of population aged 65+])`|
+|Score: percentage of population aged 75+|`10*([Percentage of population aged 75 and over]-[Min of Percentage of population aged 75+])/([Max of Percentage of population aged 75+]-[Min of Percentage of population aged 75+])`|
+|Score: percentage of residents aged 16+ with no qualifications|`10*([Percentage of residents aged 16+ with no qualifications]-[Min of Percentage of residents with no qualifications])/([Max of Percentage of residents with no qualifications]-[Min of Percentage of residents with no qualifications])`|
+|Score: unemployment rate|`10*([Unemployment rate]-[Min of Unemployment rate])/([Max of Unemployment rate]-[Min of Unemployment rate])`|

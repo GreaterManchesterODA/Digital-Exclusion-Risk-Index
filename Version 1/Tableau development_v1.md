@@ -56,10 +56,33 @@ A full list of indicator score calculations is provided in Appendix C.
 ## Component scores
 The next stage of the process is to create component scores. These component scores are based on the sum of weighted indicator scores. Only three component scores were created for this version of the tool:
 * Age component: composed of the over 65 and over 75 indicator scores.
-* Broadband
+* Broadband component: composed of the homes unable to receive at least 30MBit/s, connections below 10MBit/s, and average download speed scores.
+* Deprivation component: composed of the Index of Multiple Deprivation, Pension Credit, no qualifications, and unemployment rate scores.
+
+The weightings are originally derived from the Salford work, but to fit with this model, some changes have been made.
 
 ### Weightings and parameters
+One concern with expanding the Salford version of the tool to other areas is the choice of weightings used. Different areas might have different priorities, and as such may want to weight both the individual scores and the component scores. As such, it was decided that the weightings in the first version of the tool would not be fixed. Instead, they would be created using a parameter that can be applied and altered by the user.
+
+To create each component score, weightings are applied to each indicator score. Furthermore, to create the final DERI score, weightings are applied to the component scores. Twelve parameters were created for the tool - one for each indicator score, and one for each component score. Each parameter had the following features:
+* **Data type:** Integer
+* **Display format:** Automatic
+* **Allowable values:** Range
+* **Minimum:** 0
+* **Maximum:** 100
+
+The decision was made to create these as an integer between 0 and 100, with the weightings within one component calculation, or the calculation for the overall DERI score, to sum to 100. One issue here is that, in using integers, we have applied integers where the original Salford tool may have implemented a decimal (e.g. 33.3). In this case, we have altered the weightings so that they always sum to 100.
+
+A full list of parameters and weightings is available in Appendix D. This includes the weightings applied to both indicator scores and component scores.
+
 ### Calculating component scores
+The general calculation method for each component score is:
+`(Indicator score A * (Indicator score A weighting)/100) + (Indicator score B * (Indicator score B weighting)/100) + ...`
+
+This weighted sum is applied to all of the relevant indicators for each component to produce a component score.
+
+A full list of component score calculations is presented in Appendix E.
+
 ## Final DERI score
 
 ## Additional calculated fields
@@ -146,3 +169,28 @@ The following table lists the joined data source fields. The two sources are the
 |Score: percentage of population aged 75+|`10*([Percentage of population aged 75 and over]-[Min of Percentage of population aged 75+])/([Max of Percentage of population aged 75+]-[Min of Percentage of population aged 75+])`|
 |Score: percentage of residents aged 16+ with no qualifications|`10*([Percentage of residents aged 16+ with no qualifications]-[Min of Percentage of residents with no qualifications])/([Max of Percentage of residents with no qualifications]-[Min of Percentage of residents with no qualifications])`|
 |Score: unemployment rate|`10*([Unemployment rate]-[Min of Unemployment rate])/([Max of Unemployment rate]-[Min of Unemployment rate])`|
+
+## Appendix D: Weighting parameters
+|Parameter name|Type|Applied to|Default value|
+|---|---|---|---|
+|Weighting: % with no quals|Indicator weighting|Percentage of residents aged 16+ with no qualifications|40|
+|Weighting: 65+|Indicator weighting|Percentage of population aged 65 and over|50|
+|Weighting: 75+|Indicator weighting|Percentage of population aged 75 and over|50|
+|Weighting: avg download speed|Indicator weighting|Average download speed (MBit/s)|33|
+|Weighting: connections less than 10MBit/s|Indicator weighting|Percentage of connections receiving less than 10MBit/s|33|
+|Weighting: guaranteed pension credit|Indicator weighting|Guaranteed pension credit (rate per 1,000 aged 65+)|20|
+|Weighting: homes unable to receive 30MBit/s|Indicator weighting|Percentage of homes unable to receive at least 30MBit/s|34|
+|Weighting: IMD score|Indicator weighting|Index of Multiple Deprivation 2019 score|20|
+|Weighting: unemployment rate|Indicator weighting|Unemployment rate|20|
+|Weighting: age component|Component weighting||33|
+|Weighting: broadband component|Component weighting||33|
+|Weighting: deprivation component|Component weighting||34|
+
+## Appendix E: Component score calculations
+|Component name|Component calculation|
+|---|---|
+|Age component|`([Score: percentage of population aged 65+]*([Weighting: 65+]/100))+([Score: percentage of population aged 75+]*([Weighting: 75+]/100))`|
+|Broadband component|`([Score: percentage of connections receiving less than 10MBit/s]*([Weighting: connections less than 10MBit/s]/100))
++([Score: percentage of homes unable to receive at least 30MBit/s]*([Weighting: homes unable to receive 30MBit/s]/100))
++([Score: average download speed]*([Weighting: avg download speed]/100))`|
+|Deprivation component|`([Score: unemployment rate]*([Weighting: unemployment rate]/100)) + ([Score: percentage of residents aged 16+ with no qualifications]*([Weighting: % with no quals]/100)) + ([Score: guaranteed pension credit]*([Weighting: guaranteed pension credit]/100)) + ([Score: Index of Multiple Deprivation score]*([Weighting: IMD score]/100))`|

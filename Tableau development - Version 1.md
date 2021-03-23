@@ -44,16 +44,18 @@ Using the minimum and maximum value calculated fields mentioned above, individua
 
 The general calculation for this was:
 `10*([indicator value]-[Min of indicator])/([Max of indicator]-[Min of indicator])`
+where `[indicator value]` is the value of the the indicator for each LSOA, and `[Max of indicator]` and `[Min of indicator]` represent the maximum and minimums of that indicator, as mentioned above.
 
-However, one indicator - the average download speed - was associated with higher risk of digital exclusion. As average broadband speeds are lower, there is a risk that many homes will have low speed connections that might be underutilised. In this instance, the calculation is reversed: when average broadband speeds are low, the score needs to be high, and vice versa.
+However, one indicator - the average download speed - was associated with higher risk of digital exclusion. As average broadband speeds are lower, there is a risk that many homes will have low speed connections that might be underutilised. In this instance, the calculation is reversed: when average broadband speeds are low, the score needs to be high, and vice versa:
+`10*([Max of indicator]-[indicator value])/([Max of indicator]-[Min of indicator])`
 
 There are no log functions used in the calculation. This is something we may explore in future. A log function would help to identify if it may be harder to reach a higher value. For example, it may be more difficult to reduce down an unemployment rate from 1% to 0% than it would be to reduce it from 10% to 9%.
 
+A full list of indicator score calculations is provided in Appendix C.
 
+## Component scores
 ### Weightings and parameters
-
-### Component scores
-
+### Calculation of scores
 ### Final DERI score
 
 ## Additional calculated fields
@@ -128,3 +130,6 @@ The following table lists the joined data source fields. The two sources are the
 |Unemployment rate|Maximum per district|Max of Unemployment rate|`{ FIXED [Local authority name]: MAX([Unemployment rate])}`|
 |Unemployment rate|Minimum per district|Min of Unemployment rate|`{ FIXED [Local authority name]: MIN([Unemployment rate])}`|
 
+## Appendix C: Individual indicator scores
+|Score name|Score calculation|
+|---|---|

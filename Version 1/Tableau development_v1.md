@@ -84,15 +84,41 @@ This weighted sum is applied to all of the relevant indicators for each componen
 A full list of component score calculations is presented in Appendix E.
 
 ## Final DERI score
-The final DERI score is composed
+The final DERI score is composed of the three component scores, weighted and summed. The weightings, presented as parameters in Tableau, are shown in Appendix D, and the component scores in Appendix E. This approach contrasts with the original Salford tool, as one component area - activity - is not included. As such, the weighting for all components is equal in this version of the tool (with the exception that the weighting is an integer, and so the values are 33, 33 and 34).
+
+The calculation for the final DERI score is:
+`([Age component]*([Weighting: age component]/100)) + ([Broadband component]*([Weighting: broadband component]/100)) + ([Deprivation component]*([Weighting: deprivation component]/100))`
 
 ## Additional calculated fields
+There are four more calculated fields created in Tableau. These four are listed in Appendix F. They are text outputs that take different weightings as an input. When the relevant weightings do not sum to 100, the text output of the calculated field is a warning that summed weightings should equal 100.
 
-## Maps
+## Sheets
+The final Tableau tool is composed of several dashboards. Each of these dashboards is itself composed of several sheets. This section sets out the different sheets created, and the content of these sheets. Choices of colour are not covered here, but it is sensible to include accessible colours as a way of showing change / variance in scores.
 
-## Charts and tables
+### Maps
+Four maps were created for the Tableau tool:
+* Overall DERI score map
+* Age component map
+* Broadband component
+* Deprivation component
 
-## Additional sheets
+Each map uses a similar range of data. An example using the DERI score is presented below to explain how each map was created.
+
+#### Example: DERI Score map creation
+1. Add the `Geometry` field of the LSOAs to the 'Detail' element, with the geometry measure as 'collect'. `Longitude (generated)` and `Latitude (generated)` are automatically populated in the columns and rows respectively.
+2. Add the `Local authority name` field to the filter shelf.
+3. Choose to 'Show the filter', and change the filter type to 'Multiple values (dropdown)'.
+4. Add the `LSOA code` and `LSOA name` fields to the 'Detail' element.
+5. Add the `DERI score` field to the 'Color' element, which will automatically provide a sum as the measure.
+6. At this point, the map should be a map of LSOAs coloured by the `DERI score` field.
+7. Edit the colours and title in the 'Sum(DERI score)' legend that appears. Click the 'Advanced' button and set the minimum value to 0 and maximum value to 10.
+8. Choose to 'Show Parameter Control' for each of the relevant weighting parameters. In this case, they are `Weighting: age component`, `Weighting: broadband component`, and `Weighting: deprivation component`.
+
+Following the above, and substituting in the relevant data for other maps will create sufficient maps to be used in the final dashboard. They will be filtered by the chosen areas in the filter.
+
+### Charts and tables
+
+### Additional sheets
 
 ## Dashboard creation
 
@@ -193,3 +219,11 @@ The following table lists the joined data source fields. The two sources are the
 |Age component|`([Score: percentage of population aged 65+]*([Weighting: 65+]/100))+([Score: percentage of population aged 75+]*([Weighting: 75+]/100))`|
 |Broadband component|`([Score: percentage of connections receiving less than 10MBit/s]*([Weighting: connections less than 10MBit/s]/100)) +([Score: percentage of homes unable to receive at least 30MBit/s]*([Weighting: homes unable to receive 30MBit/s]/100)) +([Score: average download speed]*([Weighting: avg download speed]/100))`|
 |Deprivation component|`([Score: unemployment rate]*([Weighting: unemployment rate]/100)) + ([Score: percentage of residents aged 16+ with no qualifications]*([Weighting: % with no quals]/100)) + ([Score: guaranteed pension credit]*([Weighting: guaranteed pension credit]/100)) + ([Score: Index of Multiple Deprivation score]*([Weighting: IMD score]/100))`|
+
+## Appendix F: Weighting warning calculated fields
+|Warning name|Warning calculation|
+|---|---|
+|Warning: DERI weighting|`IF ([Weighting: age component]+[Weighting: broadband component]+[Weighting: deprivation component])!=100 THEN 'Warning: Weightings need to sum to 100.' END`|
+|Warning: Age component weighting|`IF ([Weighting: 65+]+[Weighting: 75+])!=100 THEN 'Warning: Weightings need to sum to 100.' END`|
+|Warning: Broadband component weighting|`IF ([Weighting: avg download speed]+[Weighting: connections less than 10MBit/s]+[Weighting: homes unable to receive 30MBit/s])!=100 THEN 'Warning: Weightings need to sum to 100.' END`|
+|Warning: Deprivation component weighting|`IF ([Weighting: % with no quals]+[Weighting: guaranteed pension credit]+[Weighting: IMD score]+[Weighting: unemployment rate])!=100 THEN 'Warning: Weightings need to sum to 100.' END`|

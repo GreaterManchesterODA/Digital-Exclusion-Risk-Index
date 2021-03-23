@@ -84,6 +84,7 @@ This weighted sum is applied to all of the relevant indicators for each componen
 A full list of component score calculations is presented in Appendix E.
 
 ## Final DERI score
+The final DERI score is composed
 
 ## Additional calculated fields
 
@@ -182,15 +183,13 @@ The following table lists the joined data source fields. The two sources are the
 |Weighting: homes unable to receive 30MBit/s|Indicator weighting|Percentage of homes unable to receive at least 30MBit/s|34|
 |Weighting: IMD score|Indicator weighting|Index of Multiple Deprivation 2019 score|20|
 |Weighting: unemployment rate|Indicator weighting|Unemployment rate|20|
-|Weighting: age component|Component weighting||33|
-|Weighting: broadband component|Component weighting||33|
-|Weighting: deprivation component|Component weighting||34|
+|Weighting: age component|Component weighting|Age component|33|
+|Weighting: broadband component|Component weighting|Broadband component|33|
+|Weighting: deprivation component|Component weighting|Deprivation component|34|
 
 ## Appendix E: Component score calculations
 |Component name|Component calculation|
 |---|---|
 |Age component|`([Score: percentage of population aged 65+]*([Weighting: 65+]/100))+([Score: percentage of population aged 75+]*([Weighting: 75+]/100))`|
-|Broadband component|`([Score: percentage of connections receiving less than 10MBit/s]*([Weighting: connections less than 10MBit/s]/100))
-+([Score: percentage of homes unable to receive at least 30MBit/s]*([Weighting: homes unable to receive 30MBit/s]/100))
-+([Score: average download speed]*([Weighting: avg download speed]/100))`|
+|Broadband component|`([Score: percentage of connections receiving less than 10MBit/s]*([Weighting: connections less than 10MBit/s]/100)) +([Score: percentage of homes unable to receive at least 30MBit/s]*([Weighting: homes unable to receive 30MBit/s]/100)) +([Score: average download speed]*([Weighting: avg download speed]/100))`|
 |Deprivation component|`([Score: unemployment rate]*([Weighting: unemployment rate]/100)) + ([Score: percentage of residents aged 16+ with no qualifications]*([Weighting: % with no quals]/100)) + ([Score: guaranteed pension credit]*([Weighting: guaranteed pension credit]/100)) + ([Score: Index of Multiple Deprivation score]*([Weighting: IMD score]/100))`|

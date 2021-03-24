@@ -161,7 +161,7 @@ There are 6 dashboards that make up the tool:
 Dashboard 3 - 6 are effectively similar. They are styled in the same way, but use different graphs and maps.
 
 #### Example: DERI Score Dashboard
-The dashboard contains the following sheets: LSOA Text; DERI Score Text; Map of DERI Score; DERI Score graph; and DERI weighting warning. Additionally, there are 5 text boxes and two image boxes.
+The dashboard contains the following sheets: LSOA Text; DERI Score Text; Map of DERI Score; DERI Score graph; and DERI weighting warning. Additionally, there are five text boxes, two image boxes, a floating legend, a tiled filter and the relevant weightings for the dashboard.
 
 The dashboard is arranged in both floating and tiled formats. The tiled format is arranged in the following way:
 * Vertical
@@ -183,6 +183,16 @@ The dashboard is arranged in both floating and tiled formats. The tiled format i
     * Image: Salford City Council logo
     * Text box: 'Produced by'
     * Image: GM ODA logo
+
+The score colour range is placed as a floating container in the top left of the map. This highlights the colours of the relevant areas.
+
+Additionally, the weighting parameters and the 'DERI weighting warning' sheet are held in a floating vertical container.
+
+A button has been added at the bottom, to provide a link back to the home dashboard.
+
+This dashboard can be recreated for the component scores, substituting in the graphs, maps, weightings and warnings for that score.
+
+
 
 ## Appendix A: Fields in the inner joined Tableau data sources
 The following table lists the joined data source fields. The two sources are the shapefile and the master spreadsheet created by GMCA.

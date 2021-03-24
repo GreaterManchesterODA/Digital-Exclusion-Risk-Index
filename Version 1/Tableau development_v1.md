@@ -1,5 +1,38 @@
 # Tableau development - Version 1
 
+## Contents
+* [Introduction](#introduction)
+* [Tableau versions](#tableau-versions)
+* [Data](#data)
+* [Indicator scores](#indicator-scores)
+ * [Maximum and minimum calculations](#maximum-and-minimum-calculations)
+ * [Calculating indicator scores](#calculating-indicator-scores)
+* [Component scores](#component-scores)
+ * [Weightings and parameters](#weightings-and-parameters)
+ * [Calculating component scores](#calculating-component-scores)
+* [Final DERI score](#final-deri-score)
+* [Additional calculated fields](#additional-calculated-fields)
+* [Sheets](#sheets)
+ * [Maps](#maps)
+  * [Example: DERI Score map creation](#example-deri-score-map-creation)
+ * [Charts](#charts)
+  * [Example: DERI Score chart creation](#example-deri-score-chart-creation)
+ * [Additional sheets](#additional-sheets)
+  * [Example: LSOA Text](#example-lsoa-text)
+  * [Example: DERI Score Text](#example-deri-score-text)
+* [Dashboard creation](#dashboard-creation)
+  * [Example: DERI Score Dashboard](#example-deri-score-dashboard)
+ * [Dashboard actions and filter](#dashboard-actions-and-filter)
+* [Appendix A: Fields in the inner joined Tableau data sources](#appendix-a-fields-in-the-inner-joined-tableau-data-sources)
+* [Appendix B: Calculations for maximum and minimum fields](#appendix-b-calculations-for-maximum-and-minimum-fields)
+* [Appendix C: Individual indicator scores](#appendix-c-individual-indicator-scores)
+* [Appendix D: Weighting parameters](#appendix-d-weighting-parameters)
+* [Appendix E: Component score calculations](#appendix-e-component-score-calculations)
+* [Appendix F: Weighting warning calculated fields](#appendix-f-weighting-warning-calculated-fields)
+* [Appendix G: Dashboard actions](#appendix-g-dashboard-actions)
+
+---
+
 ## Introduction
 This document sets out the processes used to create version 1 of the Digital Exclusion Risk Index on Tableau. In comparison to the version 1 notes, which details the considerations and issues in calculatng and building the tool, this document sets out how one might build exactly the same tool in Tableau.
 

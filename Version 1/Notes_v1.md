@@ -1,9 +1,17 @@
 # DERI Tool - Version 1 Notes
 
 ## Introduction
-
+Version 1 of the Digital Exclusion Risk Index (DERI) is an online series of Tableau dashboards that aim to highlight the risk of digital exclusion at a lower super output area geography. These notes represent some of the considerations, calculations and decisions relating to the creation of version 1 of the tool. It is designed to complement both the Methodology document and the Tableau develeopment document in this repository. It highlights the divergences of the first version of the tool from both the original tool developed by Salford, and the general methodology, which will be updated as the tool updates.
 
 ## Background
+In 2020, Salford City Council created a Digital Exclusion Risk Index to visualise the areas in Salford at risk of digital exclusion. The tool was built in PowerBI, and showcased to a wider group of digital inclusion leads across Greater Manchester. Many other districts were building or considering building a similar tool with a similar approach. 
+At the same time, digital inclusion leads at the Greater Manchester Combined Authority (GMCA) have engaged with leads across the UK, and identified similar work being explored or developed by other parties. It was therefore suggested that GMCA attempt to expand the Digital Exclusion Risk Index nationally.
+
+Initial discussions with Salford identified a methodology and approach, as well as their consent to expand the tool nationally. GMCA took on the task of creating the tool in mid-March 2021, and the first version of the tool was released at the end of March 2021.
+
+The aim of this work is to provide a single, coherent understanding of the risk of digital exclusion, and to iteratively develop this work with relevant feedback on issues such as usability, datasets, calculations and visualisations.
+
+This note, and the accompanying methodology and Tableau development notes, explain the process in developing a first version of the DERI tool. Feedback on the first version will be collated, and used to produce a note for version 2 of the tool.
 
 
 ## Version 1

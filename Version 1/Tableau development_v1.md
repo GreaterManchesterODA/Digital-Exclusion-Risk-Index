@@ -41,7 +41,7 @@ It covers the data input to version 1 of the tool, the calculated fields, the sh
 The aim of this development document is to update users so that they can also create a similar tool using their own data, or to recreate the DERI tool in full.
 
 ## Tableau versions
-There are two versions of Tableau that have been used to create the tool. The first is v2018.3.4. This was used for the creation of much of the original tool. However, newer versions provide additional elements that are beneficial for different components of the tool. As a result, at a later stage a new v.2020.xx was used.
+There are two versions of Tableau that have been used to create the tool. The first is v2018.3.4. This was used for the creation of much of the original tool. However, newer versions provide additional elements that are beneficial for different components of the tool. As a result, at a later stage a new v.2020.3.0 was used.
 
 ## Data
 There are two data sources for the tool: a shapefile of LSOAs, and a dataset with relevant LSOA level data.

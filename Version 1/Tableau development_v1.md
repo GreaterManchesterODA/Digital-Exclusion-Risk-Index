@@ -121,10 +121,68 @@ A chart was also created for each of the component scores and the overall DERI s
 
 #### Example: DERI Score chart creation
 1. Add the `DERI score` field to the 'Columns' area.
-2. Add the `DERI score` field to the 
+2. Add the `DERI score` field to the 'Filters' shelf. In the popup box that appears, choose 'Sum' then 'Next. In the next popup make this a range of values with a minimum of 0 and a maximum of 10.
+3. Add the `Local authority name` field to the 'Filters' shelf. Choose 'All' and click OK.
+4. Add the `LSOA name` and `LSOA code` fields to the 'Details' element.
+5. Add the `DERI score` field to the 'Colours' element. Style the colours similar to the map, to ensure consistency, with a max of 10 and a min of 0.
+6. In the 'Marks' shelf, under the dropdown menu, choose 'Gantt Bar' option.
+
+The above will provide a chart of individual marks for each LSOA at their score level. To recreate the other charts, you will need to update the `DERI score` field with the relevant component calculated fields.
+
 ### Additional sheets
+Five further text-based sheets were also created for addition to the dashboards. These were:
+* **LSOA Text:** a sheet showing the `LSOA code` and `LSOA name` fields relating to the LSOA being viewed / selected on the map / chart.
+* **DERI Score Text:** shows the value of the `DERI score` field, colour-coded, of the LSOA being viewed / selected on the map / chart.
+* **Age Score Text:** shows the value of the `Age component` field, colour-coded, of the LSOA being viewed / selected on the map / chart.
+* **Broadband Score Text:** shows the value of the `Broadband component` field, colour-coded, of the LSOA being viewed / selected on the map / chart.
+* **Deprivation Score Text:** shows the value of the `Deprivation component` field, colour-coded, of the LSOA being viewed / selected on the map / chart.
+
+The two examples below show how to make the 'LSOA Text' sheet and the 'DERI Score Text' sheet. The latter can be copied, with minor adjustments, to create the remaining three sheets.
+
+#### Example: LSOA Text
+1. Add `LSOA code` and `LSOA name` to the Text element.
+2. Reformat the text so that it would be small enough to read, with the format `LSOA code` : `LSOA name`.
+
+#### Example: DERI Score Text
+1. Add the `DERI Score` field to the 'Text' element.
+2. Reformat and resize the score.
+3. Add the `DERI Score` field to the 'Colors' element.
+4. Change the colours to match those in the map and graph, with a minimum of 0 and a maximum of 10.
 
 ## Dashboard creation
+There are 6 dashboards that make up the tool:
+1. Home page / introduction
+2. How to use the DERI tool
+3. DERI Score dashboard
+4. Age Score Dashboard
+5. Broadband Score Dashboard
+6. Deprivation Score Dashboard
+
+Dashboard 3 - 6 are effectively similar. They are styled in the same way, but use different graphs and maps.
+
+#### Example: DERI Score Dashboard
+The dashboard contains the following sheets: LSOA Text; DERI Score Text; Map of DERI Score; DERI Score graph; and DERI weighting warning. Additionally, there are 5 text boxes and two image boxes.
+
+The dashboard is arranged in both floating and tiled formats. The tiled format is arranged in the following way:
+* Vertical
+  * Horizontal
+    * Text box: title of the dashboard
+  * Horizontal: simple line separator
+  * Filter: this is the map filter to choose a local authority
+  * Horizontal
+    * Vertical
+      * LSOA Text
+      * DERI Score Text
+    * Horizontal
+      * Text box: 'Low risk' - this is placed at the start of the graph
+      * DERI Score graph
+      * Text box: 'High risk' - this is placed at the end of the graph
+  * Map of DERI Score
+  * Horizontal
+    * Text box: 'Based on original work by:'
+    * Image: Salford City Council logo
+    * Text box: 'Produced by'
+    * Image: GM ODA logo
 
 ## Appendix A: Fields in the inner joined Tableau data sources
 The following table lists the joined data source fields. The two sources are the shapefile and the master spreadsheet created by GMCA.

@@ -116,8 +116,12 @@ Each map uses a similar range of data. An example using the DERI score is presen
 
 Following the above, and substituting in the relevant data for other maps will create sufficient maps to be used in the final dashboard. They will be filtered by the chosen areas in the filter.
 
-### Charts and tables
+### Charts
+A chart was also created for each of the component scores and the overall DERI score. Each chart shows where each LSOA in the chosen local authority sits on a scale of 0 to 10. Each chart is similar, but an example of how to create this is again presented below for the DERI score.
 
+#### Example: DERI Score chart creation
+1. Add the `DERI score` field to the 'Columns' area.
+2. Add the `DERI score` field to the 
 ### Additional sheets
 
 ## Dashboard creation

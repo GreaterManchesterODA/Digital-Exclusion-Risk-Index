@@ -192,7 +192,10 @@ A button has been added at the bottom, to provide a link back to the home dashbo
 
 This dashboard can be recreated for the component scores, substituting in the graphs, maps, weightings and warnings for that score.
 
+### Dashboard actions and filter
+A range of dashboard actions were created for each dashboard. The first action run is that the local authority filter from the first map applies to all worksheets using the same data source.
 
+There are six dashboard actions in each dashboard. Two filters, which alter the 'LSOA Text' and relevant 'Score Text' sheets; and four highlighters to highlight the map and the chart when LSOAs are selected or hovered over. Appendix G sets out all the dashboard actions created.
 
 ## Appendix A: Fields in the inner joined Tableau data sources
 The following table lists the joined data source fields. The two sources are the shapefile and the master spreadsheet created by GMCA.
@@ -299,3 +302,31 @@ The following table lists the joined data source fields. The two sources are the
 |Warning: Age component weighting|`IF ([Weighting: 65+]+[Weighting: 75+])!=100 THEN 'Warning: Weightings need to sum to 100.' END`|
 |Warning: Broadband component weighting|`IF ([Weighting: avg download speed]+[Weighting: connections less than 10MBit/s]+[Weighting: homes unable to receive 30MBit/s])!=100 THEN 'Warning: Weightings need to sum to 100.' END`|
 |Warning: Deprivation component weighting|`IF ([Weighting: % with no quals]+[Weighting: guaranteed pension credit]+[Weighting: IMD score]+[Weighting: unemployment rate])!=100 THEN 'Warning: Weightings need to sum to 100.' END`|
+
+## Appendix G: Dashboard actions
+|Action title|Type|Run on|Source sheet(s)|Target sheet(s)|Clearing the selection will...|
+|---|---|---|---|---|---|
+|Filter DERI score based on hover over map|Filter|Hover|DERI Score graph; Map of DERI score|DERI Score Text; LSOA Text|Leave the filter|
+|Filter DERI score based on selected area|Filter|Select|DERI Score graph; Map of DERI score|DERI Score Text; LSOA Text|Leave the filter|
+|Highlight DERI map based on graph hover|Highlight|Hover|DERI Score graph|Map of DERI score||
+|Highlight DERI score graph on map hover|Highlight|Hover|Map of DERI score|DERI Score graph||
+|Highlight DERI map based on graph selection|Highlight|Select|DERI Score graph|Map of DERI score||
+|Highlight DERI score graph on map selection|Highlight|Select|Map of DERI score|DERI Score graph||
+|Filter Age score based on hover over map|Filter|Hover|Age Score graph; Map of Age score|Age Score Text; LSOA Text|Leave the filter|
+|Filter Age score based on selected area|Filter|Select|Age Score graph; Map of Age score|Age Score Text; LSOA Text|Leave the filter|
+|Highlight Age map based on graph hover|Highlight|Hover|Age Score graph|Map of Age score||
+|Highlight Age score graph on map hover|Highlight|Hover|Map of Age score|Age Score graph||
+|Highlight Age map based on graph selection|Highlight|Select|Age Score graph|Map of Age score||
+|Highlight Age score graph on map selection|Highlight|Select|Map of Age score|Age Score graph||
+|Filter Broadband score based on hover over map|Filter|Hover|Broadband Score graph; Map of Broadband score|Broadband Score Text; LSOA Text|Leave the filter|
+|Filter Broadband score based on selected area|Filter|Select|Broadband Score graph; Map of Broadband score|Broadband Score Text; LSOA Text|Leave the filter|
+|Highlight Broadband map based on graph hover|Highlight|Hover|Broadband Score graph|Map of Broadband score||
+|Highlight Broadband score graph on map hover|Highlight|Hover|Map of Broadband score|Broadband Score graph||
+|Highlight Broadband map based on graph selection|Highlight|Select|Broadband Score graph|Map of Broadband score||
+|Highlight Broadband score graph on map selection|Highlight|Select|Map of Broadband score|Broadband Score graph||
+|Filter Deprivation score based on hover over map|Filter|Hover|Deprivation Score graph; Map of Deprivation score|Deprivation Score Text; LSOA Text|Leave the filter|
+|Filter Deprivation score based on selected area|Filter|Select|Deprivation Score graph; Map of Deprivation score|Deprivation Score Text; LSOA Text|Leave the filter|
+|Highlight Deprivation map based on graph hover|Highlight|Hover|Deprivation Score graph|Map of Deprivation score||
+|Highlight Deprivation score graph on map hover|Highlight|Hover|Map of Deprivation score|Deprivation Score graph||
+|Highlight Deprivation map based on graph selection|Highlight|Select|Deprivation Score graph|Map of Deprivation score||
+|Highlight Deprivation score graph on map selection|Highlight|Select|Map of Deprivation score|Deprivation Score graph||

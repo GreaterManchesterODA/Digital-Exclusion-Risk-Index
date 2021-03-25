@@ -50,7 +50,7 @@ The first is the 2011 LSOA boundary shapefile from ONS, [available here](https:/
 
 The second was created by GMCA, by sourcing all the relevant data and adding into a single Excel spreadsheet. The dataset includes only the indicator values, and relevant denominators, such as the total 16+ population. Whilst scores can be calculated in Excel and input to the dataset, it was felt that an approach that built the measurements in Tableau would be more beneficial, as they would update automatically if any changes needed to be made to the base dataset. Similarly, this also keeps the core dataset clean for other users, who may want to create their own calculations.
 
-Furthermore, we added additional geographic information for each LSOA to the dataset. This was done using the lookup
+Furthermore, we added additional geographic information for each LSOA to the dataset. This was done using an ONS lookup [available here](https://geoportal.statistics.gov.uk/datasets/output-area-to-lower-layer-super-output-area-to-middle-layer-super-output-area-to-local-authority-district-december-2020-lookup-in-england-and-wales).
 
 These two data sources were loaded into Tableau, with an inner join based on the LSOA code.
 
@@ -194,7 +194,7 @@ There are 6 dashboards that make up the tool:
 Dashboard 3 - 6 are effectively similar. They are styled in the same way, but use different graphs and maps.
 
 #### Example: DERI Score Dashboard
-The dashboard contains the following sheets: LSOA Text; DERI Score Text; Map of DERI Score; DERI Score graph; and DERI weighting warning. Additionally, there are five text boxes, two image boxes, a floating legend, a tiled filter and the relevant weightings for the dashboard.
+The dashboard contains the following sheets: LSOA Text; DERI Score Text; Map of DERI Score; DERI Score graph; and DERI weighting warning. Additionally, there are five text boxes, two image boxes, a floating legend, a tiled filter, the relevant weightings for the dashboard, and two buttons. 
 
 The dashboard is arranged in both floating and tiled formats. The tiled format is arranged in the following way:
 * Vertical
@@ -216,12 +216,13 @@ The dashboard is arranged in both floating and tiled formats. The tiled format i
     * Image: Salford City Council logo
     * Text box: 'Produced by'
     * Image: GM ODA logo
+    * Button: Home page
 
-The score colour range is placed as a floating container in the top left of the map. This highlights the colours of the relevant areas.
+The score colour range is placed as a floating container in the bottom left of the map. This highlights the colours of the relevant areas.
 
-Additionally, the weighting parameters and the 'DERI weighting warning' sheet are held in a floating vertical container.
+Additionally, the weighting parameters and the 'DERI weighting warning' sheet are held in a floating vertical container at the top right of the map, which can be brought in and out of view via the click of a button.
 
-A button has been added at the bottom, to provide a link back to the home dashboard.
+A second button has been added at the bottom right of the page, to provide a link back to the home dashboard.
 
 This dashboard can be recreated for the component scores, substituting in the graphs, maps, weightings and warnings for that score.
 

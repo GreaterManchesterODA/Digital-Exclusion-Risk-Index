@@ -75,7 +75,7 @@ The calculation used for each indicator (i) and each LSOA (j) in each district (
 
 However, for one of the indicators (average download speed), a lower value indicated a higher risk. As a result, the calculation is different for this indicator. There are two possible formulations:
 
->10 x ((Maximum value if i across all LSOAs in district k) - (Value of indicator i for LSOA j in district k)) / ((Maximum value of i across all LSOAs in district k) - (Minimum value of i across all LSOAs in district k))
+>10 x ((Maximum value of indicator i across all LSOAs in district k) - (Value of indicator i for LSOA j in district k)) / ((Maximum value of i across all LSOAs in district k) - (Minimum value of i across all LSOAs in district k))
 
 OR
 

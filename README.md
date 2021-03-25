@@ -1,4 +1,5 @@
 |Latest version:|[Version 1](version-1)|
+|---|---|
 
 # Digital Exclusion Risk Index
 An index of risk of digital exclusion across England and Wales.

@@ -15,19 +15,31 @@
 * [DERI Score](#deri-score)
   * [Weightings](#weightings)
 
+## Introduction
+This document sets out the methodology for creating the DERI score. It makes some significant changes from the Salford DERI methodology on which it is based. As the tool is developed, updated versions of this methodology will be generated to reflect the changes to how the score is calculated.
+
 ## General process
 The DERI score is composed of a number of calculations that each build on top of one another. The base level for these calculations is a series of individual indicators at an LSOA level. The general process is:
 
-1. Individual indicators are used to create an individual indicator score for each LSOA.
-2. These indicator scores are then weighted to create several component scores.
-3. These components are then weighted to create the final DERI score.
+1. Individual indicators are used to create an individual indicator score for each LSOA between 0 and 10.
+2. These indicator scores are then weighted and summed to create several component scores.
+3. These components are then weighted and summed to create the final DERI score.
 
-The most important area of this work is the original indicator score calculation.
+The most important area of this work is the indicator score calculation, as the rest of the calculations are built upon these.
 
 ## Choice of indicators
 The original choice of indicators comes from work completed internally at Salford City Council. The indicators aim to convey the breadth of the issue of digital exclusion, covering aspects such as age, deprivation and affordability, access, and activity.
 
 It is important to review these over time, and to ensure that chosen and new indicators are not so closely correlated that they do not 'double-count' an issue.
+
+For this first version of the tool, the methodology makes some changes to the indicators used from the original Salford definition. The changes are:
+* The Digital Hard to Count score has been removed from the calculation. This dataset was created to aid the Census, and understand the propensity to engage with the Census digitally. It has not been openly released by ONS, and so cannot be accessed for all areas of the country. We will explore whether this dataset is appropriate to use following its release, or whether a different but related dataset might be better to use. For example, it may be more beneficial to use actual Census figures on the numbers who filled in the Census digitally.
+* The proportion of contacts to local services made online has been removed. This indicator was available for Salford only.
+* The proportion of council tax bills paid online has been removed. Again, this dataset was available for Salford only.
+
+This has had two major impacts on the DERI score calculation:
+* The activity component has been removed from the DERI score. The three indicators that constituted this component have been removed from the calculation.
+* The [weighting](#weightings) of the broadband component raises from 17% in Salford's original approach to 33% in this methodology. 
 
 ## Choice of geography
 The original tool developed by Salford City Council focused on ward areas. All of the datasets used are available at an LSOA or OA level, but not all are available at ward level. It was suggested that the LSOA level of detail remained, and as such the DERI score is provided at an LSOA level. 

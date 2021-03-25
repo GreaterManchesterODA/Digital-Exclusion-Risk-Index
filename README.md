@@ -1,4 +1,4 @@
-|Latest version:|[Version 1](version-1)|
+|Latest version:|[Version 1](version-1/)|
 |---|---|
 
 # Digital Exclusion Risk Index

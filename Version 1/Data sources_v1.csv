@@ -7,4 +7,4 @@ Average download speed,Connected Nations update - Summer 2019 - Fixed output are
 Unemployment rate,Claimant count,January 2021,15th February 2021,DWP,https://www.nomisweb.co.uk/query/construct/summary.asp?mode=construct&version=0&dataset=162
 Index of Multiple Deprivation score,English Indices of Deprivation 2019,Various: 2011 - 2018,26th September 2019,MHCLG,https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019
 Percentage of 16+ population with no qualifications,Census 2011,March 2011,2011,ONS,https://www.nomisweb.co.uk/query/construct/summary.asp?mode=construct&version=0&dataset=623
-Numbers of Guaranteed Pension Credit claimants per 1,000 residents aged 65+,August 2020,February 2021,DWP,https://stat-xplore.dwp.gov.uk/webapi/jsf/login.xhtml
+"Numbers of Guaranteed Pension Credit claimants per 1,000 residents aged 65+",Pension Credit claimants,August 2020,February 2021,DWP,https://stat-xplore.dwp.gov.uk/webapi/jsf/login.xhtml

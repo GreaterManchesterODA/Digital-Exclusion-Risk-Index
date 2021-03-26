@@ -56,33 +56,33 @@ These two data sources were loaded into Tableau, with an inner join based on the
 Each indicator value was used to calculate a score between 0 and 10. The aim of this is to provide scores that can be weighted and combined to create a single Digital Exclusion Risk Index. The calculation for each of the indicators was marginally different. Each score was created in Tableau as a calculated field. As highlighted in the [version 1 notes](Notes_v1.md), the decision was made to calculate indicator scores at the local authority level. Each LSOA score was based on the maximum and minimum LSOA values of the district it sits within. This means that two LSOAs with the same indicator values in two separate districts may have different scores - they will be dependent on different maxima and minima.
 
 ### Maximum and minimum calculations
-In order to create the minimum of each district's LSOA values, the calculation needs to be fixed at the local authority level. For each indicator score, it is possible to include this element within the calculation in Tableau. However, to cut down on the amount of typing and complexity of each calculation, it was decided to create calculated fields for the maximum and minimum values of each indicator for each LSOA in each district.
+In order to create the minimum of each district's LSOA values, the calculation needs to be fixed at the local authority level. For each indicator score, it is possible to include this element within the calculation in Tableau. However, to cut down on the complexity of each calculation, it was decided to create calculated fields for the maximum and minimum values of each indicator for each LSOA in each district.
 
 The standard calculation used for each 'maximum' field was:
 
 `{ FIXED [Local authority name]: MAX([indicator])}`
 
-where `[indicator]` is the the particular indicator field (identified in Appendix A below).
+where `[indicator]` is the the particular indicator field (identified in [Appendix A](#appendix-a) below).
 
 Similarly, the calculation used for the 'minimum' field was:
 
 `{ FIXED [Local authority name]: MIN([indicator])}`
 
-In total, 18 calculated fields were created - one minimum and one maximum calculated field for each indicator. The full list of calculated fields and calculations is presented in Appendix B.
+In total, 18 calculated fields were created - one minimum and one maximum calculated field for each indicator. The full list of calculated fields and calculations is presented in [Appendix B](#appendix-b).
 
 ### Calculating indicator scores
 Using the minimum and maximum value calculated fields mentioned above, individual scores between 0 and 10 can be created for each indicator. In most instances, a higher indicator value is assumed to relate to a higher risk of digital exclusion. Therefore, the calculation identifies where on the scale between the minimum and maximum values in the district each LSOA lies. The highest value would receive a score of 10, and the lowest value a score of 0. A value halfway between the highest and lowest values would gain a score of 5.
 
 The general calculation for this was:
 `10*([indicator value]-[Min of indicator])/([Max of indicator]-[Min of indicator])`
-where `[indicator value]` is the value of the the indicator for each LSOA, and `[Max of indicator]` and `[Min of indicator]` represent the maximum and minimums of that indicator, as mentioned above.
+where `[indicator value]` is the value of the the indicator for each LSOA, and `[Max of indicator]` and `[Min of indicator]` represent the maximum and minimums of that indicator, as mentioned above, at the district level.
 
 However, one indicator - the average download speed - was associated with higher risk of digital exclusion. As average broadband speeds are lower, there is a risk that many homes will have low speed connections that might be underutilised. In this instance, the calculation is reversed: when average broadband speeds are low, the score needs to be high, and vice versa:
 `10*([Max of indicator]-[indicator value])/([Max of indicator]-[Min of indicator])`
 
 There are no log functions used in the calculation. This is something we may explore in future. A log function would help to identify if it may be harder to reach a higher value. For example, it may be more difficult to reduce down an unemployment rate from 1% to 0% than it would be to reduce it from 10% to 9%.
 
-A full list of indicator score calculations is provided in Appendix C.
+A full list of indicator score calculations is provided in [Appendix C](#appendix-c).
 
 ## Component scores
 The next stage of the process is to create component scores. These component scores are based on the sum of weighted indicator scores. Only three component scores were created for this version of the tool:
@@ -104,7 +104,7 @@ To create each component score, weightings are applied to each indicator score. 
 
 The decision was made to create these as an integer between 0 and 100, with the weightings within one component calculation, or the calculation for the overall DERI score, to sum to 100. One issue here is that, in using integers, we have applied integers where the original Salford tool may have implemented a decimal (e.g. 33.3). In this case, we have altered the weightings so that they always sum to 100.
 
-A full list of parameters and weightings is available in Appendix D. This includes the weightings applied to both indicator scores and component scores.
+A full list of parameters and weightings is available in [Appendix D](#appendix-d). This includes the weightings applied to both indicator scores and component scores.
 
 ### Calculating component scores
 The general calculation method for each component score is:
@@ -112,16 +112,16 @@ The general calculation method for each component score is:
 
 This weighted sum is applied to all of the relevant indicators for each component to produce a component score.
 
-A full list of component score calculations is presented in Appendix E.
+A full list of component score calculations is presented in [Appendix E](#appendix-e).
 
 ## Final DERI score
-The final DERI score is composed of the three component scores, weighted and summed. The weightings, presented as parameters in Tableau, are shown in Appendix D, and the component scores in Appendix E. This approach contrasts with the original Salford tool, as one component area - activity - is not included. As such, the weighting for all components is equal in this version of the tool (with the exception that the weighting is an integer, and so the values are 33, 33 and 34).
+The final DERI score is composed of the three component scores, weighted and summed. The weightings, presented as parameters in Tableau, are shown in [Appendix D](#appendix-d), and the component scores in Appendix E. This approach contrasts with the original Salford tool, as one component area - activity - is not included. As such, the weighting for all components is equal in this version of the tool (with the exception that the weighting is an integer, and so the values are 33, 33 and 34).
 
 The calculation for the final DERI score is:
 `([Age component]*([Weighting: age component]/100)) + ([Broadband component]*([Weighting: broadband component]/100)) + ([Deprivation component]*([Weighting: deprivation component]/100))`
 
 ## Additional calculated fields
-There are four more calculated fields created in Tableau. These four are listed in Appendix F. They are text outputs that take different weightings as an input. When the relevant weightings do not sum to 100, the text output of the calculated field is a warning that summed weightings should equal 100.
+There are four more calculated fields created in Tableau. These four are listed in [Appendix F](#appendix-f). They are text outputs that take different weightings as an input. When the relevant weightings do not sum to 100, the text output of the calculated field is a warning that summed weightings should equal 100.
 
 ## Sheets
 The final Tableau tool is composed of several dashboards. Each of these dashboards is itself composed of several sheets. This section sets out the different sheets created, and the content of these sheets. Choices of colour are not covered here, but it is sensible to include accessible colours as a way of showing change / variance in scores.
@@ -227,7 +227,7 @@ This dashboard can be recreated for the component scores, substituting in the gr
 ### Dashboard actions and filter
 A range of dashboard actions were created for each dashboard. The first action run is that the local authority filter from the first map applies to all worksheets using the same data source.
 
-There are six dashboard actions in each dashboard. Two filters, which alter the 'LSOA Text' and relevant 'Score Text' sheets; and four highlighters to highlight the map and the chart when LSOAs are selected or hovered over. Appendix G sets out all the dashboard actions created.
+There are six dashboard actions in each dashboard. Two filters, which alter the 'LSOA Text' and relevant 'Score Text' sheets; and four highlighters to highlight the map and the chart when LSOAs are selected or hovered over. [Appendix G](#appendix-g) sets out all the dashboard actions created.
 
 ## Appendix A: Fields in the inner joined Tableau data sources
 The following table lists the joined data source fields. The two sources are the shapefile and the master spreadsheet created by GMCA.

@@ -19,7 +19,7 @@
 ---
 
 ## Introduction
-This document sets out the methodology for creating the DERI score. It makes some significant changes from the Salford DERI methodology on which it is based. As the tool is developed, updated versions of this methodology will be generated to reflect the changes to how the score is calculated.
+This document sets out the methodology for creating the Digital Exclusion Risk Index (DERI) score. It makes some significant changes from an original DERI methodology, produced by Salford City Council, on which it is based. As the tool is developed, updated versions of this methodology will be generated to reflect the changes to how the score is calculated.
 
 ## General process
 The DERI score is composed of a number of calculations that each build on top of one another. The base level for these calculations is a series of individual indicators at an LSOA level. The general process is:
@@ -31,21 +31,21 @@ The DERI score is composed of a number of calculations that each build on top of
 The most important area of this work is the indicator score calculation, as the rest of the calculations are built upon these.
 
 ## Choice of indicators
-The original choice of indicators comes from work completed internally at Salford City Council. The indicators aim to convey the breadth of the issue of digital exclusion, covering aspects such as age, deprivation and affordability, access, and activity.
+The original choice of indicators comes from work completed internally at Salford City Council. This work by the Greater Manchester Combined Authority utilises these as a basis for this DERI methodology. The indicators aim to convey the breadth of the issue of digital exclusion, covering aspects such as age, deprivation, broadband access, and activity.
 
 It is important to review these over time, and to ensure that chosen and new indicators are not so closely correlated that they do not 'double-count' an issue.
 
-For this first version of the tool, the methodology makes some changes to the indicators used from the original Salford definition. The changes are:
-* The Digital Hard to Count score has been removed from the calculation. This dataset was created to aid the Census, and understand the propensity to engage with the Census digitally. It has not been openly released by ONS, and so cannot be accessed for all areas of the country. We will explore whether this dataset is appropriate to use following its release, or whether a different but related dataset might be better to use. For example, it may be more beneficial to use actual Census figures on the numbers who filled in the Census digitally.
-* The proportion of contacts to local services made online has been removed. This indicator was available for Salford only.
-* The proportion of council tax bills paid online has been removed. Again, this dataset was available for Salford only.
+For this first version of the tool, the methodology makes some changes to the indicators used in Salford's original work. The changes are:
+* This DERI methodology does not include a Digital Hard to Count score. This dataset was created to aid the Census, and understand the propensity to engage with the Census digitally. It has not been openly released by ONS, and so cannot be accessed for all areas of the country. We will explore whether this dataset is appropriate to use following its release, or whether a different but related dataset might be better to use. For example, it may be more beneficial to use actual Census figures on the numbers who filled in the Census digitally.
+* This DERI methodology does not include the proportion of contacts to local services made online. This indicator is not available nationally.
+* This DERI methodology does not include the proportion of council tax bills paid online. Again, this dataset was not available nationally.
 
 This has had two major impacts on the DERI score calculation:
 * The activity component has been removed from the DERI score. The three indicators that constituted this component have been removed from the calculation.
 * The [weighting](#weightings) of the broadband component raises from 17% in Salford's original approach to 33% in this methodology. 
 
 ## Choice of geography
-The original tool developed by Salford City Council focused on ward areas. All of the datasets currently used are available at an LSOA or OA level, but not all are available at ward level. It was agreed that version 1 of the score would therefore use the LSOA level of detail. 
+The original methodology developed by Salford City Council focused on ward areas. All of the datasets currently used are available at an LSOA or OA level, but not all are available at ward level. GMCA decided that this DERI methodology would therefore use the LSOA level of detail. 
 
 ## Individual indicator scores
 There are 9 individual indicators that make up the overall DERI score. These are individually weighted to form the next part in the calculation chain, the component scores. We have created a data scources list that can be used to create the datasets and scores.
@@ -84,13 +84,13 @@ OR
 Both calculations should provide the same outcome.
 
 ### Local considerations
-The DERI score is based on some original work at Salford City Council. As this work was created for just one local authority, the maximum and minimum values of each indicator were based on the maximum and minimum levels of the local authority. To expand this work, there are multiple approaches that can be taken to calculate the score.
+The DERI score is based on some original work at Salford City Council. As this work was created for just one local authority, the maximum and minimum values of each indicator were based on the maximum and minimum levels of the local authority. To expand this work nationally, GMCA considered multiple approaches to calculate the score.
 
-The first is to consider this information on a single geographic basis. That is, use the maximum and minimum values nationally for each indicator. However, not all datasets are provided across all areas of the UK, or even of Great Britain - for example, the Indices of Deprivation for England and Wales are two separate datasets. Substitute indicators might need to be used in these instances, which might make a single national maximum and minimum value for all areas unlikely.
+The first potential option is to consider this information on a single geographic basis. That is, use the maximum and minimum values nationally for each indicator. However, not all datasets are provided across all areas of the UK, or even of Great Britain - for example, the Indices of Deprivation for England and Wales are two separate datasets. Substitute indicators might need to be used in these instances, which might make a single national maximum and minimum value for all areas unlikely.
 
-The second option is to consider a smaller geography, such as local authority level, for the maximum and minimum values. The benefit of this approach is it provides a localised view of where risk is highest, regardless of the wider levels of risk. That is, an LSOA could get a score of 10 on one indicator, because it is the highest indicator value within the local authority; but its value may be lower than in other areas. Unless the indicator value in that LSOA was also the highest nationally, the LSOA would not get the same score as in the first approach.
+The second potential option is to consider a smaller geography, such as local authority level, for the maximum and minimum values. The benefit of this approach is it provides a localised view of where risk is highest, regardless of the wider levels of risk. That is, an LSOA could get a score of 10 on one indicator, because it is the highest indicator value within the local authority; but its value may be lower than in other areas. Unless the indicator value in that LSOA was also the highest nationally, the LSOA would not get the same score as in the first approach.
 
-The third option is to take the maximum and minimum values of the areas of focus. That is, if a local authority is being viewed, the maximum and minimum values of that local authority are used; if a region is being viewed, the maximum and minimum values of that region are used. This would mean a recalculation - and thereby reprioritisation of risk - dependent on the area in focus.
+The third potential option is to take the maximum and minimum values of the areas of focus. That is, if a local authority is being viewed, the maximum and minimum values of that local authority are used; if a region is being viewed, the maximum and minimum values of that region are used. This would mean a recalculation - and thereby reprioritisation of risk - dependent on the area in focus.
 
 For this methodology, we utilised the second option. The creation of an online tool will help in the calculation of the third option, and this will be explored in future.
 
@@ -115,7 +115,6 @@ The overall DERI score takes each of the components and weights them to provide 
 
 ### Component weightings
 The weightings used for the DERI score are:
-* Age component: 33%
-* Broadband component: 17%
-* Deprivation component: 33%
-* Activity component: 17%
+* Age component: 33.3%
+* Broadband component: 33.3%
+* Deprivation component: 33.3%

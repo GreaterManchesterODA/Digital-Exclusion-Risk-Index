@@ -19,6 +19,5 @@ The development includes two elements:
 Each version folder will contain:
 * Methodology
 * Data sources
-* Datasets
 * Tableau development notes
 * Wider notes and considerations

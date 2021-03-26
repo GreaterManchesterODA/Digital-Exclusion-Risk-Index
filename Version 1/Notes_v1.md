@@ -1,5 +1,19 @@
 # DERI Tool - Version 1 Notes
 
+## Contents
+* [Introduction])(#introduction)
+* [Background](#background)
+* [Version 1](#version-1)
+* [Data inclusion](#data-inclusion)
+* [Geographic choice](#geographic-choice)
+  * [Converting OA to LSOA data](#converting-oa-to-lsoa-data)
+* [Calculating each indicator score](#calculating-each-indicator-score)
+* [Calculating component scores](#calculating-component-scores)
+* [Calculating the DERI score](#calculating-the-deri-score)
+* [Presenting the information](#presenting-the-information)
+
+---
+
 ## Introduction
 Version 1 of the Digital Exclusion Risk Index (DERI) tool is an online series of Tableau dashboards that aim to highlight the risk of digital exclusion at a lower super output area geography. These notes represent some of the considerations, calculations and decisions relating to the creation of version 1 of the tool. It is designed to complement both the [methodology document](DERI%20Score%20Methodology_v1.md) and the [Tableau develeopment document](Tableau%20development_v1.md) in this repository. It highlights important considerations for this version of the tool, and the divergences from the original tool developed by Salford on which this tool is based.
 
@@ -11,7 +25,6 @@ Initial discussions with Salford identified a methodology and approach, as well 
 The aim of this work is to provide a single, coherent understanding of the risk of digital exclusion, and to iteratively develop this work with relevant feedback on issues such as usability, datasets, calculations and visualisations.
 
 This note, and the accompanying [methodology](DERI%20Score%20Methodology_v1.md) and [Tableau development notes](Tableau%20development_v1.md), explain the process in developing a first version of the DERI tool. Feedback on the first version will be collated, and used to produce a note for an updated version of the tool.
-
 
 ## Version 1
 Version 1 of the tool is designed as a simple, proof-of-concept version of the tool, visualising very basic information: dashboards showing the final DERI score for each LSOA, and each of the components of the final DERI score. It marks the first created version utilising a simple set of data, and was designed to produce something that could be tested with users. It is also designed to show information for all of England, at the least.
@@ -86,3 +99,48 @@ In other instances, data was simply unavailable from the chosen dataset. For exa
 > **DECISION:** Where a component or overall DERI score cannot be calculated, the 'null' field is filtered out of the view.
 
 > **DECISION:** We will explore with partners how this additional data might be included, and where data is not comparable, what datasets might be used to form a comparable basis.
+
+## Calculating component scores
+The component score calculations are set out in the methodology document. With the exception of the aforementioned lack of data for activity, each of the components follow a similar methodology to the original work by Salford.
+
+> **DECISION:** The data sources and proposed weightings for each indicator (shown in the [methodology document](DERI%20Score%20Methodology_v1.md)) will be the same as those in the original Salford work as default.
+
+> **DECISION:** There will not be an activity component in version 1 of the tool.
+
+The development of a component score and DERI tool for the nation, however, means that different areas may have a different focus for their digital inclusion activities. For example, one area may be concerned more with digital exclusion based on age, whereas others may consider access to broadband as a key consideration. It is therefore important that the tool allows users to weight the different indicators and components as they would choose to do.
+
+> **DECISION:** Version 1 of the tool will allow users to change the weighting of different components and indicators in the final score. However, the default values will be those in the [methodology document](DERI%20Score%20Methodology_v1.md).
+
+## Calculating the DERI score
+The DERI Score is calculated using a similar method to the component scores: a weighted sum of lower level scores. In the case of the overall DERI score, this is a weighted sum of the component scores; whereas the component scores were a weighted sum of indicator scores. The decision was made to weight each of the three component scores in this DERI tool equally (i.e. 33% each). Practically, however, the parameters used in the Tableau tool are integers, and as such the weightings are 33-33-34, to sum to 100.
+
+> **DECISION:** The weightings of the components will be parameters, of values 33, 33 and 34 for age, broadband and deprivation.
+
+## Presenting the information
+We needed to consider how users might interact with the information. It was felt that a list / table of areas would not be beneficial, given the methodology uses LSOAs. LSOAs have simple codes and names that do not reflect commonly used names of areas, in the same way that wards might. Furthermore, a list of LSOAs might be considerably long if there are multiple areas chosen in the tool.
+
+> **DECISION:** The tool will not include a table showing a list of LSOAs.
+
+In terms of presenting the information, the aim of making a national DERI tool is to provide comparison and to see neighbouring / surrounding areas on a similar basis. As such, it was decided that the tool should allow users to choose multiple areas to view. However, this should be available at a sensible geography - a list of LSOAs would be extensive, and as mentioned above, not as valuable in identifying areas as wards might be.
+
+> **DECISION:** Version 1 of the tool will allow users to choose the areas they want to focus on.
+
+> **DECISION:** The tool will use local authority areas as a way to filter and visualise the data. This means that users will be able to choose 'Bolton', as an example, and all LSOAs in Bolton will appear on screen.
+
+It was felt that a map format, given that this shows the risk in different areas, would be beneficial to visualise the data. Additionally, the tool should show the variability of the overall DERI score, and the component scores, within the chosen areas. Both of these methods of visualisation should be aligned, so that choosing or hovering over an LSOA in one visualisation highlights it in the other visualisation (e.g. hovering over an LSOA in the map highlights the LSOA on a graph).
+
+> **DECISION:** The tool will use a map to highlight the main data.
+> **DECISION:** The tool will use a graph to highlight the variability in data in the chosen area(s).
+
+A further important consideration is to make the information, and the tool, as accessible as possible. This means three things:
+1. The data, guides, decisions and methodology should be made open for others to use.
+2. The tool itself should be accessible by all, and not in a closed system.
+3. The tool and data should be accessible by all types of users, including those requiring support to access content on the internet.
+
+We have attempted to ensure this is the case, by providing these documents openly, using Tableau server to present the dashboards, and considering accessibility requirements in the creation of the dashboard (e.g. colours appropriate for those with colour vision deficiency (colour blindness).
+
+> **DECISION:** The data, notes, data sources and methodology of the tool should be made open.
+
+> **DECISION:** The tool should use Tableau server to present the data, and the link be accessible to all.
+
+> **DECISION:** The tool should try to be as accessible as possible to all users, focusing on key accessibility requirements.

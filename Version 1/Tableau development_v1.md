@@ -34,11 +34,9 @@
 ---
 
 ## Introduction
-This document sets out the processes used to create version 1 of the Digital Exclusion Risk Index on Tableau. In comparison to the version 1 notes, which details the considerations and issues in calculatng and building the tool, this document sets out how one might build exactly the same tool in Tableau.
+This document sets out the processes used to create version 1 of the Digital Exclusion Risk Index on Tableau<sup>[1](#ft1)</sup>. In comparison to the version 1 notes, which details the considerations and issues in calculatng and building the tool, this document sets out how one might build exactly the same tool in Tableau. It covers the data input to version 1 of the tool, the calculated fields, the sheets created and the final dashboard.
 
-It covers the data input to version 1 of the tool, the calculated fields, the sheets created and the final dashboard.
-
-The aim of this development document is to update users so that they can also create a similar tool using their own data, or to recreate the DERI tool in full.
+The aim of this development document is to update users so that they can also create a similar tool using their own data, or to recreate the DERI tool in full. It should be read alongside the [notes document](Notes_v1.md), [data sources](Data%20sources_v1.csv), and the [methodology](DERI%20Score%20Methodology_v1.md).
 
 ## Tableau versions
 There are two versions of Tableau that have been used to create the tool. The first is v2018.3.4. This was used for the creation of much of the original tool. However, newer versions provide additional elements that are beneficial for different components of the tool. As a result, at a later stage a new v.2020.3.0 was used.
@@ -55,7 +53,7 @@ Furthermore, we added additional geographic information for each LSOA to the dat
 These two data sources were loaded into Tableau, with an inner join based on the LSOA code.
 
 ## Indicator scores
-Each indicator value was used to calculate a score between 0 and 10. The aim of this is to provide a range of normalised scores that can be weighted and combined to create a single Digital Exclusion Risk Index. The calculation for each of the indicators was marginally different. Each score was created in Tableau as a calculated field. As highlighted in the [version 1 notes](Version%201%20Notes.md), the decision was made to fix elements of the calculation. Each LSOA score was based on the maximum and minimum LSOA values of the district it sits within. This means that two LSOAs with the same indicator values in two separate districts may have different scores - they will be dependent on different maxima and minima.
+Each indicator value was used to calculate a score between 0 and 10. The aim of this is to provide scores that can be weighted and combined to create a single Digital Exclusion Risk Index. The calculation for each of the indicators was marginally different. Each score was created in Tableau as a calculated field. As highlighted in the [version 1 notes](Notes_v1.md), the decision was made to calculate indicator scores at the local authority level. Each LSOA score was based on the maximum and minimum LSOA values of the district it sits within. This means that two LSOAs with the same indicator values in two separate districts may have different scores - they will be dependent on different maxima and minima.
 
 ### Maximum and minimum calculations
 In order to create the minimum of each district's LSOA values, the calculation needs to be fixed at the local authority level. For each indicator score, it is possible to include this element within the calculation in Tableau. However, to cut down on the amount of typing and complexity of each calculation, it was decided to create calculated fields for the maximum and minimum values of each indicator for each LSOA in each district.
@@ -364,3 +362,6 @@ The following table lists the joined data source fields. The two sources are the
 |Highlight Deprivation score graph on map hover|Highlight|Hover|Map of Deprivation score|Deprivation Score graph||
 |Highlight Deprivation map based on graph selection|Highlight|Select|Deprivation Score graph|Map of Deprivation score||
 |Highlight Deprivation score graph on map selection|Highlight|Select|Map of Deprivation score|Deprivation Score graph||
+
+---
+<a name="ft1">1</a>: Tableau is a form of business intelligence and analytics software. [It is available at Tableau's website.](https://www.tableau.com/en-gb) A free download and trial is available from Tableau. The GMCA used [Tableau Desktop](https://www.tableau.com/en-gb/products/desktop) and [Tableau Server](https://www.tableau.com/en-gb/products/server) to create and publish the dashboards. Other business analytics tools will work just as well, but may not provide the same names or options as Tableau. Other options with a free or freemium model are available, such as PowerBI, Plotly and Google Data Studio.  

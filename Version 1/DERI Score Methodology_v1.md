@@ -111,7 +111,7 @@ The deprivation component is built from four indicator scores: the proportion of
 ## DERI Score
 The overall DERI score takes each of the components and weights them to provide a score between 0 and 10, with 0 being low risk of digital exclusion, and 10 being a high risk. The score is again composed of the sum of weighted individual component scores. That is:
 
->(Age component score x age component weighting) + (Deprivation component score x deprivation component weighting) + (Broadband component score x broadband component weighting) + (Activity component score x activity component weighting)
+>(Age component score x age component weighting) + (Deprivation component score x deprivation component weighting) + (Broadband component score x broadband component weighting)
 
 ### Component weightings
 The weightings used for the DERI score are:

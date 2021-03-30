@@ -1,4 +1,4 @@
-|Latest version:|[Version 1](https://github.com/GreaterManchesterODA/Digital-Exclusion-Risk-Index/tree/main/Version%201)|
+|Latest version:|[Version 1](/Version%201)|
 |---|---|
 
 # Digital Exclusion Risk Index
@@ -10,7 +10,7 @@ This project is designed to create a tool for wider use, reduce duplication of w
 This work stems from original work produced by Salford City Council to understand the risk of digital exclusion in the local area. Locality digital inclusion leads in Greater Manchester saw the value in utilising this work, rather than in creating multiple new risk indices, and as such Greater Manchester Combined Authority aimed to create a risk index that incorporates all areas of the country.
 
 ## Development
-The aim is to develop the tool iteratively: develop a working prototype, test with partners, and update. The latest version is [Version 1](https://github.com/GreaterManchesterODA/Digital-Exclusion-Risk-Index/tree/main/Version%201).
+The aim is to develop the tool iteratively: develop a working prototype, test with partners, and update. The latest version is [Version 1](/Version%201).
 
 The development includes two elements:
 1. A methodology for creating a Digital Exclusion Risk Index

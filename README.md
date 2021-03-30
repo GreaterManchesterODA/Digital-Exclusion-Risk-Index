@@ -1,4 +1,5 @@
 |Latest version:|[Version 1](/Version%201)|
+|Current phase:|Testing|
 |---|---|
 
 # Digital Exclusion Risk Index

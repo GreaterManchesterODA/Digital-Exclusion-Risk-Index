@@ -7,10 +7,11 @@
  * [Navigation](#navigation)
 * [User guide page](#user-guide-page)
 * [Individual dashboards](#individual-dashboards)
-  * [Area filter](#area-filter)
-  * [Marker graph](#marker-graph)
-  * [Area score](#area-score)
-  * [Map](#map)
+ * [Area filter](#area-filter)
+ * [Marker graph](#marker-graph)
+ * [Area score](#area-score)
+ * [Map](#map)
+ * [Other components](#other-components)
 * [How might you want to use the tool?](#how-might-you-want-to-use-the-tool)
 
 ---

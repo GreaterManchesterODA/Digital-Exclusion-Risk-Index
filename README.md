@@ -1,4 +1,4 @@
-|Latest version:|[Version 1](https://github.com/GreaterManchesterODA/Digital-Exclusion-Risk-Index/tree/main/Version%201)|
+|Latest version:|[Version 1](/Version%201)|
 |---|---|
 
 # Digital Exclusion Risk Index

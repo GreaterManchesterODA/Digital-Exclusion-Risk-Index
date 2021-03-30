@@ -1,9 +1,10 @@
 # User Guide - Version 1
 
-* [Contents](#contents)
+## Contents
 * [Introduction](#introduction)
 * [Accessing the tool](#accessing-the-tool)
 * [Home page](#home-page)
+ * [Navigation](#navigation)
 * [User guide page](#user-guide-page)
 * [Individual dashboards](#individual-dashboards)
   * [Area filter](#area-filter)
@@ -15,7 +16,7 @@
 ---
 
 ## Introduction
-This document complements the [methodology document](Methodology_v1.md) for version 1 of the Tableau tool. It explains how users can utilise the tool, and what each element of the online tool does.
+This document complements the [methodology document](DERI%20Score%20Methodology_v1.md) for version 1 of the Tableau tool. It explains how users can utilise the tool, and what each element of the online tool does.
 
 ## Accessing the tool
 The tool can be accessed through the main Tableau server link provided by email. For the first few versions of this tool, this link will not be shared openly. Rather, it will be shared with partners to help develop this before a better version is released for wider public use.
@@ -32,6 +33,9 @@ There are 6 parts of the tool:
 The first page is a 'home page' (DERI home page). It provides links to the tool guide and the four dashboards that makes up the tool. It provides a short description of the dashboards and the DERI score. The DERI score is a risk index, providing a number between 0 and 10. When the number is closer to ten, the risk of digital exclusion is higher; when the number is closer to 0, the risk is lower. For each of the components - also scored 0 to 10 - the score represents the risk of digital exclusion associated with that theme: age, deprivation, or broadband speeds and access.
 
 ### Navigation
+Individual navigation buttons in the home page direct users to the individual dashboards or the user guide. However, users can also use the tabs at the very top of every page in the tool, above the page title.
+
+Each dashboard and page, with the exception of the home page, includes a link button that takes users back to the home page. The aim of this is to reduce clutter and stop users from having multiple buttons directing them throughout the dashboard.
 
 ## User guide page
 The user guide page provides a simple image of the DERI dashboard, highlighting all of the relevant components of the dashboard, which are replicated through each of the four dashboards.
@@ -83,13 +87,29 @@ Individually selecting LSOAs can also be done by clicking on an LSOA on the map,
 The background map used is fairly simple, and does not provide major roads, location names or addresses. It does provide general physical geographic components (e.g. rivers, lakes) as a guide, however.
 
 ### Other components
+There are several other components to each dashboard that are added to the dashboard for usability or clarity.
 
 #### Weightings
+Each dashboard shows the relevant weightings for the score presented on the dashboard. The DERI score dashboard, for example, shows the weightings of the different components that make up the score; while the component dashboards show the weightings of the individual indicator scores within it.
+
+The weightings are shown in a collapsible box, floating on the top right of the map. To hide the weightings, click the 'Hide score weightings' button at the top of the weightings, and to open them again, click the 'Edit score weighting button' that appears in its place.
+
+Each weighting is a parameter that affects the score of each component, and therefore the overall DERI score. If you make a change to a weighting for an indicator score in a component dashboard, this will affect the DERI score in the DERI dashboard.
+
+Weightings are set at default settings, and are available in the [methodology note](DERI%20Score%20Methodology_v1.md). The weightings are presented as sliders, which can be altered by the user to alter the different weightings of components and indicators. The sliders move an integer at a time, between 0(%) and 100(%). Once a change is made, the tool will automatically update the relevant scores throughout the dashboard, which may take a moment.
 
 #### Warning
+Weightings within each dashboard need to sum to 100, otherwise some component or indicator scores may be pushed beyond 10. If they do not sum - either they are too low or too high - then a warning will appear below the weightings to explain this. This warning is currently only visible in the expandable weightings container. 
 
 #### Legend
-
-#### Home page link
+A legend also appears in the bottom left of the map. This legend shows the colour coding used for the map, graph and LSOA score for each dashboard. This legend is set: 0 is a dark blue, and 10 is a dark red.
 
 ## How might you want to use the tool?
+There are many different options for using the tool. Users may want to:
+* See their locality scores: this can be done by accessing the relevant dashboard and choosing their locality in the area filter.
+* Compare their area against another: this can be done by choosing the relevant areas in the area filter at the top of each dashboard.
+* Understand digital exclusion relating to a particular component: individual component dashboards allow users to see relevant risk indices for age, deprivation and broadband access and speed.
+* Re-weight the scores to understand a particular conmponent's impact on the DERI score: this can be done using the weightings section in each dashboard.
+* Understand local or regional hotspots: by choosing one or more areas, users can see using the colour coding, graph, map and score, the areas that are at highest risk in each locality of experiencing digital exclusion.
+
+It is important, however, to note what the DERI tool cannot be used for. To take an example, imagine a user wanted to understand the top ten areas at risk of digital exclusion in Greater Manchester. This tool would only show _within each district_ which areas were at risk of digital inclusion. Choosing all ten districts in Greater Manchester and identifying those with the top ten highest DERI scores would not show those at the highest risk of digital exclusion within Greater Manchester. If the risk of digital exclusion was based on maximum and minimum values within all of Greater Manchester, this would elicit different LSOAs at risk than the current approach, which is based on the maximum and minimum values _within each district_.

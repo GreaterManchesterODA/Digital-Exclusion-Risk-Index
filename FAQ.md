@@ -31,19 +31,19 @@ Throughout the latter half of March 2021, GMCA developed a first version of the 
 The work is based on original work by Salford City Council. The DERI is being developed by GMCA, specifically the Research and Digital teams.
 
 ## How can I access the DERI tool?
-The DERI tool is currently closed to a limited number of users for testing, who have been contacted directly. However, all the related information to recreate version 1 of the tool is available in this repository.
+The DERI tool is currently closed to a limited number of users for testing, who have been contacted directly. However, all the related information to recreate version 1 of the tool is [available in this repository](/Version%201).
 
 ## How is the DERI calculated?
-A full methodology document has been created to show how the DERI is calculated. In addition to this methodology, certain elements are specific to Tableau. As such, a Tableau development document has also been created to allow users to recreate the Tableau dashboards on their own. It is envisaged that later versions of the tool will be made more open.
+[A full methodology document](/Version%201/DERI%20Score%20Methodology_v1.md) has been created to show how the DERI is calculated. In addition to this methodology, certain elements are specific to Tableau. As such, a [Tableau development document has also been created](/Version%201/Tableau%20development_v1.md) to allow users to recreate the Tableau dashboards on their own. It is envisaged that later versions of the tool will be made more open.
 
 ## What are the data sources for the DERI?
-There is a data sources document that identifies the source of the data for the indicators that make up the DERI score. These should be read alongside the methodology document.
+There is a [data sources document](/Version%201/Data%20sources_v1.csv) that identifies the source of the data for the indicators that make up the DERI score. These should be read alongside the [methodology document](/Version%201/DERI%20Score%20Methodology_v1.md).
 
 ## What is the geographic basis of the DERI?
 The DERI provides a score between 0 and 10, with 0 being low risk and 10 a high risk of digital exclusion. These are calculated on an LSOA basis, using maxmum and minimum values at the local authority level.
 
 ## Can I access the background data?
-We have not released the background data on this repository. This is due to the data being an early stage prototype, and therefore the data being subject to significant change. However, all of the data sources are identified in the data sources document, and all are accessible datasets.
+We have not released the background data on this repository. This is due to the data being an early stage prototype, and therefore the data being subject to significant change. However, all of the data sources are identified in the [data sources document](/Version%201/Data%20sources_v1.csv), and all are accessible datasets.
 
 ## Can I add data to the DERI?
 No, not at present. The tool is not designed for users to add further data. However, we aim to make the data open so that users can download and use the data from the tool, as well as update with their own information.

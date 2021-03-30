@@ -2,6 +2,21 @@
 
 This document related to [Version 1](/Version%201) of the DERI.
 
+Common questions:
+* [What is the Digital Exclusion Risk Index?](#what-is-the-digital-exclusion-risk-index)
+* [What is the background to the DERI?](#what-is-the-background-to-the-deri)
+* [Who is creating the DERI?](#who-is-creating-the-deri)
+* [How can I access the DERI tool?](#how-can-i-access-the-deri-tool)
+* [How is the DERI calculated?](#how-is-the-deri-calculated)
+* [What are the data sources for the DERI?](#what-are-the-data-sources-for-the-deri)
+* [What is the geographic basis of the DERI?](#what-is-the-geographic-basis-of-the-deri)
+* [Can I access the background data?](#can-i-access-the-background-data)
+* [Can I add data to the DERI?](#can-i-add-data-to-the-deri)
+* [Can I view bespoke geographies in the tool?](#can-i-view-bespoke-geographies-in-the-tool)
+* [What are the next steps for the DERI?](#what-are-the-next-steps-for-the-deri)
+
+---
+
 ## What is the Digital Exclusion Risk Index?
 The Digital Exclusion Risk Index (DERI) is a methodology and a tool to visualise and understand the risk of digital exclusion at a localised geographic level. It uses a number of indicators, which are normalised, weighted and summed, to create a DERI score - a number between 0 and 10 that identifies the risk of digital exclusion in an area. The score is calculated on a lower super output area geography, and presented in a Tableau dashboard to allow users to explore the score in more detail.
 
@@ -28,7 +43,7 @@ There is a data sources document that identifies the source of the data for the 
 The DERI provides a score between 0 and 10, with 0 being low risk and 10 a high risk of digital exclusion. These are calculated on an LSOA basis, using maxmum and minimum values at the local authority level.
 
 ## Can I access the background data?
-We have not released the background data on this repository. This is due to the data being an early stage prototype, and therefore the data being subject to significant change. However, all of the data sources are identified in the data sources document.
+We have not released the background data on this repository. This is due to the data being an early stage prototype, and therefore the data being subject to significant change. However, all of the data sources are identified in the data sources document, and all are accessible datasets.
 
 ## Can I add data to the DERI?
 No, not at present. The tool is not designed for users to add further data. However, we aim to make the data open so that users can download and use the data from the tool, as well as update with their own information.

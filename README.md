@@ -4,6 +4,10 @@
 |Current phase:|Testing|
 |---|---|
 
+|Licence:|[Open Government Licence v3](Open%20Government%20Licence.md)|
+|---|---|
+
+
 # Digital Exclusion Risk Index
 An index of risk of digital exclusion across England and Wales.
 

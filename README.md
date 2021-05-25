@@ -1,7 +1,7 @@
-|Latest version:|[#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) '#f03c15' [Version 1](/Version%201)|
+|Latest version:|[Version 1](/Version%201)|
 |---|---|
 
-|Current phase:|Testing|
+|Current phase:|`#ffa500`Testing|
 |---|---|
 
 |Licence:|[Open Government Licence v3](Open%20Government%20Licence.md)|

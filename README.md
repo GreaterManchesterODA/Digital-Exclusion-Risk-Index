@@ -1,7 +1,7 @@
-|Latest version:|[Version 1](/Version%201)|
+|Latest version:|[Version 1.1](/Version%201)|
 |---|---|
 
-|Current phase:| `#ffa500` Testing|
+|Current phase:|Development - version 1.2|
 |---|---|
 
 |Licence:|[Open Government Licence v3](Open%20Government%20Licence.md)|
@@ -9,7 +9,7 @@
 
 
 # Digital Exclusion Risk Index
-An index of risk of digital exclusion across England and Wales.
+An index of risk of digital exclusion across England, Wales and Scotland.
 
 This project is designed to create a tool for wider use, reduce duplication of work in creating digital exclusion indices, and come to a collective agreement about what indicators are best to portray the risk of digital exclusion on a local spatial scale.
 

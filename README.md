@@ -1,7 +1,7 @@
 |Latest version:|[Version 1](/Version%201)|
 |---|---|
 
-|Current phase:|`#ffa500`Testing|
+|Current phase:| `#ffa500` Testing|
 |---|---|
 
 |Licence:|[Open Government Licence v3](Open%20Government%20Licence.md)|

@@ -1,4 +1,4 @@
-|Latest version:|[](https://via.placeholder.com/15/f03c15/000000?text=+)[Version 1](/Version%201)|
+|Latest version:|[](https://via.placeholder.com/15/f03c15/000000?text=+) [Version 1](/Version%201)|
 |---|---|
 
 |Current phase:|Testing|

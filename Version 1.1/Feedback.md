@@ -31,5 +31,40 @@ Linked to this, the geography of choice became important. The lower super output
 
 However, many users noted that, especially at the local authority level, work was often based around wards rather than LSOAs. LSOA names and codes are not indicative of *where* an area is located. For example, given the name and code 'E01033667 - Manchester 054E', users would not be able to determine the location; however, the ward 'Piccadilly' has an instant location brought to mind for the user. Therefore, either a tool that explained the ward of the LSOA data (despite overlaps between wards of some LSOAs), overlaid wards, or translated the data to a ward level was considered a useful update.
 
+After some discussion, it was felt that a series of approaches could be taken. Firstly, to consider overlaying ward boundaries and adding in the ward names on the tooltips for the dashboards. This would then provide an overview of wards, whilst showing the potential variance *within* wards that a purely ward-level analysis would not provide. Then to test this approach, and see whether other options might be better - for example, an on/off button for ward overlays, and separately an option to switch between LSOA and ward level analysis.
+
 **Actions:**
+* Add a ward overlay to the data as a starting point.
+* Consider adding an LSOA to ward lookup to the tool so that the ward name is displayed for each LSOA.
+* Add a new background map that shows the roads and place names clearly for users.
+* Update the style of the maps, to reduce opacity and allow users to see more of the underneath map.
+* Review the ward overlays, and understand whether a ward-level tool would be appropriate.
+* Consider using the tooltip to display more ward-level data, where possible.
+
+### Methodology and guidance
+The methodology feedback has been the most abundant. The team has shared the tool quite widely with local and national stakeholders, and the focus on the methodology has been important. Some of these issues cross over specifically with the datasets to be used, and the level of geography.
+
+Generally, users suggested an index approach worked for them - it simplified the issue of digital exclusion, whilst allowing specific datasets to be delved into. Users also noted that the use of clear guidance and releasing the notes on GitHub gave people a flavour and expectation of how the tool was developed and the decisions made.
+
+However, many of the comments focused on the information that should be contained within the index. It is clear from the evidence, and from feedback, that users appreciated deprivation and age were two key risk factors for digital exclusion. Within the deprivation component of the DERI calculation, skills levels and unemployment were also considered key factors. Nevertheless, a number of new datasets were suggested for inclusion within the methodology. The primary area for inclusion was around digital activity as a component. In the original Salford work, this was captured through 'hard to count' scores that were pre-Census estimates from ONS; online contacts as a proportion of all contacts with the council; and the proportion of residents paying their council tax online. None of these datasets are available openly, nationally, and so the activity component was not included within version 1 of the tool.
+
+Some suggestions for potential digital activity components included: library PC user addresses, though this was noted to be sensitive, and not available openly, nationally; Census data, when released, of the areas that were assigned paper copies in advance, and areas that requested paper copies during the Census period; and the CDRC's Internet User Classification.
+
+Other domains were also suggested. One user suggested that 'impacts of digital exclusion' could also be included within the methodology. Suggested 
+
+It is important for the team to follow up on these methodological components.
+
+Fourth domain - IMD access to services, GM transport accessibility
+Validity of using IMD as a composite indicator already
+Activity needs to be included - e.g. Census data on needing paper copies, who took paper copies
+Guidance for how to use and how not to use the tool
+
+**Actions:**
+* Explore what other datasets might be sensible to include within the methodology, including those highlighted above.
+* Continue to provide updates on developments on GitHub, as well as providing links to the tool.
+* 
+
+### Data
+Wales IMD
+Scotland inclusion
 

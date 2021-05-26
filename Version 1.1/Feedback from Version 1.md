@@ -33,6 +33,8 @@ However, many users noted that, especially at the local authority level, work wa
 
 After some discussion, it was felt that a series of approaches could be taken. Firstly, to consider overlaying ward boundaries and adding in the ward names on the tooltips for the dashboards. This would then provide an overview of wards, whilst showing the potential variance *within* wards that a purely ward-level analysis would not provide. Then to test this approach, and see whether other options might be better - for example, an on/off button for ward overlays, and separately an option to switch between LSOA and ward level analysis.
 
+The original model focused on one local authority. Discussions with different parts of the country, and through the Cooperative Councils Innovation Network, has highlighted a sensible need to ensure that areas other than just England are reasonably included. This would involve adding in further Welsh data  - specifically, the Wales IMD data - and expanding the work to include Scotland, as well as potentially Northern Ireland.
+
 **Actions:**
 * Add a ward overlay to the data as a starting point.
 * Consider adding an LSOA to ward lookup to the tool so that the ward name is displayed for each LSOA.
@@ -40,6 +42,7 @@ After some discussion, it was felt that a series of approaches could be taken. F
 * Update the style of the maps, to reduce opacity and allow users to see more of the underneath map.
 * Review the ward overlays, and understand whether a ward-level tool would be appropriate.
 * Consider using the tooltip to display more ward-level data, where possible.
+* Explore the inclusion of further Welsh, Scottish and Northern Irish data into the tool.
 
 ### Methodology and guidance
 The methodology feedback has been the most abundant. The team has shared the tool quite widely with local and national stakeholders, and the focus on the methodology has been important. Some of these issues cross over specifically with the datasets to be used, and the level of geography.
@@ -50,9 +53,9 @@ However, many of the comments focused on the information that should be containe
 
 Some suggestions for potential digital activity components included: library PC user addresses, though this was noted to be sensitive, and not available openly, nationally; Census data, when released, of the areas that were assigned paper copies in advance, and areas that requested paper copies during the Census period; and the CDRC's Internet User Classification.
 
-Other domains were also suggested. One user suggested that 'impacts of digital exclusion' could also be included within the methodology. Suggested 
+Other domains were also suggested. One user suggested that 'impacts of digital exclusion' could also be included within the methodology. Suggested indicators for this component included the use of specific indices within the English Indices of Deprivation, such as access to services; and the use of Transport for Greater Manchester's 'Greater Manchester Accessibility Layer', or GMAL. 
 
-It is important for the team to follow up on these methodological components.
+It is important for the team to follow up on these potential methodological components. Not all of the datasets are openly available, or available across the relevant geographies.
 
 Fourth domain - IMD access to services, GM transport accessibility
 Validity of using IMD as a composite indicator already

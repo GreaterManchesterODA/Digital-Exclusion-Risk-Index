@@ -33,8 +33,6 @@ However, many users noted that, especially at the local authority level, work wa
 
 After some discussion, it was felt that a series of approaches could be taken. Firstly, to consider overlaying ward boundaries and adding in the ward names on the tooltips for the dashboards. This would then provide an overview of wards, whilst showing the potential variance *within* wards that a purely ward-level analysis would not provide. Then to test this approach, and see whether other options might be better - for example, an on/off button for ward overlays, and separately an option to switch between LSOA and ward level analysis.
 
-The original model focused on one local authority. Discussions with different parts of the country, and through the Cooperative Councils Innovation Network, has highlighted a sensible need to ensure that areas other than just England are reasonably included. This would involve adding in further Welsh data  - specifically, the Wales IMD data - and expanding the work to include Scotland, as well as potentially Northern Ireland.
-
 **Actions:**
 * Add a ward overlay to the data as a starting point.
 * Consider adding an LSOA to ward lookup to the tool so that the ward name is displayed for each LSOA.
@@ -51,25 +49,35 @@ Generally, users suggested an index approach worked for them - it simplified the
 
 However, many of the comments focused on the information that should be contained within the index. It is clear from the evidence, and from feedback, that users appreciated deprivation and age were two key risk factors for digital exclusion. Within the deprivation component of the DERI calculation, skills levels and unemployment were also considered key factors. Nevertheless, a number of new datasets were suggested for inclusion within the methodology. The primary area for inclusion was around digital activity as a component. In the original Salford work, this was captured through 'hard to count' scores that were pre-Census estimates from ONS; online contacts as a proportion of all contacts with the council; and the proportion of residents paying their council tax online. None of these datasets are available openly, nationally, and so the activity component was not included within version 1 of the tool.
 
-Some suggestions for potential digital activity components included: library PC user addresses, though this was noted to be sensitive, and not available openly, nationally; Census data, when released, of the areas that were assigned paper copies in advance, and areas that requested paper copies during the Census period; and the CDRC's Internet User Classification.
+Some suggestions for potential digital activity components included: library PC user addresses, though this was noted to be sensitive, and not available openly, nationally; Census 2021 data, when released, of the areas that were assigned paper copies in advance, and areas that requested paper copies during the Census period; and the CDRC's Internet User Classification.
 
-Other domains were also suggested. One user suggested that 'impacts of digital exclusion' could also be included within the methodology. Suggested indicators for this component included the use of specific indices within the English Indices of Deprivation, such as access to services; and the use of Transport for Greater Manchester's 'Greater Manchester Accessibility Layer', or GMAL. 
+Other domains were also suggested. One user suggested that 'impacts of digital exclusion' could also be included within the methodology. Suggested indicators for this component included the use of specific indices within the English Indices of Deprivation, such as access to services; and the use of Transport for Greater Manchester's 'Greater Manchester Accessibility Layer', or GMAL.
 
 It is important for the team to follow up on these potential methodological components. Not all of the datasets are openly available, or available across the relevant geographies.
 
-Fourth domain - IMD access to services, GM transport accessibility
+Lastly, an issue was also raised with the use of the Indices of Deprivation. This dataset is already a composite indicator dataset, and there were concerns that its inclusion might either double-count some existing indicators, or be closely aligned with other existing indicators. It is important that the model addresses correlations and the potential for double counting, an issue highlighted further in the data section below. 
+
+
+
 Validity of using IMD as a composite indicator already
-Activity needs to be included - e.g. Census data on needing paper copies, who took paper copies
+
 Guidance for how to use and how not to use the tool
 
 **Actions:**
 * Explore what other datasets might be sensible to include within the methodology, including those highlighted above.
 * Continue to provide updates on developments on GitHub, as well as providing links to the tool.
-* 
+* Explore the correlations between datasets to see if there is a risk of 'double-counting' a particular indicator.
 
 ### Data
+The original model focused on one local authority. Discussions with different parts of the country, and through the Cooperative Councils Innovation Network, has highlighted a sensible need to ensure that areas other than just England are reasonably included. This would involve adding in further Welsh data  - specifically, the Wales IMD data - and expanding the work to include Scotland, as well as potentially Northern Ireland.
+
 Wales IMD
 Scotland inclusion
+Disabled data
+Prof Yates' work
+Manchester Digital Exclusion model
+Westminster model
+Age data
 
 ---
 <a name="footnote1">1</a>: For a more detailed discussion and overview of geographies used in the UK, see the [ONS UK Geographies webpages](https://www.ons.gov.uk/methodology/geography/ukgeographies).

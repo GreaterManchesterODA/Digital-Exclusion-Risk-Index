@@ -1,7 +1,7 @@
 # Feedback from Version 1
 
 ## Introduction
-Following the release of version 1 of the Digital Exclusion Risk Index, we shared the project with a range of local and national partners, seeking feedback on several areas of work:
+Following the release of [version 1 of the Digital Exclusion Risk Index](https://www.gmtableau.nhs.uk/t/GMCA/views/210325_DERI/DERIhomepage?%3Aiid=1&%3AisGuestRedirectFromVizportal=y&%3Aembed=y#1) and it's [methodology here on GitHub](https://github.com/GreaterManchesterODA/Digital-Exclusion-Risk-Index/tree/main/Version%201), we shared the project with a range of local and national partners, seeking feedback on several areas of work:
  - Usability of the tool
  - Visualisation and geography
  - Methodology and guidance
@@ -15,7 +15,7 @@ Feedback in this area was generally positive, especially the creation of a tool 
 
 One issue that was highlighted was the way the maps worked with the other aspects of each dashboard. Currently, the map highlights areas when you hover over or select them, but did not automatically show all sites again when the selection or hovering ended. Users asked for this to be changed and simplified.
 
-One suggestion provided was to simplify the weighting tool. In Version 1, the weighting tool was a slider with a number between 0 and 100. It was noted that choosing a specific value (for example, 33 or 34 to represent a weighting of one third) might be difficult to do. Furthermore, this required a warning to appear when weightings did not sum to 100. Instead, the suggestion to simplify this was to change the way weightings were presented and calculated. The suggestion was to limit the values of weightings to between 0 and 10, and to change the calculation method so that the weighting for each indicator was the weighting vaue chosen as a proportion of the sum total of all weightings.
+One suggestion provided was to simplify the weighting tool. In [Version 1](https://www.gmtableau.nhs.uk/t/GMCA/views/210325_DERI/DERIhomepage?%3Aiid=1&%3AisGuestRedirectFromVizportal=y&%3Aembed=y#2), the weighting tool was a slider with a number between 0 and 100. It was noted that choosing a specific value (for example, 33 or 34 to represent a weighting of one third) might be difficult to do. Furthermore, this required a warning to appear when weightings did not sum to 100. Instead, the suggestion to simplify this was to change the way weightings were presented and calculated. The suggestion was to limit the values of weightings to between 0 and 10, and to change the calculation method so that the weighting for each indicator was the weighting vaue chosen as a proportion of the sum total of all weightings.
 
 To take an example, assume there are three indicators, A, B and C, with weightings 4, 5, and 6 respectively. The weighting applied to A would be 4/15 (that is, 4 divided by the sum of weightings 4, 5 and 6) = 26.7%. The weighting for B would be 5/15 = 33.3%. And the weighting for C would be 6/15 = 40%.
 
@@ -27,7 +27,7 @@ To take an example, assume there are three indicators, A, B and C, with weightin
 ### Visualisation and geography
 Users noted that the original version of the tool included a soft grey background map that did not include many features that indicated location. It was suggested that the background map in particular could be improved by adding roads, landmarks or place names to help.
 
-Linked to this, the geography of choice became important. The lower super output area (LSOA) geography was chosen for the work as this was the level at which many of the datasets were available. Converting the data to ward or other electoral boundaries would require a degree of translation that might not be entirely accurate. This was balanced against the fact that some data at the LSOA level might be suppressed due to low counts.
+Linked to this, the geography of choice became important. The [lower super output area (LSOA) geography](https://www.ons.gov.uk/methodology/geography/ukgeographies/censusgeography#super-output-area-soa) was chosen for the work as this was the level at which many of the datasets were available. Converting the data to ward or other electoral boundaries would require a degree of translation that might not be entirely accurate. This was balanced against the fact that some data at the LSOA level might be suppressed due to low counts<sup>[1](#footnote1)</sup>.
 
 However, many users noted that, especially at the local authority level, work was often based around wards rather than LSOAs. LSOA names and codes are not indicative of *where* an area is located. For example, given the name and code 'E01033667 - Manchester 054E', users would not be able to determine the location; however, the ward 'Piccadilly' has an instant location brought to mind for the user. Therefore, either a tool that explained the ward of the LSOA data (despite overlaps between wards of some LSOAs), overlaid wards, or translated the data to a ward level was considered a useful update.
 
@@ -71,3 +71,5 @@ Guidance for how to use and how not to use the tool
 Wales IMD
 Scotland inclusion
 
+---
+<a name="footnote1">1</a>: For a more detailed discussion and overview of geographies used in the UK, see the [ONS UK Geographies webpages](https://www.ons.gov.uk/methodology/geography/ukgeographies).

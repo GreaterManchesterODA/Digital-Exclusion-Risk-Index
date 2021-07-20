@@ -7,17 +7,22 @@
 |Licence:|[Open Government Licence v3](Open%20Government%20Licence.md)|
 |---|---|
 
-|||
-|:--|:--|
-|Latest version:|[Version 1.1 update notes](/Version%201)<br>[Version 1.1 on Tableau](https://www.gmtableau.nhs.uk/t/GMCA/views/DigitalExclusionRiskIndexv1_1/DERIhomepage/christopher.pope@greatermanchester-ca.gov.uk/9767395d-5c8f-4904-b3b1-2e8dff1ddfb9?:display_count=n&:showVizHome=n&:origin=viz_share_link)|
-|Current phase:|Development - version 1.2|
-|Licence:|[Open Government Licence v3](Open%20Government%20Licence.md)|
+<table>
+  <tr>
+    <td><b>Latest version:</b></td>
+    <td>[Version 1.1 update notes](/Version%201)<br>[Version 1.1 on Tableau](https://www.gmtableau.nhs.uk/t/GMCA/views/DigitalExclusionRiskIndexv1_1/DERIhomepage/christopher.pope@greatermanchester-ca.gov.uk/9767395d-5c8f-4904-b3b1-2e8dff1ddfb9?:display_count=n&:showVizHome=n&:origin=viz_share_link)</td>
+  </tr>
+  <tr>
+    <td>Current phase:</td>
+    <td>Development - version 1.2</td>
+  </tr>
+  <tr>
+    <td>Licence:</td>
+    <td>[Open Government Licence v3](Open%20Government%20Licence.md)</td>
+  </tr>
+  </table>
+  
 
-**Latest version:** [Version 1.1 update notes](/Version%201)<br>[Version 1.1 on Tableau](https://www.gmtableau.nhs.uk/t/GMCA/views/DigitalExclusionRiskIndexv1_1/DERIhomepage/christopher.pope@greatermanchester-ca.gov.uk/9767395d-5c8f-4904-b3b1-2e8dff1ddfb9?:display_count=n&:showVizHome=n&:origin=viz_share_link)
-
-**Current phase:** Development - version 1.2
-
-**Licence:** [Open Government Licence v3](Open%20Government%20Licence.md)
 
 # Digital Exclusion Risk Index
 An index of risk of digital exclusion across England, Wales and Scotland.

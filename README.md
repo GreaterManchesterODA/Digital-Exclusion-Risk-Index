@@ -17,14 +17,14 @@ This project is designed to create a tool for wider use, reduce duplication of w
 This work stems from original work produced by Salford City Council to understand the risk of digital exclusion in the local area. Locality digital inclusion leads in Greater Manchester saw the value in utilising this work, rather than in creating multiple new risk indices, and as such Greater Manchester Combined Authority aimed to create a risk index that incorporates all areas of the country.
 
 ## Development
-The aim is to develop the tool iteratively: develop a working prototype, test with partners, and update. The latest version is [Version 1](/Version%201).
+The aim is to develop the tool iteratively: develop a working prototype, test with partners, and update. The latest version is [Version 1.1](/Version%201.1).
 
-The development includes two elements:
-1. A methodology for creating a Digital Exclusion Risk Index
-2. An online tool that visualises the Digital Exclusion Risk Index locally
+The latest development includes makes only minor changes:
+1. A change to the background map to show more detail
+2. A small update to the size and positioning of features
 
-Each version folder will contain:
-* Methodology
-* Data sources
-* Tableau development notes
-* Wider notes and considerations
+Each future version will add a new folder, which will contain:
+* Explanations for updates and changes
+* Link to the new tool
+* Development notes 
+* Any new data or updates

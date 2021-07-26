@@ -13,7 +13,7 @@
   * [Broadband component and weightings](#broadband-component-and-weightings)
   * [Deprivation component and weightings](#deprivation-component-and-weightings)
 * [DERI Score](#deri-score)
-  * [Weightings](#weightings)
+  * [Component weightings](#component-weightings)
 
 ---
 

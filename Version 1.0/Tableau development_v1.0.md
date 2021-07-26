@@ -21,8 +21,7 @@
  		* [Example: LSOA Text](#example-lsoa-text)
 		* [Example: DERI Score Text](#example-deri-score-text)
 * [Dashboard creation](#dashboard-creation)
-		
-		* [Example: DERI Score Dashboard](#example-deri-score-dashboard)
+				* [Example: DERI Score Dashboard](#example-deri-score-dashboard)
 	* [Dashboard actions and filter](#dashboard-actions-and-filter)
 * [Appendix A: Fields in the inner joined Tableau data sources](#appendix-a-fields-in-the-inner-joined-tableau-data-sources)
 * [Appendix B: Calculations for maximum and minimum fields](#appendix-b-calculations-for-maximum-and-minimum-fields)

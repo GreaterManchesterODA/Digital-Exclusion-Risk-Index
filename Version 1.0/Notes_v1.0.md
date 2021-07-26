@@ -23,7 +23,7 @@ Initial discussions with Salford identified a methodology and approach, as well 
 
 The aim of this work is to provide a single, coherent understanding of the risk of digital exclusion, and to iteratively develop this work with relevant feedback on issues such as usability, datasets, calculations and visualisations.
 
-This note, and the accompanying [methodology](DERI%20Score%20Methodology_v1.md) and [Tableau development notes](Tableau%20development_v1.md), explain the process in developing a first version of the DERI tool. Feedback on the first version will be collated, and used to produce a note for an updated version of the tool.
+This note, and the accompanying [methodology](DERI%20Score%20Methodology_v1.0.md) and [Tableau development notes](Tableau%20development_v1.0.md), explain the process in developing a first version of the DERI tool. Feedback on the first version will be collated, and used to produce a note for an updated version of the tool.
 
 ## Version 1.0
 Version 1.0 of the tool is designed as a simple, proof-of-concept version of the tool, visualising very basic information: dashboards showing the final DERI score for each LSOA, and each of the components of the final DERI score. It marks the first created version utilising a simple set of data, and was designed to produce something that could be tested with users. It is also designed to show information for all of England, at the least.
@@ -44,7 +44,7 @@ The data used is that indicated in the [data sources document](Data%20sources_v1
 
 Three indicators from the original Salford approach are not currently available. Two datasets were specific to Salford (proportion of contacts with the council made online, and proportion of council tax bills paid online), while one has not been released openly by ONS (a digital 'hard to count' score, identifying the areas with a propensity to respond to the Census online). The first two of these might be difficult to replicate nationally, as there is no consistent standard for these datasets. Information provided by ONS suggests that this dataset will be released after the Census, and as such cannot be easily integrated into version 1. However, it may be useful to explore other related activity datasets.
 
-> **DECISION:** Version 1.0 will not include an activity component, and therefore diverges from the original Salford approach. Notes for this are available in our [methodology document](DERI%20Score%20Methodology_v1.md).
+> **DECISION:** Version 1.0 will not include an activity component, and therefore diverges from the original Salford approach. Notes for this are available in our [methodology document](DERI%20Score%20Methodology_v1.0.md).
 
 > **DECISION:** We will explore integrating the digital hard to count score, or a related dataset, in a future version of the methodology and tool.
 
@@ -76,9 +76,9 @@ For the average download speed per LSOA, we:
 * Divided the total sum by the total number of connections for each LSOA to provide an average download speed. 
 
 ## Calculating each indicator score
-Each indicator score is given as a number from 0 to 10, indicating the relative position of each indicator in each LSOA to the maximum and minimum values of the indicator. A more detailed explanation is given in the [methodology document](DERI%20Score%20Methodology_v1.md).
+Each indicator score is given as a number from 0 to 10, indicating the relative position of each indicator in each LSOA to the maximum and minimum values of the indicator. A more detailed explanation is given in the [methodology document](DERI%20Score%20Methodology_v1.0.md).
 
-As indicated in the [methodology document](DERI%20Score%20Methodology_v1.md), there are several approaches to potentially calculating the indicator score:
+As indicated in the [methodology document](DERI%20Score%20Methodology_v1.0.md), there are several approaches to potentially calculating the indicator score:
 1. Using the entire population's minimum and maximum values, thereby creating a fixed, absolute score for each indicator, for each LSOA. By this approach, LSOA A and LSOA B, both in different districts, would attain the same average download speed score if they had the same average download speed.
 2. Using the maximum and minimum of a fixed subset, such as that of a local authority, to calculate an absolute score for each indicator, for each LSOA. By this approach, LSOA A and LSOA B _could_ attain different scores for their average download speed, even if the average download speed was the same.
 3. Using the maximum and minimum values of a varying set, chosen by the user. In this case, the advantages of using Tableau or other dashboard tools means that the calculation for this can be automatically updated. In the case of LSOAs A and B, they would only attain the same average download speed score if they were both in the chosen set of the user AND if their average download speed was the same. Otherwise, their scores would vary.

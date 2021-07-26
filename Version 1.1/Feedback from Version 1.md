@@ -1,7 +1,7 @@
-# Feedback from Version 1
+# Feedback from Version 1.0
 
 ## Introduction
-Following the release of [version 1 of the Digital Exclusion Risk Index](https://www.gmtableau.nhs.uk/t/GMCA/views/210325_DERI/DERIhomepage?%3Aiid=1&%3AisGuestRedirectFromVizportal=y&%3Aembed=y#1) and it's [methodology here on GitHub](https://github.com/GreaterManchesterODA/Digital-Exclusion-Risk-Index/tree/main/Version%201), we shared the project with a range of local and national partners, seeking feedback on several areas of work:
+Following the release of [version 1.0 of the Digital Exclusion Risk Index](https://www.gmtableau.nhs.uk/t/GMCA/views/210325_DERI/DERIhomepage?%3Aiid=1&%3AisGuestRedirectFromVizportal=y&%3Aembed=y#1) and it's [methodology here on GitHub](https://github.com/GreaterManchesterODA/Digital-Exclusion-Risk-Index/tree/main/Version%201.0), we shared the project with a range of local and national partners, seeking feedback on several areas of work:
  - Usability of the tool
  - Visualisation and geography
  - Methodology and guidance

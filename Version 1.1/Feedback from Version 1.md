@@ -89,5 +89,5 @@ Lastly, a range of organisations have also created their own versions of a digit
 
 
 ---
-# Footnotes
+### Footnotes
 <a name="footnote1">1</a>: For a more detailed discussion and overview of geographies used in the UK, see the [ONS UK Geographies webpages](https://www.ons.gov.uk/methodology/geography/ukgeographies).

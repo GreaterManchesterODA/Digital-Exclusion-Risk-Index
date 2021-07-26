@@ -1,4 +1,4 @@
-# Tableau development - Version 1.0
+# Tableau development - v1.0
 
 ## Contents
 * [Introduction](#introduction)

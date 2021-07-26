@@ -1,4 +1,4 @@
-# Notes on DERI tool and methodology - Version 1.0
+# Notes on DERI tool and methodology - v1.0
 ## Contents
 * [Introduction](#introduction)
 * [Background](#background)

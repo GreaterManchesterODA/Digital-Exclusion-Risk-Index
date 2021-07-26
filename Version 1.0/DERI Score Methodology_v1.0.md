@@ -1,4 +1,4 @@
-# Methodology
+# Methodology - v1.0
 
 ## Contents
 * [Introduction](#introduction)

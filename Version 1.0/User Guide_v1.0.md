@@ -1,4 +1,4 @@
-# User Guide - Version 1
+# User Guide - Version 1.0
 
 ## Contents
 * [Introduction](#introduction)

@@ -5,7 +5,7 @@
 * [General process](#general-process)
 * [Choice of indicators](#choice-of-indicators)
 * [Choice of geography](#choice-of-geography)
-* [Individual indicators scores](#individual-indicators-scores)
+* [Individual indicator scores](#individual-indicator-scores)
   * [Scoring based on minimum and maximum](#scoring-based-on-minimum-and-maximum)
   * [Local considerations](#local-considerations)
 * [Components](#components)

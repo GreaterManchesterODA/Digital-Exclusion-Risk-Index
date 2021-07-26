@@ -41,13 +41,13 @@ For this first version of the tool, the methodology makes some changes to the in
 
 This has had two major impacts on the DERI score calculation:
 * The activity component has been removed from the DERI score. The three indicators that constituted this component have been removed from the calculation.
-* The [weighting](#weightings) of the broadband component raises from 17% in Salford's original approach to 33% in this methodology. 
+* The [weighting](#component-weightings) of the broadband component raises from 17% in Salford's original approach to 33% in this methodology. 
 
 ## Choice of geography
 The original methodology developed by Salford City Council focused on ward areas. All of the datasets currently used are available at an LSOA or OA level, but not all are available at ward level. GMCA decided that this DERI methodology would therefore use the LSOA level of detail. 
 
 ## Individual indicator scores
-[There are 9 individual indicators that make up the overall DERI score.](Data%20sources_v1.csv) These are individually weighted to form the next part in the calculation chain, the component scores. We have created a data scources list that can be used to create the datasets and scores.
+[There are 9 individual indicators that make up the overall DERI score.](Data%20sources_v1.0.csv) These are individually weighted to form the next part in the calculation chain, the component scores. We have created a data scources list that can be used to create the datasets and scores.
 
 The table below highlights, for each indicator, what is considered a higher risk of digital exclusion.
 

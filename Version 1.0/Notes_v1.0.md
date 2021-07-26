@@ -1,4 +1,4 @@
-# DERI Tool - Version 1 Notes
+# DERI Tool - Version 1.0 Notes
 
 ## Contents
 * [Introduction])(#introduction)

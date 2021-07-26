@@ -12,7 +12,6 @@
   * [Age component and weightings](#age-component-and-weightings)
   * [Broadband component and weightings](#broadband-component-and-weightings)
   * [Deprivation component and weightings](#deprivation-component-and-weightings)
-  * [Activity component](#activity-component)
 * [DERI Score](#deri-score)
   * [Weightings](#weightings)
 

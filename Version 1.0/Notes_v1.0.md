@@ -1,7 +1,7 @@
 # DERI Tool - Version 1.0 Notes
 
 ## Contents
-* [Introduction])(#introduction)
+* [Introduction](#introduction)
 * [Background](#background)
 * [Version 1](#version-1)
 * [Data inclusion](#data-inclusion)

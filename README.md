@@ -1,7 +1,7 @@
 <table>
   <tr>
     <td><b>Latest version:</b></td>
-    <td><a href="https://www.gmtableau.nhs.uk/t/GMCA/views/DigitalExclusionRiskIndexv1_1/DERIhomepage/christopher.pope@greatermanchester-ca.gov.uk/9767395d-5c8f-4904-b3b1-2e8dff1ddfb9?:display_count=n&:showVizHome=n&:origin=viz_share_link">Version 1.1 tool on Tableau</a><br>
+    <td><a href="https://www.gmtableau.nhs.uk/t/GMCA/views/DigitalExclusionRiskIndexv1_5/DERIhomepage?%3Aiid=1&%3AisGuestRedirectFromVizportal=y&%3Aembed=y">Version 1.5 tool on Tableau</a><br>
 <a href="https://github.com/GreaterManchesterODA/Digital-Exclusion-Risk-Index/blob/main/Version%201.1">Version 1.1 update notes on Github</a>
 </td>
   </tr>

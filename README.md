@@ -7,7 +7,7 @@
   </tr>
   <tr>
     <td><b>Current phase:</b></td>
-    <td><a href="https://github.com/GreaterManchesterODA/Digital-Exclusion-Risk-Index/blob/main/Version%201.2">Development - version 1.2</a></td>
+    <td>Development - version 1.6
   </tr>
   <tr>
     <td><b>Licence:</b></td>

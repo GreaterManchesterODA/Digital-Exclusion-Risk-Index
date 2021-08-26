@@ -1,8 +1,9 @@
 # Updates to Version 1.2
 
-Version 1.2 of the Digital Exclusion Risk Index included two main changes:
+Version 1.2 of the Digital Exclusion Risk Index included three main changes:
 1. Adding data for Welsh LSOAs
 2. Adding ward boundary overlays to the map
+3. Changing the calculation and methodology behind the weightings
 
 ## Adding Welsh data
 

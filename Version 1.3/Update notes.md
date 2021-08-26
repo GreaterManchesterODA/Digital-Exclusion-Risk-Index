@@ -1,1 +1,11 @@
-TBC
+# Version 1.3 updates
+
+Our main updates to version 1.3 have been:
+* Adding in data for Scotland to ensure we have coverage of Great Britain
+* Using Scottish Data Zones as comparators for LSOAs in England and Wales
+
+## Adding Scottish data
+As with the data for England and Wales, the Scottish data included is ...
+
+## Using Scottish Data Zones
+As LSOA boundaries only apply to England and Wales, Scottish Data Zone boundaries were used as comparators for the purposes of the DERI tool. The Data Zone boundaries were downloaded in Shapefile format from [SpatialData.gov.scot](https://www.spatialdata.gov.scot/geonetwork/srv/api/records/7d3e8709-98fa-4d71-867c-d5c8293823f2#:~:text=The%20finalised%20set%20of%20boundaries%20consists%20of%206%2C976,previous%202001%20codes%20ranged%20from%20S01000001%20to%20S01006505%29.) and merged with the LSOA Shapefile for England and Wales using QGIS software. 

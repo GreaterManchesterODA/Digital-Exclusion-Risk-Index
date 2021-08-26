@@ -25,3 +25,5 @@ Ward boundaries were downloaded from the ONS Open Geography portal. These were m
 2. Create a full outer join between the LSOA boundary shapefile and the Ward boundary shapefile with a join clause of '1 = 0' (this makes a union of the two files but where no columns are the same.
 3. Create a dual axis map where one marks card has LSOA geometry and one has ward geometry (ensure that the Ward marks card is layered underneath the LSOA marks card in order to avoid losing the functionality of hovering over the map to see LSOA scores).
 4. Created a calculated field of 'IFNULL([LA name from LSOA], [LA name from Wards])' and use this as a universal filter.
+
+## Changing the weightings methodology

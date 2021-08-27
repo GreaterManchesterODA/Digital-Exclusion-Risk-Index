@@ -1,6 +1,6 @@
-# Version 1.3 updates
+# Updates to Version 1.3
 
-Our main updates to version 1.3 have been:
+Our main updates to [Version 1.3](https://www.gmtableau.nhs.uk/t/GMCA/views/DigitalExclusionRiskIndexv1_3/DERIhomepage?%3Aiid=1&%3AisGuestRedirectFromVizportal=y&%3Aembed=y) have been:
 * Adding in data for Scotland to ensure we have coverage of Great Britain
 * Using Scottish Data Zones as comparators for LSOAs in England and Wales
 

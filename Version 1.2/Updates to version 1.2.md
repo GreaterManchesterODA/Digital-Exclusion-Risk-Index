@@ -7,7 +7,7 @@
 
 ## Adding Welsh data
 
-The data that was added for Wales is indicated in the data sources v1.2 document. As with the existing English data used in the tool, the data includes:
+The data that was added for Wales is indicated in the [data sources v1.2](https://github.com/GreaterManchesterODA/Digital-Exclusion-Risk-Index/blob/main/Version%201.2/Data%20sources_v1.2.csv) document. As with the existing English data used in the tool, the Welsh data includes:
 * Proportion of population aged 65+ (ONS Mid-year population estimates)
 * Proportion of population aged 75+ (ONS Mid-year population estimates)
 * Proportion of over 65 residents on guaranteed Pension Credit (DWP benefit claimants)

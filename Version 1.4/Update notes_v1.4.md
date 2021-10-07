@@ -18,7 +18,21 @@ Changing this component required two new sets of calculations: one set to create
 Once these calculations and parameters were created, the `Age component` was renamed to `Demography component` and the calculated field was updated to be based on the scores and parameters for all four indicators.
 
 ## National and Great Britain DERI scores 
+Prior versions of the DERI tool based the calculation for the indicator, component and DERI scores on the minimum and maximum values in each local authority district. While this is useful for seeing the relative risk of digital exclusion within a local area, this approach limits the usefulness of comparisons between different local authority areas. To enable meaningful comparisons between different local authorities required a second and third set of calculations to be created. The first set recalculated the scores based upon the maximum and minimum indicator values within each nation (England, Scotland and Wales). The second set recalculated the scores based upon the maximum and minimum values across the full dataset, which includes all of Great Britain.
+
+### National scores
 Add text here ...
+
+Appendix A details the full set of calculations involved behind the national scores.
+
+### Great Britain scores
+Add text here ...
+
+Appendix B details the full set of calculations involved behind the GB scores.
 
 ## Improving dashboard functionality to select different DERI score calculations
 Add text here ...
+
+## Appendix A
+
+## Appendix B

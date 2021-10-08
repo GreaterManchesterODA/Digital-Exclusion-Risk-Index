@@ -33,6 +33,97 @@ Appendix B details the full set of calculations involved behind the GB scores.
 ## Improving dashboard functionality to select different DERI score calculations
 Add text here ...
 
-## Appendix A
+## Appendix A: Calculations for nation level minimum and maxium fields
+|Indicator|Type|Calculated field name|Calculation|
+|---|---|---|---|
+|Nation level Percentage of homes unable to receive at least 30MBit/s|Maximum per nation|National max of Percentage of homes unable to receive at least 30MBit/s|`{ FIXED [Nation]: MAX([Percentage of homes unable to receive at least 30Mbit/s broadband])}`|
+|Nation level Percentage of homes unable to receive at least 30MBit/s|Minimum per nation|National min of Percentage of homes unable to receive at least 30MBit/s|`{ FIXED [Nation]: MIN([Percentage of homes unable to receive at least 30Mbit/s broadband])}`|
+|Nation level Average download speed (MBit/s)|Maximum per nation|National max of Average download speed|`{ FIXED [Nation]: MAX([Average download speed (Mbit/s)])}`|
+|Nation level Average download speed (MBit/s)|Minimum per nation|National min of Average download speed|`{ FIXED [Nation]: MIN([Average download speed (Mbit/s)])}`|
+|Nation level Percentage of connections receiving less than 10MBit/s|Maximum per nation|National max of Percentage of connections less than 10MBit/s|`{ FIXED [Nation]: MAX([Percentage of connections receiving less than 10MBit/s])}`|
+|Nation level Percentage of connections receiving less than 10MBit/s|Minimum per nation|National min of Percentage of connections less than 10MBit/s|`{ FIXED [Nation]: MIN([Percentage of connections receiving less than 10MBit/s])}`|
+|Nation level Percentage of population aged 65 and over|Maximum per nation|National max of Percentage of population aged 65+|`{ FIXED [Nation]: MAX([Percentage of population aged 65 and over])}`|
+|Nation level Percentage of population aged 65 and over|Minimum per nation|National min of Percentage of population aged 65+|`{ FIXED [Nation]: MIN([Percentage of population aged 65 and over])}`|
+|Nation level Percentage of population aged 75 and over|Maximum per nation|National max of Percentage of population aged 75+|`{ FIXED [Nation]: MAX([Percentage of population aged 75 and over])}`|
+|Nation level Percentage of population aged 75 and over|Minimum per nation|National min of Percentage of population aged 75+|`{ FIXED [Nation]: MIN([Percentage of population aged 75 and over])}`|
+|Nation level Percentage of residents aged 16+ with no qualifications|Maximum per nation|National max of Percentage of residents with no qualifications|`{ FIXED [Nation]: MAX([Percentage of residents aged 16+ with no qualifications])}`|
+|Nation level Percentage of residents aged 16+ with no qualifications|Minimum per nation|National min of Percentage of residents with no qualifications|`{ FIXED [Nation]: MIN([Percentage of residents aged 16+ with no qualifications])}`|
+|Nation level Guaranteed pension credit (rate per 1,000 aged 65+)|Maximum per nation|National max of Guaranteed Pension Credit|`{ FIXED [Nation]: MAX([Guaranteed pension credit (rate per 1,000 aged 65+)])}`|
+|Nation level Guaranteed pension credit (rate per 1,000 aged 65+)|Minimum per nation|National min of Guaranteed Pension Credit|`{ FIXED [Nation]: MIN([Guaranteed pension credit (rate per 1,000 aged 65+)])}`|
+|Nation level Index of Multiple Deprivation 2019 score|Maximum per nation|National max of Index of Multiple Deprivation Score|`{ FIXED [Nation]: MAX([Index of Multiple Deprivation 2019 score])}`|
+|Nation level Index of Multiple Deprivation 2019 score|Minimum per nation|National min of Index of Multiple Deprivation Score|`{ FIXED [Nation]: MIN([Index of Multiple Deprivation 2019 score])}`|
+|Nation level Unemployment rate|Maximum per nation|National max of Unemployment rate|`{ FIXED [Nation]: MAX([Unemployment rate])}`|
+|Nation level Unemployment rate|Minimum per nation|National min of Unemployment rate|`{ FIXED [Nation]: MIN([Unemployment rate])}`|
 
-## Appendix B
+NEED TO ADD DISABILITY AND SOCIAL GRADE
+
+## Appendix B: Calculations for Great Britan level minimum and maxium fields
+|Indicator|Type|Calculated field name|Calculation|
+|---|---|---|---|
+|GB level Percentage of homes unable to receive at least 30MBit/s|Maximum per full dataset|GB max of Percentage of homes unable to receive at least 30MBit/s|`{ FIXED: MAX([Percentage of homes unable to receive at least 30Mbit/s broadband])}`|
+|GB level Percentage of homes unable to receive at least 30MBit/s|Minimum per full dataset|GB min of Percentage of homes unable to receive at least 30MBit/s|`{ FIXED: MIN([Percentage of homes unable to receive at least 30Mbit/s broadband])}`|
+|GB level Average download speed (MBit/s)|Maximum per full dataset|GB max of Average download speed|`{ FIXED: MAX([Average download speed (Mbit/s)])}`|
+|GB level Average download speed (MBit/s)|Minimum per full dataset|GB min of Average download speed|`{ FIXED: MIN([Average download speed (Mbit/s)])}`|
+|GB level Percentage of connections receiving less than 10MBit/s|Maximum per full dataset|GB max of Percentage of connections less than 10MBit/s|`{ FIXED: MAX([Percentage of connections receiving less than 10MBit/s])}`|
+|GB level Percentage of connections receiving less than 10MBit/s|Minimum per full dataset|GB min of Percentage of connections less than 10MBit/s|`{ FIXED: MIN([Percentage of connections receiving less than 10MBit/s])}`|
+|GB level Percentage of population aged 65 and over|Maximum per full dataset|GB max of Percentage of population aged 65+|`{ FIXED: MAX([Percentage of population aged 65 and over])}`|
+|GB level Percentage of population aged 65 and over|Minimum per full dataset|GB min of Percentage of population aged 65+|`{ FIXED: MIN([Percentage of population aged 65 and over])}`|
+|GB level Percentage of population aged 75 and over|Maximum per full dataset|GB max of Percentage of population aged 75+|`{ FIXED: MAX([Percentage of population aged 75 and over])}`|
+|GB level Percentage of population aged 75 and over|Minimum per full dataset|GB min of Percentage of population aged 75+|`{ FIXED: MIN([Percentage of population aged 75 and over])}`|
+|GB level Percentage of residents aged 16+ with no qualifications|Maximum per full dataset|GB max of Percentage of residents with no qualifications|`{ FIXED: MAX([Percentage of residents aged 16+ with no qualifications])}`|
+|GB level Percentage of residents aged 16+ with no qualifications|Minimum per full dataset|GB min of Percentage of residents with no qualifications|`{ FIXED: MIN([Percentage of residents aged 16+ with no qualifications])}`|
+|GB level Guaranteed pension credit (rate per 1,000 aged 65+)|Maximum per full dataset|GB max of Guaranteed Pension Credit|`{ FIXED: MAX([Guaranteed pension credit (rate per 1,000 aged 65+)])}`|
+|GB level Guaranteed pension credit (rate per 1,000 aged 65+)|Minimum per full dataset|GB min of Guaranteed Pension Credit|`{ FIXED: MIN([Guaranteed pension credit (rate per 1,000 aged 65+)])}`|
+|GB level Index of Multiple Deprivation 2019 score|Maximum per full dataset|GB max of Index of Multiple Deprivation Score|`{ FIXED: MAX([Index of Multiple Deprivation 2019 score])}`|
+|GB level Index of Multiple Deprivation 2019 score|Minimum per full dataset|GB min of Index of Multiple Deprivation Score|`{ FIXED: MIN([Index of Multiple Deprivation 2019 score])}`|
+|GB level Unemployment rate|Maximum per full dataset|GB max of Unemployment rate|`{ FIXED: MAX([Unemployment rate])}`|
+|GB level Unemployment rate|Minimum per full dataset|GB min of Unemployment rate|`{ FIXED: MIN([Unemployment rate])}`|
+
+NEED TO ADD DISABILITY AND SOCIAL GRADE
+
+## Appendix C: Nation level indicator scores
+|Score name|Score calculation|
+|---|---|
+|National score: average download speed|`10*([National max of Average download speed]-[Average download speed (Mbit/s)])/([National max of Average download speed]-[National min of Average download speed])`|
+|National score: guaranteed pension credit|`10*([Guaranteed pension credit (rate per 1,000 aged 65+)]-[National min of Guaranteed Pension Credit])/([National max of Guaranteed Pension Credit]-[National min of Guaranteed Pension Credit])`|
+|National score: Index of Multiple Deprivation score|`10*([Index of Multiple Deprivation 2019 score]-[National min of Index of Multiple Deprivation Score])/([National max of Index of Multiple Deprivation Score]-[National min of Index of Multiple Deprivation Score])`|
+|National score: percentage of connections receiving less than 10MBit/s|`10*([Percentage of connections receiving less than 10Mbit/s broadband]-[National min of Percentage of connections less than 10MBit/s])/([National max of Percentage of connections less than 10MBit/s]-[National min of Percentage of connections less than 10MBit/s])`|
+|National score: percentage of homes unable to receive at least 30MBit/s|`10*([Percentage of homes unable to receive at least 30Mbit/s broadband]-[National min of Percentage of homes unable to receive at least 30MBit/s])/([National max of Percentage of homes unable to receive at least 30MBit/s]-[National min of Percentage of homes unable to receive at least 30MBit/s])`|
+|National score: percentage of population aged 65+|`10*([Percentage of population aged 65 and over]-[National min of Percentage of population aged 65+])/([National max of Percentage of population aged 65+]-[National min of Percentage of population aged 65+])`|
+|National score: percentage of population aged 75+|`10*([Percentage of population aged 75 and over]-[National min of Percentage of population aged 75+])/([National max of Percentage of population aged 75+]-[National min of Percentage of population aged 75+])`|
+|National score: percentage of residents aged 16+ with no qualifications|`10*([Percentage of residents aged 16+ with no qualifications]-[National min of Percentage of residents with no qualifications])/([National max of Percentage of residents with no qualifications]-[National min of Percentage of residents with no qualifications])`|
+|National score: unemployment rate|`10*([Unemployment rate]-[National min of Unemployment rate])/([National max of Unemployment rate]-[National min of Unemployment rate])`|
+|National score: percentage of population with disability|`10*([Percentage of residents whose day-to-day activities are limited]-[National min of percentage of population with disability])/([National max of percentage of population with disability]-[National min of percentage of population with disability])`|
+|National score: percentage of population in social grade DE|`10*([Percentage of population in social grade DE]-[National min of percentage of population in social grade DE])/([National max of percentage of population in social grade DE]-[National min of percentage of population in social grade DE])`|
+
+## Appendix D: Great Britain level indicator scores
+|Score name|Score calculation|
+|---|---|
+|GB score: average download speed|`10*([GB max of Average download speed]-[Average download speed (Mbit/s)])/([GB max of Average download speed]-[GB min of Average download speed])`|
+|GB score: guaranteed pension credit|`10*([Guaranteed pension credit (rate per 1,000 aged 65+)]-[GB min of Guaranteed Pension Credit])/([GB max of Guaranteed Pension Credit]-[GB min of Guaranteed Pension Credit])`|
+|GB score: Index of Multiple Deprivation score|`10*([Index of Multiple Deprivation 2019 score]-[GB min of Index of Multiple Deprivation Score])/([GB max of Index of Multiple Deprivation Score]-[GB min of Index of Multiple Deprivation Score])`|
+|GB score: percentage of connections receiving less than 10MBit/s|`10*([Percentage of connections receiving less than 10Mbit/s broadband]-[GB min of Percentage of connections less than 10MBit/s])/([GB max of Percentage of connections less than 10MBit/s]-[GB min of Percentage of connections less than 10MBit/s])`|
+|GB score: percentage of homes unable to receive at least 30MBit/s|`10*([Percentage of homes unable to receive at least 30Mbit/s broadband]-[GB min of Percentage of homes unable to receive at least 30MBit/s])/([GB max of Percentage of homes unable to receive at least 30MBit/s]-[GB min of Percentage of homes unable to receive at least 30MBit/s])`|
+|GB score: percentage of population aged 65+|`10*([Percentage of population aged 65 and over]-[GB min of Percentage of population aged 65+])/([GB max of Percentage of population aged 65+]-[GB min of Percentage of population aged 65+])`|
+|GB score: percentage of population aged 75+|`10*([Percentage of population aged 75 and over]-[GB min of Percentage of population aged 75+])/([GB max of Percentage of population aged 75+]-[GB min of Percentage of population aged 75+])`|
+|GB score: percentage of residents aged 16+ with no qualifications|`10*([Percentage of residents aged 16+ with no qualifications]-[GB min of Percentage of residents with no qualifications])/([GB max of Percentage of residents with no qualifications]-[GB min of Percentage of residents with no qualifications])`|
+|GB score: unemployment rate|`10*([Unemployment rate]-[GB min of Unemployment rate])/([GB max of Unemployment rate]-[GB min of Unemployment rate])`|
+|GB score: percentage of population with disability|`10*([Percentage of residents whose day-to-day activities are limited]-[GB min of percentage of population with disability])/([GB max of percentage of population with disability]-[GB min of percentage of population with disability])`|
+|GB score: percentage of population in social grade DE|`10*([Percentage of population in social grade DE]-[GB min of percentage of population in social grade DE])/([GB max of percentage of population in social grade DE]-[GB min of percentage of population in social grade DE])`|
+
+## Appendix E: Nation level component and DERI score calculations
+|Component name|Component calculation|
+|---|---|
+|Demography component (national)|`([National score: percentage of population aged 65+]*(([Weighting: 65+]/([Weighting: 65+]+[Weighting: 75+])))+([National score: percentage of population aged 75+]*(([Weighting: 75+]/([Weighting: 65+]+[Weighting: 75+])))+([National score: percentage of population with disability]*([Weighting: disability]/([Weighting: 65-74]+[Weighting: 75+]+[Weighting: disability]+[Weighting: social grade DE])))+([National score: percentage of population in social grade DE]*([Weighting: social grade DE]/([Weighting: 65-74]+[Weighting: 75+]+[Weighting: disability]+[Weighting: social grade DE])))`|
+|Broadband component (national)|`([National score: percentage of connections receiving less than 10MBit/s]*([Weighting: connections less than 10MBit/s]/([Weighting: connections less than 10MBit/s]+[Weighting: homes unable to receive 30MBit/s]+[Weighting: avg download speed])))+([National score: percentage of homes unable to receive at least 30MBit/s]*([Weighting: homes unable to receive 30MBit/s]/([Weighting: connections less than 10MBit/s]+[Weighting: homes unable to receive 30MBit/s]+[Weighting: avg download speed])))+([National score: average download speed]*([Weighting: avg download speed]/([Weighting: connections less than 10MBit/s]+[Weighting: homes unable to receive 30MBit/s]+[Weighting: avg download speed])))`|
+|Deprivation component (national)|`([National score: unemployment rate]*([Weighting: unemployment rate]/([Weighting: unemployment rate]+[Weighting: % no quals]+[Weighting: guaranteed pension credit]+[Weighting: IMD score])))+([National score: percentage of residents aged 16+ with no qualifications]*([Weighting: % no quals]/([Weighting: unemployment rate]+[Weighting: % no quals]+[Weighting: guaranteed pension credit]+[Weighting: IMD score])))+([National score: guaranteed pension credit]*([Weighting: guaranteed pension credit]/([Weighting: unemployment rate]+[Weighting: % no quals]+[Weighting: guaranteed pension credit]+[Weighting: IMD score])))+([National score: Index of Multiple Deprivation score]*([Weighting: IMD score]/([Weighting: unemployment rate]+[Weighting: % no quals]+[Weighting: guaranteed pension credit]+[Weighting: IMD score])))`|
+|DERI score (national)|`([Demography component (national)]*([Weighting: demography component (national)]/([Weighting: demography component (national)]+[Weighting: broadband component (national)]+[Weighting: deprivation component (national)])))+([Broadband component (national)]*([Weighting: broadband component (national)]/([Weighting: demography component (national)]+[Weighting: broadband component (national)]+[Weighting: deprivation component (national)])))+([Deprivation component (national)]*([Weighting: deprivation component (national)]/([Weighting: demography component (national)]+[Weighting: broadband component (national)]+[Weighting: deprivation component (national)])))`|
+
+
+## Appendix F: Great Britain level component and DERI score calculations
+|Component name|Component calculation|
+|---|---|
+|Demography component (GB)|`([GB score: percentage of population aged 65+]*(([Weighting: 65+]/([Weighting: 65+]+[Weighting: 75+])))+([GB score: percentage of population aged 75+]*(([Weighting: 75+]/([Weighting: 65+]+[Weighting: 75+])))+([GB score: percentage of population with disability]*([Weighting: disability]/([Weighting: 65-74]+[Weighting: 75+]+[Weighting: disability]+[Weighting: social grade DE])))+([GB score: percentage of population in social grade DE]*([Weighting: social grade DE]/([Weighting: 65-74]+[Weighting: 75+]+[Weighting: disability]+[Weighting: social grade DE])))`|
+|Broadband component (GB)|`([GB score: percentage of connections receiving less than 10MBit/s]*([Weighting: connections less than 10MBit/s]/([Weighting: connections less than 10MBit/s]+[Weighting: homes unable to receive 30MBit/s]+[Weighting: avg download speed])))+([GB score: percentage of homes unable to receive at least 30MBit/s]*([Weighting: homes unable to receive 30MBit/s]/([Weighting: connections less than 10MBit/s]+[Weighting: homes unable to receive 30MBit/s]+[Weighting: avg download speed])))+([GB score: average download speed]*([Weighting: avg download speed]/([Weighting: connections less than 10MBit/s]+[Weighting: homes unable to receive 30MBit/s]+[Weighting: avg download speed])))`|
+|Deprivation component (GB)|`([GB score: unemployment rate]*([Weighting: unemployment rate]/([Weighting: unemployment rate]+[Weighting: % no quals]+[Weighting: guaranteed pension credit]+[Weighting: IMD score])))+([GB score: percentage of residents aged 16+ with no qualifications]*([Weighting: % no quals]/([Weighting: unemployment rate]+[Weighting: % no quals]+[Weighting: guaranteed pension credit]+[Weighting: IMD score])))+([GB score: guaranteed pension credit]*([Weighting: guaranteed pension credit]/([Weighting: unemployment rate]+[Weighting: % no quals]+[Weighting: guaranteed pension credit]+[Weighting: IMD score])))+([GB score: Index of Multiple Deprivation score]*([Weighting: IMD score]/([Weighting: unemployment rate]+[Weighting: % no quals]+[Weighting: guaranteed pension credit]+[Weighting: IMD score])))`|
+|DERI score (GB)|`([Demography component (GB)]*([Weighting: demography component (GB)]/([Weighting: demography component (GB)]+[Weighting: broadband component (GB)]+[Weighting: deprivation component (GB)])))+([Broadband component (GB)]*([Weighting: broadband component (GB)]/([Weighting: demography component (GB)]+[Weighting: broadband component (GB)]+[Weighting: deprivation component (GB)])))+([Deprivation component (GB)]*([Weighting: deprivation component (GB)]/([Weighting: demography component (GB)]+[Weighting: broadband component (GB)]+[Weighting: deprivation component (GB)])))`|

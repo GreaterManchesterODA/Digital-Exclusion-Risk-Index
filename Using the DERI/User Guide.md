@@ -78,9 +78,11 @@ The map and the graph are linked so that hovering or clicking anywhere on the ma
 * Component score
 
 #### DERI score dashboard
-The DERI score dashboard follows the same visual structure as the individual component dashboard, but the score displayed is built from the three components. As with the deprivation dashboard, the DERI score dashboard contains the additional drop down box for the IMD score methodology, as the IMD indicator forms part of the overall DERI score through its inclusion within the deprivation component.
+The DERI score dashboard follows the same visual structure as the individual component dashboards, but the score displayed is built from the three component scores. As with the deprivation dashboard, the DERI score dashboard contains the additional drop down box for the IMD score methodology. This is because the IMD indicator forms part of the overall DERI score through its inclusion within the deprivation component.
 
-By default, the DERI score dashboard will open with all three components equally weighted. However, the button on the top right hand corner of the map allows users to change the relative importance of each indicator. Where changes are made to the score weighting, the scores and the associated visualisations on the map and graph will be updated automatically.
+The DERI score dashboard is linked directly to the component scores so that any changes to the weightings of individual indicators within the component dashboards will also update the DERI score.
+
+By default, the DERI score dashboard will open with all three components equally weighted. However, the button on the top right hand corner of the map allows users to change the relative importance of each indicator. Where changes are made to the DERI score weighting, the scores and the associated visualisations (i.e. the map and graph) will be updated automatically.
 
 ## How to use the DERI, and how not to use the DERI
 The DERI is a risk index: it does not mean that every person in a high-risk area is digitally excluded; nor does it mean that no-one in a low-risk area is digitally excluded either. It gives an overview of where targeting resources could have the most benefit.

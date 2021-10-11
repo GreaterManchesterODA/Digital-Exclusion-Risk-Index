@@ -12,7 +12,7 @@ Versions 1.0 to 1.3 of the DERI used an age component to form the DERI score. Ho
 * Percentage of residents whose daily activities are limited
 * Percentage of population in social grade DE
 
-### Tableau updates for demography component
+## Tableau updates for demography component
 Changing this component required two new sets of calculations: one set to create a score for the percentage of residents whose daily activities are limited and one for the percentage of population in social grade DE. Parameters were also created for the weightings of each of these new scores. The creation of these calculations and parameters followed the same process as outlined in the original [version 1.0 methodology](https://github.com/GreaterManchesterODA/Digital-Exclusion-Risk-Index/blob/main/Version%201.0/DERI%20Score%20Methodology_v1.0.md#individual-indicator-scores), with updates to the parameter weightings as outlined in the [version 1.2 methodology](https://github.com/GreaterManchesterODA/Digital-Exclusion-Risk-Index/blob/main/Version%201.2/Update%20notes_v1.2.md).
 
 Once these calculations and parameters were created, the `Age component` was renamed to `Demography component` and the calculated field was updated to be based on the scores and parameters for all four indicators.
@@ -20,18 +20,60 @@ Once these calculations and parameters were created, the `Age component` was ren
 ## National and Great Britain DERI scores 
 Prior versions of the DERI tool based the calculation for the indicator, component and DERI scores on the minimum and maximum values in each local authority district. While this is useful for seeing the relative risk of digital exclusion within a local area, this approach limits the usefulness of comparisons between different local authority areas. To enable meaningful comparisons between different local authorities required a second and third set of calculations to be created. The first set recalculated the scores based upon the maximum and minimum indicator values within each nation (England, Scotland and Wales). The second set recalculated the scores based upon the maximum and minimum values across the full dataset, which includes all of Great Britain.
 
-### Tableau updates for national and Great Britain DERI scores
+## Tableau updates for national and Great Britain DERI scores
+
+### Individual indicator scores
+As with the original methodology outlined in [version 1.0](https://github.com/GreaterManchesterODA/Digital-Exclusion-Risk-Index/blob/main/Version%201.0/Tableau%20development_v1.0.md), the national and Great Britain DERI score must be built up from a series of individual indicator scores. These indicator scores are built using calculations to work out the minimum and maximum LSOA values for those scores. In the original methodology, these minimum and maximum LSOA values were fixed at Local Authority level.
+
+#### Maximum and minimum calculations
+In order to create the minimum and maximum of each nation's LSOA values, the calculation needs to be fixed at the nation level. In order to create the minimum and maximum of the Great Britain LSOA values, the calculation needs to be fixed at the highest and lowest value within the full dataset.
+
+The standard calculation used for each 'maximum' field at the nation level was:
+
+`{ FIXED [nation]: MAX([indicator])}`
+
+Similarly, the calculation used for the 'minimum' field was:
+
+`{ FIXED [nation]: MIN([indicator])}`
+
+The standard calculation used for the 'maximum' at the Great Britain level was:
+
+`{ FIXED: MAX([indicator])}`
+
+Similarly, the calculation used for the 'minimum' field was:
+
+`{ FIXED: MIN([indicator])}`
+
+In total, 22 calculated fields were created for each new set - one minimum and one maximum calculated field for each indicator. The full list of calculated fields and calculations at nation level is presented in [Appendix A](#appendix-a) and the full list of calculations at Great Britain level is presented in [Appendix B](#appendix-b).
+
+#### Indicator score calculations
+As with the original methodology, using the minimum and maximum value calculated fields mentioned above, individual scores between 0 and 10 can be created for each indicator. In most instances, a higher indicator value is assumed to relate to a higher risk of digital exclusion. Therefore, the calculation identifies where on the scale between the minimum and maximum values in the district each LSOA lies. The highest value would receive a score of 10, and the lowest value a score of 0. A value halfway between the highest and lowest values would gain a score of 5.
+
+The general calculation for this remains:
+
+`10*([indicator value]-[Min of indicator])/([Max of indicator]-[Min of indicator])`
+
+where `[indicator value]` is the value of the the indicator for each LSOA, and `[Max of indicator]` and `[Min of indicator]` represent the maximum and minimums of that indicator, as mentioned above, at either the nation or Great Britain level.
+
+However, one indicator - the average download speed - was associated with higher risk of digital exclusion. As average broadband speeds are lower, there is a risk that many homes will have low speed connections that might be underutilised. In this instance, the calculation is reversed: when average broadband speeds are low, the score needs to be high, and vice versa:
+
+`10*([Max of indicator]-[indicator value])/([Max of indicator]-[Min of indicator])`
+
+A full list of indicator score calculations at nation level is provided in [Appendix C](#appendix-c) and a full list of indicator score calculations at Great Britain level is provided in [Appendix D](#appendix-D).
+
+### Component and DERI scores
+
 The general calculation method for each component score follows the same process as the methodology for Local Authority scores, as outlined in [updates to version 1.2](https://github.com/GreaterManchesterODA/Digital-Exclusion-Risk-Index/blob/main/Version%201.2/Update%20notes_v1.2.md) of the tool:
 
 `(Indicator score A * ((Indicator score A weighting)/(Indicator score A weighting + Indicator score B weighting + Indicator score C weighting ...)) + (Indicator score B * (Indicator score B weighting)/Indicator score A weighting + Indicator score B weighting + Indicator score C weighting ...) + ...`
 
 This weighted sum is applied to all of the relevant indicators for each component to produce a component score.
 
-A full list of calculations for the nation level scores is presented in [Appendix C](##appendix-c) and a full list of calculations for the GB level scores is presented in [Appendix D](##appendix-d).
+A full list of calculations for the nation level scores is presented in [Appendix E](#appendix-e) and a full list of calculations for the GB level scores is presented in [Appendix F](#appendix-f).
 
 
 ## Improving dashboard functionality to select different DERI score calculations
-To allow users the option to choose a set of scores at either Local Authority/nation/Great Britain level requires the creation of a new parameter and a new set of calculated fields to update the scores based on the parameter selection.
+To allow users the option to choose a set of scores at either local authority, nation or Great Britain level requires the creation of a new parameter and a new set of calculated fields to update the scores based on the parameter selection.
 
 The parameter required is as follows:
 |Parameter name|Data type|Options|Default value|
@@ -42,15 +84,15 @@ The calculated fields tell Tableau which set of scores to select based on the pa
 
 `CASE [Local / national / GB score]`
 
-`WHEN "Local Authority" THEN [Broadband component]`
+`WHEN "Local Authority" THEN [X component]`
 
-`WHEN "Nation" THEN [Broadband component (national)]`
+`WHEN "Nation" THEN [X component (national)]`
 
-`WHEN "Great Britain" THEN [Broadband component (GB)]`
+`WHEN "Great Britain" THEN [X component (GB)]`
 
 `END`
 
-
+where 'X' is either broadband, demography or deprivation.
 
 
 ## Appendix A: Calculations for nation level minimum and maxium fields

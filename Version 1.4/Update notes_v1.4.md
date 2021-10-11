@@ -13,25 +13,45 @@ Versions 1.0 to 1.3 of the DERI used an age component to form the DERI score. Ho
 * Percentage of population in social grade DE
 
 ### Tableau updates for demography component
-Changing this component required two new sets of calculations: one set to create a score for the percentage of residents whose daily activities are limited and one for the percentage of population in social grade DE. Parameters were also created for the weightings of each of these new scores. The creation of these calculations and parameters followed the same process as outlined in the original [version 1.0 methodology](https://github.com/GreaterManchesterODA/Digital-Exclusion-Risk-Index/blob/main/Version%201.0/DERI%20Score%20Methodology_v1.0.md#individual-indicator-scores).
+Changing this component required two new sets of calculations: one set to create a score for the percentage of residents whose daily activities are limited and one for the percentage of population in social grade DE. Parameters were also created for the weightings of each of these new scores. The creation of these calculations and parameters followed the same process as outlined in the original [version 1.0 methodology](https://github.com/GreaterManchesterODA/Digital-Exclusion-Risk-Index/blob/main/Version%201.0/DERI%20Score%20Methodology_v1.0.md#individual-indicator-scores), with updates to the parameter weightings as outlined in the [version 1.2 methodology](https://github.com/GreaterManchesterODA/Digital-Exclusion-Risk-Index/blob/main/Version%201.2/Update%20notes_v1.2.md).
 
 Once these calculations and parameters were created, the `Age component` was renamed to `Demography component` and the calculated field was updated to be based on the scores and parameters for all four indicators.
 
 ## National and Great Britain DERI scores 
 Prior versions of the DERI tool based the calculation for the indicator, component and DERI scores on the minimum and maximum values in each local authority district. While this is useful for seeing the relative risk of digital exclusion within a local area, this approach limits the usefulness of comparisons between different local authority areas. To enable meaningful comparisons between different local authorities required a second and third set of calculations to be created. The first set recalculated the scores based upon the maximum and minimum indicator values within each nation (England, Scotland and Wales). The second set recalculated the scores based upon the maximum and minimum values across the full dataset, which includes all of Great Britain.
 
-### National scores
-Add text here ...
+### Tableau updates for national and Great Britain DERI scores
+The general calculation method for each component score follows the same process as the methodology for Local Authority scores, as outlined in [updates to version 1.2](https://github.com/GreaterManchesterODA/Digital-Exclusion-Risk-Index/blob/main/Version%201.2/Update%20notes_v1.2.md) of the tool:
 
-Appendix A details the full set of calculations involved behind the national scores.
+`(Indicator score A * ((Indicator score A weighting)/(Indicator score A weighting + Indicator score B weighting + Indicator score C weighting ...)) + (Indicator score B * (Indicator score B weighting)/Indicator score A weighting + Indicator score B weighting + Indicator score C weighting ...) + ...`
 
-### Great Britain scores
-Add text here ...
+This weighted sum is applied to all of the relevant indicators for each component to produce a component score.
 
-Appendix B details the full set of calculations involved behind the GB scores.
+A full list of calculations for the nation level scores is presented in [Appendix C](##appendix-c) and a full list of calculations for the GB level scores is presented in [Appendix D](##appendix-d).
+
 
 ## Improving dashboard functionality to select different DERI score calculations
-Add text here ...
+To allow users the option to choose a set of scores at either Local Authority/nation/Great Britain level requires the creation of a new parameter and a new set of calculated fields to update the scores based on the parameter selection.
+
+The parameter required is as follows:
+|Parameter name|Data type|Options|Default value|
+|---|---|---|---|
+|Local / national / GB score|String|Local Authority, Nation, Great Britan|Local Authority|
+
+The calculated fields tell Tableau which set of scores to select based on the parameter selection. As the DERI score pulls together the scores for each component, four calculations are needed to accompany the parameter - one for each component (broadband, demography and deprivation) and one for the overall DERI score. The component calculations will follow the format of the broadband component example below:
+
+`CASE [Local / national / GB score]`
+
+`WHEN "Local Authority" THEN [Broadband component]`
+
+`WHEN "Nation" THEN [Broadband component (national)]`
+
+`WHEN "Great Britain" THEN [Broadband component (GB)]`
+
+`END`
+
+
+
 
 ## Appendix A: Calculations for nation level minimum and maxium fields
 |Indicator|Type|Calculated field name|Calculation|
@@ -54,8 +74,10 @@ Add text here ...
 |Nation level Index of Multiple Deprivation 2019 score|Minimum per nation|National min of Index of Multiple Deprivation Score|`{ FIXED [Nation]: MIN([Index of Multiple Deprivation 2019 score])}`|
 |Nation level Unemployment rate|Maximum per nation|National max of Unemployment rate|`{ FIXED [Nation]: MAX([Unemployment rate])}`|
 |Nation level Unemployment rate|Minimum per nation|National min of Unemployment rate|`{ FIXED [Nation]: MIN([Unemployment rate])}`|
-
-NEED TO ADD DISABILITY AND SOCIAL GRADE
+|Nation level percentage of residents in social grade DE|Maximum per nation|National max of Percentage of residents in social grade DE|`{ FIXED [Nation]: MAX([Percentage of residents in social grade DE])}`|
+|Nation level percentage of residents in social grade DE|Minimum per nation|National min of Percentage of residents in social grade DE|`{ FIXED [Nation]: MIN([Percentage of residents in social grade DE])}`|
+|Nation level percentage of population with disability|Maximum per nation|National max of percentage of population with disability|`{ FIXED [Nation]: MAX([Percentage of residents whose day-to-day activities are limited])}`|
+|Nation level percentage of population with disability|Minimum per nation|National min of percentage of population with disability|`{ FIXED [Nation]: MIN([Percentage of residents whose day-to-day activities are limited])}`|
 
 ## Appendix B: Calculations for Great Britan level minimum and maxium fields
 |Indicator|Type|Calculated field name|Calculation|
@@ -78,8 +100,10 @@ NEED TO ADD DISABILITY AND SOCIAL GRADE
 |GB level Index of Multiple Deprivation 2019 score|Minimum per full dataset|GB min of Index of Multiple Deprivation Score|`{ FIXED: MIN([Index of Multiple Deprivation 2019 score])}`|
 |GB level Unemployment rate|Maximum per full dataset|GB max of Unemployment rate|`{ FIXED: MAX([Unemployment rate])}`|
 |GB level Unemployment rate|Minimum per full dataset|GB min of Unemployment rate|`{ FIXED: MIN([Unemployment rate])}`|
-
-NEED TO ADD DISABILITY AND SOCIAL GRADE
+|GB level percentage of residents in social grade DE|Maximum per full dataset|GB max of Percentage of residents in social grade DE|`{ FIXED: MAX([Percentage of residents in social grade DE])}`|
+|GB level percentage of residents in social grade DE|Minimum per full dataset|GB min of Percentage of residents in social grade DE|`{ FIXED: MIN([Percentage of residents in social grade DE])}`|
+|GB level percentage of population with disability|Maximum per full dataset|GB max of percentage of population with disability|`{ FIXED: MAX([Percentage of residents whose day-to-day activities are limited])}`|
+|GB level percentage of population with disability|Minimum per full dataset|GB min of percentage of population with disability|`{ FIXED: MIN([Percentage of residents whose day-to-day activities are limited])}`|
 
 ## Appendix C: Nation level indicator scores
 |Score name|Score calculation|

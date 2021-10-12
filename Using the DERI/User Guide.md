@@ -41,8 +41,8 @@ The different versions of the tool can be accessed via the following links:
 |Version 1.4|https://www.gmtableau.nhs.uk/t/GMCA/views/DigitalExclusionRiskIndexv1_4/DERIhomepage?:iid=2&:isGuestRedirectFromVizportal=y&:embed=y|
 |Version 1.5|https://www.gmtableau.nhs.uk/t/GMCA/views/DigitalExclusionRiskIndexv1_5/DERIhomepage?:iid=1&:isGuestRedirectFromVizportal=y&:embed=y|
 
-### Navigating the tool
-The tool contains the following dashboards:
+### Navigating around the tool
+Each version of tool contains the following tabs, which are all Tableau dashboards and part of the same Tableau workbook:
 * Summary home page
 * Tool guide
 * DERI score dashboard
@@ -50,7 +50,7 @@ The tool contains the following dashboards:
 * Digital connectivity component dashboard
 * Deprivation component dashboard
 
-The hyperlinks above navigate to the main DERI home page for each version of the tool. From the home page, there are links to each of the other 5 dashboards, all displayed as white text on a dark grey background. Within each of the other 5 dashboards there are links back to the main home page, again displayed as white text on a dark grey background.
+The links in the above section navigate to the main DERI home page for each version of the tool. From the home page, there are links to each of the other 5 dashboards, all displayed as white text on a dark grey background. Within each of the other 5 dashboards there are links back to the main home page, again displayed as white text on a dark grey background.
 
 Users are also able to navigate to each dashboard directly by clicking the relevant tab displayed in the bar along the top of the tool.
 
@@ -67,9 +67,9 @@ Each component dashboard is set out in an identical format and has a number of k
   * A function in the top right hand corner that allows users to edit the score weighting by dragging a point along a slider bar for each indicator
 * Coloured text to display the value of the score of the most recent LSOA selected (LSOAs are selected by hovering or clicking on the map or the graph)
 
-There is an additional drop down box in the deprivation dashboard for the IMD score methodology. This allows users to choose whether to base the calculation for the IMD score on the IMD methodology from Scotland, England or Wales.
+There is an additional drop down box in both the deprivation dashboard for the IMD score methodology, and the main DERI Score dashboard. This allows users to choose whether to base the calculation for the IMD score on the IMD methodology from Scotland, England or Wales.
 
-The map and the graph are linked so that hovering or clicking anywhere on the map will highlight that same LSOA within the graph, and vice versa. When hovering or clicking on the map or graph, a tooltip box will appear to display the following information about the selected LSOA:
+The map and the graph on each page are linked so that hovering or clicking anywhere on the map will highlight that same LSOA within the graph, and vice versa. When hovering or clicking on the map or graph, a tooltip box will appear to display the following information about the selected LSOA:
 * LSOA code
 * LSOA name
 * Ward name

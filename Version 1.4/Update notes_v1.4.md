@@ -12,10 +12,39 @@ Versions 1.0 to 1.3 of the DERI used an age component to form the DERI score. Ho
 * Percentage of residents whose daily activities are limited
 * Percentage of population in social grade DE
 
-## Tableau updates for demography component
+### Tableau updates for demography component
 Changing this component required two new sets of calculations: one set to create a score for the percentage of residents whose daily activities are limited and one for the percentage of population in social grade DE. Parameters were also created for the weightings of each of these new scores. The creation of these calculations and parameters followed the same process as outlined in the original [version 1.0 methodology](https://github.com/GreaterManchesterODA/Digital-Exclusion-Risk-Index/blob/main/Version%201.0/DERI%20Score%20Methodology_v1.0.md#individual-indicator-scores), with updates to the parameter weightings as outlined in the [version 1.2 methodology](https://github.com/GreaterManchesterODA/Digital-Exclusion-Risk-Index/blob/main/Version%201.2/Update%20notes_v1.2.md).
 
-Once these calculations and parameters were created, the `Age component` was renamed to `Demography component` and the calculated field was updated to be based on the scores and parameters for all four indicators.
+#### New calculated fields for indicator minimum and maximums
+The first step in creating new indicator scores is to fix the minimum and maximum LSOA scores within each local authority district. This is done by creating calculated fields, as outlined in the table below:
+
+|Indicator|Type|Calculated field name|Calculation|
+|---|---|---|---|
+|Percentage of population with disability|Maximum per district|Max of percentage of population with disability|`{ FIXED [Local authority name]: MAX([Percentage of residents whose day-to-day activities are limited])}`|
+|Percentage of population with disability|Minimum per district|Min of percentage of population with disability|`{ FIXED [Local authority name]: MIN([Percentage of residents whose day-to-day activities are limited])}`|
+|Percentage of residents in social grade DE|Maximum per district|Max of Percentage of residents in social grade DE|`{ FIXED [Local authority name]: MAX([Percentage of residents in social grade DE])}`|
+|Percentage of residents in social grade DE|Minimum per district|Min of Percentage of residents in social grade DE|`{ FIXED [Local authority name]: MIN([Percentage of residents in social grade DE])}`|
+
+#### New calculated fields for indicator scores
+Using the minimum and maximum value calculated fields mentioned above, individual scores between 0 and 10 can be created for the two new indicators. For both of these indicators, a higher value is assumed to relate to a higher risk of digital exclusion. Therefore, the highest value would receive a score of 10, and the lowest value a score of 0. A value halfway between the highest and lowest values would gain a score of 5. The calculated fields for creating these scores are shown in the table below:
+
+|Score name|Score calculation|
+|---|---|
+|Score: percentage of population with disability|`10*([Percentage of residents whose day-to-day activities are limited]-[Min of percentage of population with disability])/([Mx of percentage of population with disability]-[Min of percentage of population with disability])`|
+|Score: percentage of population in social grade DE|`10*([Percentage of population in social grade DE]-[Min of percentage of population in social grade DE])/([Max of percentage of population in social grade DE]-[Min of percentage of population in social grade DE])`|
+
+#### New parameters
+To create each component score, weightings are applied to each indicator score. The new parameters needed in order to create the demography component are outlined in the table below:
+
+|Parameter name|Type|Applied to|Default value|
+|---|---|---|---|
+|Weighting: disability|Indicator weighting|Percentage of residents whose day-to-day activities are limited|2|
+|Weighting: social grade DE|Indicator weighting|Percentage of population in social grade DE|2|
+
+#### Updated calculation for demography component
+Once these calculations and parameters were created, the `Age component` was renamed to `Demography component` and the calculated field for the component was updated to be based on the scores and parameters for all four indicators. The calculation for the updated demography component is shown below:
+
+`([Score: percentage of population aged 65+]*(([Weighting: 65+]/([Weighting: 65+]+[Weighting: 75+])))+([Score: percentage of population aged 75+]*(([Weighting: 75+]/([Weighting: 65+]+[Weighting: 75+])))+([Score: percentage of population with disability]*([Weighting: disability]/([Weighting: 65-74]+[Weighting: 75+]+[Weighting: disability]+[Weighting: social grade DE])))+([Score: percentage of population in social grade DE]*([Weighting: social grade DE]/([Weighting: 65-74]+[Weighting: 75+]+[Weighting: disability]+[Weighting: social grade DE])))`
 
 ## National and Great Britain DERI scores 
 Prior versions of the DERI tool based the calculation for the indicator, component and DERI scores on the minimum and maximum values in each local authority district. While this is useful for seeing the relative risk of digital exclusion within a local area, this approach limits the usefulness of comparisons between different local authority areas. To enable meaningful comparisons between different local authorities required a second and third set of calculations to be created. The first set recalculated the scores based upon the maximum and minimum indicator values within each nation (England, Scotland and Wales). The second set recalculated the scores based upon the maximum and minimum values across the full dataset, which includes all of Great Britain.

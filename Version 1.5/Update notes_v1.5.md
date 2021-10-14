@@ -19,7 +19,7 @@ The repository has UK indices and GB indices. We have used the GB set of data as
 #### Calculations for new indicator minimum and maximums
 The process for calculating the separate IMD scores within the DERI tool followed the same steps as the original [indicator score methodology](https://github.com/GreaterManchesterODA/Digital-Exclusion-Risk-Index/blob/main/Version%201.0/DERI%20Score%20Methodology_v1.0.md#individual-indicator-scores). The first step in creating new indicator scores is to fix the minimum and maximum LSOA scores within each local authority district, nation and Great Britain. 
 
-The mins and maxes needed to be calculated for each of the English, Welsh and Scottish IMD figures, fixed separately at Local Authority, nation, and Great Britain level. This requires 9 new calculated fields for the maxes, in the format of the calculations below, where X is either England, Scotland or Wales.
+The mins and maxes needed to be calculated for each of the English, Welsh and Scottish IMD figures, fixed separately at Local Authority, nation, and Great Britain level. This requires 9 new calculated fields for the maxes, in the format of the calculations below, where `X` is either England, Scotland or Wales.
 
 `{FIXED [Local Authority name] : MAX([IMD score - X base])}`
 
@@ -66,10 +66,14 @@ To bring this parameter into the calculations behind the main component scores t
 
 where `X` is either local authority, nation, or Great Britain.
 
-This calculated field then forms the basis of the IMD score within the main calculated field for the `Deprivation component (GB)`. This allows the score to be controlled by both the `IMD: England /Scotland / Wales` parameter and the `Local / national / GB score` parameter (from [Version 1.4](https://github.com/GreaterManchesterODA/Digital-Exclusion-Risk-Index/blob/main/Version%201.4/Update%20notes_v1.4.md)) simultaneously. 
+This calculated field then forms the basis of the IMD score within the main calculated field for each of the three `Deprivation component` options (district / nation / GB). Appendix B shows the updated calculations required for each deprivation component. These calculations allow the score to be controlled by both the `IMD: England /Scotland / Wales` parameter and the `Local / national / GB score` parameter (from [Version 1.4](https://github.com/GreaterManchesterODA/Digital-Exclusion-Risk-Index/blob/main/Version%201.4/Update%20notes_v1.4.md)) simultaneously. 
 
 ### Adding the parameter to the dashboards
 The addition of the different calculation bases for the Index of Multiple Deprivation score impacts the deprivation component and feeds through to the overall DERI score. Therefore the `IMD: England / Scotland / Wales` parameter needed to be added to both the 'Deprivation Score dashboard' and the 'DERI Score dashboard'. 
+
+There is space in the dashboards to add the parameter in a horizontal container next to the filters for the local authority selection and the local / national / GB selection.
+
+The dashboards are linked so that if 'IMD score - England base' is selected in one dashboard, the scores will be updated to display the England IMD scores throughout the other dashboards.
 
 ## Appendix A: Calculations for minimum and maximum fields
 |Indicator|Type|Calculated field name|Calculation|
@@ -92,3 +96,10 @@ The addition of the different calculation bases for the Index of Multiple Depriv
 |GB level IMD score - Scotland base|Minimum per full dataset|GB min of IMD score - Scotland base|`{ FIXED: MIN([Index of Multiple Deprivation 2019 score - Scotland base])}`|
 |GB level IMD score - Wales base|Maximum per full dataset|GB max of IMD score - England base|`{ FIXED: MAX([Index of Multiple Deprivation 2019 score - Wales base])}`|
 |GB level IMD score - Wales base|Minimum per full dataset|GB min of IMD score - England base|`{ FIXED: MIN([Index of Multiple Deprivation 2019 score - Wales base])}`|
+
+## Appendix B: Calculations for the deprivation component
+|Component name|Component calculation|
+|---|---|
+|Deprivation component|`([Score: unemployment rate]*([Weighting: unemployment rate]/([Weighting: unemployment rate]+[Weighting: % no quals]+[Weighting: guaranteed pension credit]+[Weighting: IMD score]))) + ([Score: percentage of residents aged 16+ with no qualifications]*([Weighting: % no quals]/([Weighting: unemployment rate]+[Weighting: % no quals]+[Weighting: guaranteed pension credit]+[Weighting: IMD score]))) + ([Score: guaranteed pension credit]*([Weighting: guaranteed pension credit]/([Weighting: unemployment rate]+[Weighting: % no quals]+[Weighting: guaranteed pension credit]+[Weighting: IMD score]))) + ([IMD Score]*([Weighting: IMD score]/([Weighting: unemployment rate]+[Weighting: % no quals]+[Weighting: guaranteed pension credit]+[Weighting: IMD score])))`|
+|Deprivation component (national)|`([National score: unemployment rate]*([Weighting: unemployment rate]/([Weighting: unemployment rate]+[Weighting: % no quals]+[Weighting: guaranteed pension credit]+[Weighting: IMD score]))) + ([National score: percentage of residents aged 16+ with no qualifications]*([Weighting: % no quals]/([Weighting: unemployment rate]+[Weighting: % no quals]+[Weighting: guaranteed pension credit]+[Weighting: IMD score]))) + ([National score: Guaranteed Pension Credit]*([Weighting: guaranteed pension credit]/([Weighting: unemployment rate]+[Weighting: % no quals]+[Weighting: guaranteed pension credit]+[Weighting: IMD score]))) + ([IMD Score (National)]*([Weighting: IMD score]/([Weighting: unemployment rate]+[Weighting: % no quals]+[Weighting: guaranteed pension credit]+[Weighting: IMD score])))`|
+|Deprivation component (GB)|`([GB score: unemployment rate]*([Weighting: unemployment rate]/([Weighting: unemployment rate]+[Weighting: % no quals]+[Weighting: guaranteed pension credit]+[Weighting: IMD score]))) + ([GB score: percentage of residents aged 16+ with no qualifications]*([Weighting: % no quals]/([Weighting: unemployment rate]+[Weighting: % no quals]+[Weighting: guaranteed pension credit]+[Weighting: IMD score]))) + ([GB score: Guaranteed Pension Credit]*([Weighting: guaranteed pension credit]/([Weighting: unemployment rate]+[Weighting: % no quals]+[Weighting: guaranteed pension credit]+[Weighting: IMD score]))) + ([IMD Score (GB)]*([Weighting: IMD score]/([Weighting: unemployment rate]+[Weighting: % no quals]+[Weighting: guaranteed pension credit]+[Weighting: IMD score])))`|

@@ -83,13 +83,3 @@ The DERI score dashboard follows the same visual structure as the individual com
 The DERI score dashboard is linked directly to the component scores so that any changes to the weightings of individual indicators within the component dashboards will also update the DERI score.
 
 By default, the DERI score dashboard will open with all three components equally weighted. However, the button on the top right hand corner of the map allows users to change the relative importance of each indicator. Where changes are made to the DERI score weighting, the scores and the associated visualisations (i.e. the map and graph) will be updated automatically.
-
-## How to use the DERI, and how not to use the DERI
-The DERI is a risk index: it does not mean that every person in a high-risk area is digitally excluded; nor does it mean that no-one in a low-risk area is digitally excluded either. It gives an overview of where targeting resources could have the most benefit.
-
-One way to consider the DERI is as part of an overall risk matrix around digital inclusion. Considering the DERI as an indicator of ‘likelihood’ – people are more likely to be digitally excluded in areas where the DERI score is high. However, adding in another dataset focused on where priority groups are more likely to live would provide the ‘impact’. As an example, anywhere with a high DERI score (likelihood) and a high proportion of disabled people (as a priority group, the ‘impact’) should be a key area of focus.
-
-However, the tool and dataset should not be used as an indicator over time – changes in a DERI score could occur because of, for example, older people moving out of an area. Therefore, as the tool is developed and updated information is added, this should not be seen as a change over time due to digital inclusion activities alone, but rather an updated view on the likelihood of being digitally excluded within an area.
-
-Furthermore, users should consider what additional local data might be used in context alongside the tool. This is not THE tool of digital exclusion, but rather A tool. Adding in local context and data – even if not openly available – can add more detail and ensure that local activity is focused on the areas most likely to be digitally excluded.
-

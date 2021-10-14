@@ -64,9 +64,11 @@ To bring this parameter into the calculations behind the main component scores t
 
 `END`
 
-where `X` is either local authority, nation, or Great Britain.
+where `X` is either local authority, nation, or Great Britain. These calculated fields can be named as `IMD score`, `IMD score (National)` and `IMD score (GB)`.
 
-This calculated field then forms the basis of the IMD score within the main calculated field for each of the three `Deprivation component` options (district / nation / GB). Appendix B shows the updated calculations required for each deprivation component. These calculations allow the score to be controlled by both the `IMD: England /Scotland / Wales` parameter and the `Local / national / GB score` parameter (from [Version 1.4](https://github.com/GreaterManchesterODA/Digital-Exclusion-Risk-Index/blob/main/Version%201.4/Update%20notes_v1.4.md)) simultaneously. 
+These three calculated fields then form the basis of the IMD score within the main calculation for each of the three `Deprivation component` options (district / nation / GB). Appendix B shows the updated calculations required for each deprivation component to incorporate the new IMD score calculations.
+
+These calculations allow the score to be controlled by both the `IMD: England /Scotland / Wales` parameter and the `Local / national / GB score` parameter (from [Version 1.4](https://github.com/GreaterManchesterODA/Digital-Exclusion-Risk-Index/blob/main/Version%201.4/Update%20notes_v1.4.md)) simultaneously. 
 
 ### Adding the parameter to the dashboards
 The addition of the different calculation bases for the Index of Multiple Deprivation score impacts the deprivation component and feeds through to the overall DERI score. Therefore the `IMD: England / Scotland / Wales` parameter needed to be added to both the 'Deprivation Score dashboard' and the 'DERI Score dashboard'. 

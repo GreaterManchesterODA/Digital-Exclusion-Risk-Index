@@ -4,18 +4,23 @@ It is important to note the uses and limitations of the DERI in order to underst
 
 ## Limitations of the tool
 ### Data quality
-The data used to create the tool came from a wide variety of sources, many of which come with their own limitations. For example, the deprivation component within the tool uses the Index of Multiple Deprivation as one indicator, which itself is a composite index that only provides an estimate of the degree of deprivation in an area. Equally, some of the indicators are calculated with reference to the ONS' Mid-Year Population Estimates dataset, which again is an estimate rather than an exact dataset. Similarly, much of the information has come through surveys which provide estimates only. As a result, the tool needs to be used as an indicative guide, rather than interpreted as absolute fact.
+The data used to create the tool came from a wide variety of sources, many of which come with their own limitations. For example, the deprivation component within the tool uses the Index of Multiple Deprivation as one indicator, which itself is a composite index that only provides an estimate of the degree of deprivation in an area. Equally, some of the indicators are calculated with reference to the ONS' Mid-Year Population Estimates dataset, which again is an estimate rather than an exact dataset. Similarly, much of the information has come through surveys that provide estimates only. As a result, the tool needs to be used as an indicative guide, rather than interpreted as absolute fact.
 
 ### Data recency
 Not all of the data in the tool is up to date - some of the data has come from the 2011 census and is now a decade out of date. Other data sources are more recent, but there is significant variation in recency across the datasets. With some datasets in the tool being up to a decade out of date, users must be aware the the tool may not accurately reflect the true picture of digital exclusion risk today. We are aware of this limitation and will seek to update the data sources as and when newer versions of the source datasets become available.
 
 ### Geography
-The tool is only currently available at Lower Super Output Area level in England and Wales and Data Zone level in Scotland. While ward boundaries are overlaid on the map view, indicator and DERI scores are only calculated for the LSOAs and Data Zones. The tool presents each LSOA/Data Zone as one homogenous area but there is likely to be variation even within these geographical areas, so the scores should be interpreted with caution.
+The tool is only currently available at Lower Super Output Area level in England and Wales and Data Zone level in Scotland. While ward boundaries are overlaid on the map view, indicator and DERI scores are only calculated for the LSOAs and Data Zones. The tool presents each LSOA/Data Zone as one homogenous area but there is likely to be variation within these geographical areas, so the scores should be interpreted with caution.
 
 ## What can the tool be used for?
 ### Context
+The DERI tool can be used to provide context about the levels of digital exclusion risk in an area. It does not directly identify who is or is not digitally excluded, but instead provides information about the factors that are associated with digital exclusion, such as age, disability, deprivation, broadband connectivty, poverty, and skills levels. These factors can then be taken into consideration alongside local information to support further investigation or prioritisation of digital inclusion activities.
+
 ### Further investigation
+By outlining the overall risk of digital exclusion in each LSOA/Data Zone, the DERI tool indicates which areas may have higher numbers of people at risk of digital exclusion or may require digital inclusion support. This information can be used as a starting point for policymakers to carry out further investigation, using more detailed local information and evidence, to explore where there is the greatest need for digital inclusion support.
+
 ### Prioritisation
+One way to consider the DERI is as part of an overall risk matrix around digital inclusion to support the prioritisation of investigation and investment. Considering the DERI as an indicator of ‘likelihood’ – people are more likely to be digitally excluded in areas where the DERI score is high. However, adding in another dataset focused on where priority groups are more likely to live would provide the ‘impact’. As an example, anywhere with a high DERI score (likelihood) and a high proportion of disabled people (as a priority group, the ‘impact’) should be a key area of focus.
 
 ## What should the tool not be used for?
 ### Targets

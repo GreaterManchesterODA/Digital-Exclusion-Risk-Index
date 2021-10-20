@@ -2,7 +2,7 @@
 
 ## Introduction
 
-### What is the DERI 
+### What is the DERI?
 The Digital Exclusion Risk Index (DERI) is a tool that creates a digital exclusion risk score for each LSOA in Great Britain. The DERI score is a single number between 0 (low risk of digital exclusion) and 10 (high risk) and is actually composed of three component scores:
 *	Deprivation – includes IMD, skills, and welfare recipients
 *	Demography – includes information on disabled people and older residents
@@ -12,7 +12,7 @@ In total, 11 indicators are used. Each of these is normalised based on the maxim
 
 The DERI contains three different sets of calculations to normalise the indicators. The first set of calculations uses the maximum and minimum values of each indicator within each individual local authority. The second set uses the maximum and minimum indicator values within each nation in Great Britain (England, Scotland and Wales). The third set uses the maximum and minimum values within the full dataset, covering Great Britain as a whole. Users can select which set of calculations they want to see within the tool, depending on their area of interest.
 
-### What problem is the DERI trying to solve
+### What problem is the DERI trying to solve?
 There is no single, national dataset that identifies who is and isn’t digitally excluded. Policymakers and researchers therefore need to rely on proxy information, or on national surveys to give an indication of digital exclusion prevalence.
 
 An additional difficulty is the multi-faceted nature of digital exclusion. That is, digital inclusion and exclusion are on a continuum of need and support. Therefore, to move from a national view of digital exclusion (through surveys like the Lloyds Digital Consumer Index, or Ofcom surveys of internet usage) to a more localised view, a different approach must be taken to support policymakers.

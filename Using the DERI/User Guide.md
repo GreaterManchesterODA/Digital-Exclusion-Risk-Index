@@ -32,14 +32,14 @@ The tool now covers all of England, Scotland and Wales and focuses on Lower Supe
 
 ### Accessing the tool
 The different versions of the tool can be accessed via the following links:
-|Version|Tool link|Methodology and notes|
+|Version|Tool link|Methodology, data and notes|
 |---|---|---|
-|Version 1.0|[Version 1.0 on Tableau](https://www.gmtableau.nhs.uk/#/site/GMCA/views/210325_DERI/DERIhomepage?:iid=1)|[Version 1.0 notes]()|
-|Version 1.1|[Version 1.1 on Tableau](https://www.gmtableau.nhs.uk/t/GMCA/views/DigitalExclusionRiskIndexv1_1/DERIhomepage?%3AisGuestRedirectFromVizportal=y&%3Aembed=y)|[Version 1.1 notes]()|
-|Version 1.2|[Version 1.2 on Tableau](https://www.gmtableau.nhs.uk/t/GMCA/views/DigitalExclusionRiskIndexv1_2/DERIhomepage?:iid=1&:isGuestRedirectFromVizportal=y&:embed=y)|[Version 1.2 notes]()|
-|Version 1.3|[Version 1.3 on Tableau](https://www.gmtableau.nhs.uk/t/GMCA/views/DigitalExclusionRiskIndexv1_3/DERIhomepage?%3Aiid=1&%3AisGuestRedirectFromVizportal=y&%3Aembed=y)|[Version 1.3 notes]()|
-|Version 1.4|[Version 1.4 on Tableau](https://www.gmtableau.nhs.uk/t/GMCA/views/DigitalExclusionRiskIndexv1_4/DERIhomepage?:iid=2&:isGuestRedirectFromVizportal=y&:embed=y)|[Version 1.4 notes]()|
-|Version 1.5|[Version 1.5 on Tableau](https://www.gmtableau.nhs.uk/t/GMCA/views/DigitalExclusionRiskIndexv1_5/DERIhomepage?:iid=1&:isGuestRedirectFromVizportal=y&:embed=y)|[Version 1.5 notes]()|
+|Version 1.0|[Version 1.0 on Tableau](https://www.gmtableau.nhs.uk/#/site/GMCA/views/210325_DERI/DERIhomepage?:iid=1)|[Version 1.0 notes](https://github.com/GreaterManchesterODA/Digital-Exclusion-Risk-Index/tree/main/Version%201.0)|
+|Version 1.1|[Version 1.1 on Tableau](https://www.gmtableau.nhs.uk/t/GMCA/views/DigitalExclusionRiskIndexv1_1/DERIhomepage?%3AisGuestRedirectFromVizportal=y&%3Aembed=y)|[Version 1.1 notes](https://github.com/GreaterManchesterODA/Digital-Exclusion-Risk-Index/tree/main/Version%201.1)|
+|Version 1.2|[Version 1.2 on Tableau](https://www.gmtableau.nhs.uk/t/GMCA/views/DigitalExclusionRiskIndexv1_2/DERIhomepage?:iid=1&:isGuestRedirectFromVizportal=y&:embed=y)|[Version 1.2 notes](https://github.com/GreaterManchesterODA/Digital-Exclusion-Risk-Index/tree/main/Version%201.2)|
+|Version 1.3|[Version 1.3 on Tableau](https://www.gmtableau.nhs.uk/t/GMCA/views/DigitalExclusionRiskIndexv1_3/DERIhomepage?%3Aiid=1&%3AisGuestRedirectFromVizportal=y&%3Aembed=y)|[Version 1.3 notes](https://github.com/GreaterManchesterODA/Digital-Exclusion-Risk-Index/tree/main/Version%201.3)|
+|Version 1.4|[Version 1.4 on Tableau](https://www.gmtableau.nhs.uk/t/GMCA/views/DigitalExclusionRiskIndexv1_4/DERIhomepage?:iid=2&:isGuestRedirectFromVizportal=y&:embed=y)|[Version 1.4 notes](https://github.com/GreaterManchesterODA/Digital-Exclusion-Risk-Index/tree/main/Version%201.4)|
+|Version 1.5|[Version 1.5 on Tableau](https://www.gmtableau.nhs.uk/t/GMCA/views/DigitalExclusionRiskIndexv1_5/DERIhomepage?:iid=1&:isGuestRedirectFromVizportal=y&:embed=y)|[Version 1.5 notes](https://github.com/GreaterManchesterODA/Digital-Exclusion-Risk-Index/tree/main/Version%201.5)|
 
 ### Navigating around the tool
 Each version of tool contains the following tabs, which are all Tableau dashboards and part of the same Tableau workbook:

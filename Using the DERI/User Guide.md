@@ -56,8 +56,23 @@ The links in [the above section](#accessing-the-tool) navigate to the main home 
 
 Users are also able to navigate to each dashboard directly by clicking the relevant tab displayed in the bar along the top of the tool.
 
-### Using the dashboards
-Each component dashboard is set out in an identical format and has a number of key elements:
+### Home page and user guide page
+The first page of the DERI tool is a 'home page'. It provides links to the tool guide and the four dashboards that makes up the tool. It also provides a short description of the dashboards and the DERI score.
+
+The user guide page follows the home page provides a simple image of the DERI dashboard, highlighting all of the relevant components of the dashboard, which are replicated through each of the four dashboards.
+
+### The interactive dashboards
+There are four interactive dashboards in the online tool. The first, the DERI Score dashboard, focuses on the overall DERI score for each LSOA.
+
+The DERI score dashboard follows the same visual structure as the individual component dashboards, but the score displayed is built from the three component scores. As with the deprivation dashboard, the DERI score dashboard contains the additional drop down box for the IMD score methodology. This is because the IMD indicator forms part of the overall DERI score through its inclusion within the deprivation component.
+
+The DERI score dashboard is linked directly to the component scores so that any changes to the weightings of individual indicators within the component dashboards will also update the DERI score.
+
+By default, the DERI score dashboard will open with all three components equally weighted. However, the button on the top right hand corner of the map allows users to change the relative importance of each indicator. Where changes are made to the DERI score weighting, the scores and the associated visualisations (i.e. the map and graph) will be updated automatically.
+
+The remaining dashboards focus on the individual components of the DERI score - demography, broadband access, and deprivation. Each of the dashboards is built in much the same way, although each draws on different data and present different information.
+
+There are a number of key elements which remain the same on every dashboard:
 * Title to show which dashboard is being displayed
 * Drop down boxes to allow the users to select the following:
   * Local authority area(s)
@@ -78,22 +93,6 @@ The map and the graph on each page are linked so that hovering or clicking anywh
 * Local authority name
 * Nation
 * Component score
-
-## Home page
-The first page is a 'home page' (DERI home page). It provides links to the tool guide and the four dashboards that makes up the tool. It provides a short description of the dashboards and the DERI score. The DERI score is a risk index, providing a number between 0 and 10. When the number is closer to ten, the risk of digital exclusion is higher; when the number is closer to 0, the risk is lower. For each of the components - also scored 0 to 10 - the score represents the risk of digital exclusion associated with that theme: age, deprivation, or broadband speeds and access.
-
-## User guide page
-The user guide page provides a simple image of the DERI dashboard, highlighting all of the relevant components of the dashboard, which are replicated through each of the four dashboards.
-
-## DERI score dashboard
-The DERI score dashboard follows the same visual structure as the individual component dashboards, but the score displayed is built from the three component scores. As with the deprivation dashboard, the DERI score dashboard contains the additional drop down box for the IMD score methodology. This is because the IMD indicator forms part of the overall DERI score through its inclusion within the deprivation component.
-
-The DERI score dashboard is linked directly to the component scores so that any changes to the weightings of individual indicators within the component dashboards will also update the DERI score.
-
-By default, the DERI score dashboard will open with all three components equally weighted. However, the button on the top right hand corner of the map allows users to change the relative importance of each indicator. Where changes are made to the DERI score weighting, the scores and the associated visualisations (i.e. the map and graph) will be updated automatically.
-
-## Individual dashboards
-There are four dashboards in the online tool. The first, the DERI Score dashboard, focuses on the overall DERI score for each LSOA. The remaining dashboards focus on the individual components of the DERI score - demography, broadband access, and deprivation. Each of the dashboards is built in much the same way, although each draws on different data and present different information.
 
 ### Area filter
 The first major component of each dashboard is the area filter, which sits beneath the dashboard title. This filter allows a user to choose one or more relevant local authorities, or to choose all local authorities. The local authority filter is at a district level, and so a view of county, city-regional, regional or other areas will require a choice of all individual districts within. The filter action applies to both the [map](#map) and the [marker graph](#marker-graph).
@@ -144,33 +143,29 @@ Individually selecting LSOAs can also be done by clicking on an LSOA on the map,
 
 The background map used is fairly simple, and does not provide major roads, location names or addresses. It does provide general physical geographic components (e.g. rivers, lakes) as a guide, however.
 
-### Other components
-There are several other components to each dashboard that are added to the dashboard for usability or clarity.
+### Weightings
+Each score - whether a component score, or the final DERI score - is composed of other individually weighted scores. The DERI score is composed of three weighted component scores, and the component scores are composed of multiple weighted indicator scores.
 
-#### Weightings
-Each dashboard shows the relevant weightings for the score presented on the dashboard. The DERI score dashboard, for example, shows the weightings of the different components that make up the score; while the component dashboards show the weightings of the individual indicator scores within it.
-
-The weightings are shown in a collapsible box, floating on the top right of the map. To hide the weightings, click the 'Hide score weightings' button at the top of the weightings, and to open them again, click the 'Edit score weighting button' that appears in its place.
+The DERI tool allows you to alter these weightings as you see fit. The weightings are shown in a collapsible box, floating on the top right of the map. To hide the weightings, click the 'Hide score weightings' button at the top of the weightings, and to open them again, click the 'Edit score weighting button' that appears in its place.
 
 Each weighting is a parameter that affects the score of each component, and therefore the overall DERI score. If you make a change to a weighting for an indicator score in a component dashboard, this will affect the DERI score in the DERI dashboard.
 
-Weightings are set at default settings, and are available in the [methodology note](DERI%20Score%20Methodology_v1.md). The weightings are presented as sliders, which can be altered by the user to alter the different weightings of components and indicators. The sliders move an integer at a time, between 0(%) and 100(%). Once a change is made, the tool will automatically update the relevant scores throughout the dashboard, which may take a moment.
+Weightings are set at default settings, and are available in the [methodology note](DERI%20Score%20Methodology_v1.md) and subsequent updates. The weightings are presented as sliders, which can be altered by the user to alter the different weightings of components and indicators. The sliders move an integer at a time, between 0 (no weight) and 10 (high weight). Once a change is made, the tool will automatically update the relevant scores throughout the dashboard, which may take a moment.
 
-#### Warning
-Weightings within each dashboard need to sum to 100, otherwise some component or indicator scores may be pushed beyond 10. If they do not sum - either they are too low or too high - then a warning will appear below the weightings to explain this. This warning is currently only visible in the expandable weightings container. 
+The weightings are also relative to one another. That is, if three components have weightings of 1, 1, and 2, this is the same as weightings of 2, 2, and 4; or 3, 3, and 6. The overall score will not be affected if the relative value of the weightings remain the same. Similarly, if all weightings are 3, this will produce the same output as if all weightings were at 10. The only difference will occur if 0 values are used (e.g. weightings of 3, 3, and 3 are not the same as 0, 0, and 0). 
 
-#### Legend
+### Legend
 A legend also appears in the bottom left of the map. This legend shows the colour coding used for the map, graph and LSOA score for each dashboard. This legend is set: 0 is a dark blue, and 10 is a dark red.
 
 ## How might you want to use the tool?
 There are many different options for using the tool. Users may want to:
-* See their locality scores: this can be done by accessing the relevant dashboard and choosing their locality in the area filter.
-* Compare their area against another: this can be done by choosing the relevant areas in the area filter at the top of each dashboard.
-* Understand digital exclusion relating to a particular component: individual component dashboards allow users to see relevant risk indices for age, deprivation and broadband access and speed.
-* Re-weight the scores to understand a particular conmponent's impact on the DERI score: this can be done using the weightings section in each dashboard.
+* See their locality's scores: this can be done by accessing the relevant dashboard and choosing their locality in the area filter.
+* Compare their area against another: this can be done by choosing the relevant areas in the area filter at the top of each dashboard, and choosing the national or Great Britain calculation method.
+* Understand digital exclusion relating to a particular component: individual component dashboards allow users to see relevant risk indices for age, deprivation and broadband access and speed. You can change the weighting of individual indicator scores, or the overall component scores.
+* Re-weight the scores to understand a particular conmponent's impact on the DERI score: again, this can be done using the weightings section in each dashboard.
 * Understand local or regional hotspots: by choosing one or more areas, users can see using the colour coding, graph, map and score, the areas that are at highest risk in each locality of experiencing digital exclusion.
 
-It is important, however, to note what the DERI tool cannot be used for. To take an example, imagine a user wanted to understand the top ten areas at risk of digital exclusion in Greater Manchester. This tool would only show _within each district_ which areas were at risk of digital inclusion. Choosing all ten districts in Greater Manchester and identifying those with the top ten highest DERI scores would not show those at the highest risk of digital exclusion within Greater Manchester. If the risk of digital exclusion was based on maximum and minimum values within all of Greater Manchester, this would elicit different LSOAs at risk than the current approach, which is based on the maximum and minimum values _within each district_.
+For more discussion of the ways that you may or may not want to use the DERI tool and dataset, visit [the guide on how to, and how not to use the DERI tool](How%20to%20and%20how%20not%20to%20use%20the%20DERI.md).
 
 ---
 <b id="f1">1</b> For England and Wales, the 2011 Census Lower Super Output Areas are used. For Scotland, the 2011 Data Zones are used. For the remainder of this document, the term 'LSOA' is used to represent LSOAs or Data Zones. [↩](#a1)

@@ -1,6 +1,6 @@
 # User Guide
 
-*NOTE:* This User Guide relates to the latest version of the Digital Exclusion Risk Index (v1.5). If you have any queries about using previous versions, please contact oda@greatermanchester-ca.gov.uk.
+***NOTE:** This User Guide relates to the latest version of the Digital Exclusion Risk Index (v1.5). If you have any queries about using previous versions, please contact oda@greatermanchester-ca.gov.uk.*
 
 ## Introduction
 

@@ -60,7 +60,7 @@ Lastly, the team felt that those indicators focused more on _digital inclusion_ 
 
 Nevertheless, the inclusion of a digital activity component is considered by many who have developed an index. As such, several local and national datasets have been suggested for addition to the DERI. The primary dataset suggested appears to be the Internet User Classification. An exploration of this dataset suggests that the different groups would align with a risk score approach, though the exact ordering of the groups might be up for debate. Alternatively, using the proportion of residents who are likely to be in specific groups could also be an indicator that could be used in a new activity component. We would also welcome exploration of this work.
 
-## Personality profiles
+### Personality profiles
 Many areas extended their analysis by incorporating personality profiles. These were usually resident typologies, often constructed in commercial, non-open datasets such as Acorn, Paycheck, and MOSAIC. The use of these typologies or profiles alongside the risk indices is helpful in providing a wider picture of the data, and the types of residents also associated with high levels of digital exclusion risk.
 
 However, the commercial nature of these datasets meant that we would be unable to utilise them in an openly licenced DERI. Nevertheless, we would like to explore the potential for how this could be accomplished on a systematic basis. Other open typologies, such as the Output Area Classifications, might be amenable to inclusion in the DERI, or as an extension to the analysis.

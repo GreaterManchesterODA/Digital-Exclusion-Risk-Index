@@ -19,6 +19,8 @@ The DERI tool can be used to provide context about the levels of digital exclusi
 ### Further investigation
 By outlining the overall risk of digital exclusion in each LSOA/Data Zone, the DERI tool indicates which areas may have higher numbers of people at risk of digital exclusion or may require digital inclusion support. This information can be used as a starting point for policymakers to carry out further investigation, using more detailed local information and evidence, to explore where there is the greatest need for digital inclusion support.
 
+Users can also change the weightings of indicator scores or component scores to investigate further the impact of these elements of the calculation. For example, you my wish to understand digital exclusion risk in the context of deprivation, and so adding a higher weighting to deprivation indicators would be of use.
+
 ### Prioritisation
 One way to consider the DERI is as part of an overall risk matrix around digital inclusion to support the prioritisation of investigation and investment. Considering the DERI as an indicator of ‘likelihood’ – people are more likely to be digitally excluded in areas where the DERI score is high. However, adding in another dataset focused on where priority groups are more likely to live would provide the ‘impact’. As an example, anywhere with a high DERI score (likelihood) and a high proportion of disabled people (as a priority group, the ‘impact’) should be a key area of focus.
 
@@ -31,3 +33,6 @@ The tool and dataset should not be used as an indicator over time – changes in
 
 ### Investment without investigation
 The DERI is a risk index: it does not mean that every person in a high-risk area is digitally excluded; nor does it mean that no-one in a low-risk area is digitally excluded either. It gives an overview of where targeting resources could have the most benefit. However, this alone should never be used to justify investment without further investigation. For example, an area may appear to be at high risk of digital exclusion but may already be well served by a number of digital inclusion programmes, and therefore the need for investment and support may be greater elsewhere. 
+
+## Further exploration of the tool and dataset
+The suggestions above are by no means an extensive list of uses, or uses-to-be-avoided. For more examples of how you might want to extend your use or analysis of the tool, check out [the guide on potential opportunities for extending the model](Opportunities%20for%20Extension.md).

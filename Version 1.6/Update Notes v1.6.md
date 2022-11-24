@@ -6,6 +6,7 @@ For full understanding of how what goes into the DERI, it is important to read t
 
 The latest release of DERI is v1.6 which was released in November 2022. 
 This includes data updates from:
+
 **1. Age Component**
   - Mid Year Population Estimates 
     - Scotland, NRS SAPE 2020

@@ -6,19 +6,19 @@ For full understanding of how what goes into the DERI, it is important to read t
 
 The latest release of DERI is v1.6 which was released in November 2022. 
 This includes data updates from:
-1. Age Component
+**1. Age Component**
   - Mid Year Population Estimates 
     - Scotland, NRS SAPE 2020
     - England and Wales, ONS SAPE 2020
 
-3. Broadband Component
+**2. Broadband Component**
   - Ofcom Data, May 2022, Connected Nations update on coverage availability by output area
   
-4. Deprivation Component
+**3. Deprivation Component**
   - Alternative Claimant Count, May 2022, Stat-Xplore
   - Pension Credit Caseload, February 2022, Stat-Xplore
   
-6. Dashboard refresh
+**4. Dashboard refresh**
   - Refreshed some of the dashbord interface, to fix some reported issues in v1.5 such as the DERI scale on some dashboards
 
 As not all the data has been updated to 2021 Census data, the boundaries that you see have no changes and are at 2011 level boundaries. Updating to 2021 boundaries is to be included in the next iteration of DERI.

@@ -2,7 +2,7 @@
 
 This document has all the new notes for changes made between [version 1.5](https://www.gmtableau.nhs.uk/t/GMCA/views/DigitalExclusionRiskIndexv1_5/DERIhomepage?:iid=1&:isGuestRedirectFromVizportal=y&:embed=y) and [version 1.6](https://www.gmtableau.nhs.uk/t/GMCA/views/DigitalExclusionRiskIndexv1_6/DERIhomepage?:showAppBanner=false&:display_count=n&:showVizHome=n&:origin=viz_share_link) of the Digital Exclusion Risk Index (DERI).
 
-For full understanding of what goes into the DERI, it is important to read the [version 1.0 summary documents and details](../tree/main/Version%201.0) as a foundation for the DERI dataset and tool. Each subsequent version of the tool includes updates to the relevant files in that folder.
+For full understanding of what goes into the DERI, it is important to read the [version 1.0 summary documents and details](./tree/main/Version%201.0) as a foundation for the DERI dataset and tool. Each subsequent version of the tool includes updates to the relevant files in that folder.
 
 The latest release of DERI is v1.6 which was released in November 2022.
 

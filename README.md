@@ -1,14 +1,14 @@
 <table>
   <tr>
     <td><b>Latest version:</b></td>
-    <td><a href="https://www.gmtableau.nhs.uk/t/GMCA/views/DigitalExclusionRiskIndexv1_5/DERIhomepage?%3Aiid=1&%3AisGuestRedirectFromVizportal=y&%3Aembed=y">Version 1.5 tool on Tableau</a><br>
-<a href="https://github.com/GreaterManchesterODA/Digital-Exclusion-Risk-Index/blob/main/Version%201.5">Version 1.5 update notes on Github</a>
+    <td><a href="https://www.gmtableau.nhs.uk/t/GMCA/views/DigitalExclusionRiskIndexv1_6/DERIhomepage?%3Adisplay_count=n&%3Aembed=y&%3AisGuestRedirectFromVizportal=y&%3Aorigin=viz_share_link&%3AshowAppBanner=false&%3AshowVizHome=n">Version 1.6 tool on Tableau</a><br>
+<a href="https://github.com/GreaterManchesterODA/Digital-Exclusion-Risk-Index/tree/main/Version%201.6">Version 1.6 update notes on Github</a>
 </td>
   </tr>
   <tr>
     <td><b>Current phase:</b></td>
-    <td>Release - v1.5;
-      Development - v1.6;
+    <td>Release - v1.6;
+      Development - v2.0;
   </tr>
   <tr>
     <td><b>Licence:</b></td>
@@ -23,13 +23,13 @@ The Digital Exclusion Risk Index is a dataset and tool to explore the risk of di
 
 This repository holds information about the project to design and build the dataset and tool. It is being shared openly to support the wider use of the tool, reduce duplication of effort in creating digital exclusion indices, and come to a collective agreement about what indicators are best to portray the risk of digital exclusion on a local spatial scale.
 
-The latest version is version 1.5, [available to access on Tableau](https://www.gmtableau.nhs.uk/t/GMCA/views/DigitalExclusionRiskIndexv1_5/DERIhomepage?%3Aiid=1&%3AisGuestRedirectFromVizportal=y&%3Aembed=y) and with [methodology notes, datsets and sources on GitHub](/Version%201.5).
+The latest version is version 1.6, [available to access on Tableau](https://www.gmtableau.nhs.uk/t/GMCA/views/DigitalExclusionRiskIndexv1_6/DERIhomepage?%3Adisplay_count=n&%3Aembed=y&%3AisGuestRedirectFromVizportal=y&%3Aorigin=viz_share_link&%3AshowAppBanner=false&%3AshowVizHome=n) and with [methodology notes, datsets and sources on GitHub](/Version%201.6).
 
 ## Background
 This work stems from original work produced by [Salford City Council](https://www.salford.gov.uk) to understand the risk of digital exclusion in the local area. Locality digital inclusion leads in Greater Manchester saw the value in utilising this work, rather than in creating multiple new risk indices, and as such [Greater Manchester Combined Authority](https://www.greatermanchester-ca.gov.uk) aimed to create a risk index that incorporates all areas of the country.
 
 ## Development
-The aim is to develop the tool iteratively: develop a working prototype, testing with partners, and updating the tool. The latest version is [Version 1.5](/Version%201.5), which will be formally released on 22nd October 2021.
+The aim is to develop the tool iteratively: develop a working prototype, testing with partners, and updating the tool. The latest version is [Version 1.6](/Version%201.6), which will be formally released in November 2022.
 
 GMCA will commit to updating the data within the DERI, and look to continue development of the tool and dataset as new information is released.
 

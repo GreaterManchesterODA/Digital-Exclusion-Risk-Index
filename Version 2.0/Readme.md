@@ -4,7 +4,15 @@ This version makes some significant changes to the data sources and structure of
 
 <table>
   <tr>
-    <td>Indicator data sources:</td>
-    <td>Indicator data sources.csv</td>
+    <td><strong>Latest version:</strong></td>
+    <td>Version 1.6</td>
+  </tr>
+  <tr>
+    <td><strong>Next iteration:</strong></td>
+    <td>Version 2.0</td>
+  </tr>
+  <tr>
+    <td><strong>Next iteration status:</strong></td>
+    <td>In development</td>
   </tr>
 </table>
